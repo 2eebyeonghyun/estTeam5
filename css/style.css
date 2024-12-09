@@ -3,7 +3,7 @@
 
 html {scroll-behavior: smooth;}
 body {font-size: 100%; font-family: 'Noto Sans KR', sans-serif; background-color: #fff;}
-* {color: #222; box-sizing: border-box;}
+* {color: #222; margin: 0; padding: 0; box-sizing: border-box;}
 
 :root {
 	--Mcolor: #fff;
