@@ -4,6 +4,9 @@
 	--mainColor: #fff;
 	--subColor: #000;
 	--border: #ededed;
+	--borderBlack: #000;
+	--fontBlack: #000;
+	--bgBlack: #000;
 }
 
 html {
