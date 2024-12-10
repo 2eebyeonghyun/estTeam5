@@ -1,10 +1,31 @@
 @charset "utf-8";
 
-html {scroll-behavior: smooth; font-size: 62.5%;}
-body {font-size: 1rem; font-family: 'Noto Sans KR', sans-serif; background-color: #fff;}
-* {color: #000; box-sizing: border-box;}
+html {
+	scroll-behavior: smooth;
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1rem;
+	font-family: 'Noto Sans KR', sans-serif;
+	background-color: #fff;
+}
+
+/* 기본 옵션 */
+* {
+	color: #000;
+	box-sizing: border-box;
+}
+
+button {
+	cursor: pointer;
+	border: none;
+	background-color: transparent;
+	outline: none;
+}
 
 :root {
 	--mainColor: #fff;
+	--subColor: #000;
 	--border: 1px solid #ededed;
 }
