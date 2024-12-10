@@ -1,5 +1,11 @@
 @charset "utf-8";
 
+:root {
+	--mainColor: #fff;
+	--subColor: #000;
+	--border: #ededed;
+}
+
 html {
 	scroll-behavior: smooth;
 	font-size: 62.5%;
@@ -22,10 +28,4 @@ button {
 	border: none;
 	background-color: transparent;
 	outline: none;
-}
-
-:root {
-	--mainColor: #fff;
-	--subColor: #000;
-	--border: 1px solid #ededed;
 }
