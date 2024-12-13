@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav {
+            background-image: url(nav_img.png);
+            width: 99%;
+            height: 300px;
+            margin: 0 auto;
+            border-radius: 50px;
+            background-repeat: no-repeat;
+            background-position: center;
+
+        }
+
+        section {
+            margin-top: 150px;
+            text-align: center;
+        }
+
+        .text_1stline {
+            color: #808080;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .text_2ndline {
+            font-size: 60px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .text_3rdline {
+            font-size: 20px;
+            color: #242424;
+            font-size: 20px;
+            margin-bottom: 50px;
+        }
+
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+            justify-content: center;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .image-box {
+            width: 300px;
+            margin-bottom: 30px;
+        }
+
+        .image-content {
+            height: 400px;
+            background-color: #f0f0f0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            transition: bottom 0.3s ease-in-out;
+        }
+
+        .image-box:hover .overlay {
+            bottom: 0;
+        }
+
+        .image-box h3 {
+            margin: 10px 0 5px;
+            text-align: center;
+        }
+
+        .image-box p {
+            margin: 0;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        1. 이미지 간격 넓게
+        2. 세번째줄만 간격 따로 설정하려면 어떻게?
+        3. 주석 달기
+     -->
+    <nav></nav>
+
+    <section>
+        <div class="text_1stline">Meet Our Pods Squad</div>
+        <div class="text_2ndline">United Voices, Limitless Stories </div>
+        <div class="text_3rdline">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id ante eu purus
+            luctus viverra id vitae augue.</div>
+    </section>
+
+    <div class="image-container">
+        <div class="image-box">
+            <div class="image-content">
+                <div class="overlay"></div>
+            </div>
+            <h3>Jaxon Kingslay</h3>
+            <p>Professional Host</p>
+        </div>
+        <div class="image-box">
+            <div class="image-content">
+                <div class="overlay"></div>
+            </div>
+            <h3>Celeste Harrington</h3>
+            <p>Professional Host</p>
+        </div>
+        <div class="image-box">
+            <div class="image-content">
+                <div class="overlay"></div>
+            </div>
+            <h3>Sebastian Wilde</h3>
+            <p>Professional Host</p>
+        </div>
+        <div class="image-box">
+            <div class="image-content">
+                <div class="overlay"></div>
+            </div>
+            <h3>Landon Kensington</h3>
+            <p>Professional Host</p>
+        </div>
+        <div class="image-box">
+            <div class="image-content">
+                <div class="overlay"></div>
+            </div>
+            <h3>Adelaide Montgomery</h3>
+            <p>Professional Host</p>
+        </div>
+        <div class="image-box">
+            <div class="image-content">
+                <div class="overlay"></div>
+            </div>
+            <h3>Harrison Beaumont</h3>
+            <p>Professional Host</p>
+        </div>
+    </div>
+</body>
+
+</html>
