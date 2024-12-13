@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team5 Project</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
@@ -16,14 +20,155 @@
 </head>
 
 <body>
-    <header class="header"></header>
+    <!-- HEADER 영역 시작 -->
+    <header class="header">
+        <h1 class="logo"><a href="#none" title="Rosonator"><img src="img/logo.svg" alt="Resonator"></a></h1>
 
-    <main>
-        <section class="section section01"></section>
-        <section class="section section02"></section>
+        <h2 class="a11y-hidden">메뉴</h2>
+        <nav>
+            <ul class="gnb">
+                <li class="--active"><a href="#none">Homes</a></li>
+                <li><a href="#none">Podcast</a></li>
+                <li><a href="#none">Host</a></li>
+                <li><a href="#none">Episode</a></li>
+                <li><a href="#none">Shop</a></li>
+            </ul>
+        </nav>
+
+        <div class="utillity">
+            <button type="button" class="btn-search"><span>Search</span></button>
+            <button type="button" class="btn-menu">
+                <div><span></span><span></span><span></span></div>
+                <div><span></span><span></span><span></span></div>
+                <div><span></span><span></span><span></span></div>
+            </button>
+        </div>
+    </header>
+    <!-- HEADER 영역 끝 -->
+
+    <!-- 본문 영역 시작 -->
+    <main class="main main--page">
+        <section class="section section01">
+            <div class="inner">
+                <div class="section01__textBox">
+                    <h2 class="textBox__title">New episode<br class="mobile__none"> available now</h2>
+                    <p class="textBox__information">Available on Apple Soundcast and Spotify.</p>
+                    <div class="textBox__btnWrap">
+                        <a href="#" class="btn"><img src="img/btn_img1.png" alt="Apple"></a>
+                        <a href="#" class="btn"><img src="img/btn_img2.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section02">
+            <div class="inner">
+                <div class="section01__episodeBox">
+                    <div class="episodeBox__img">
+                        <img src="img/episode_img1.png" alt="Timmy Mike">
+                    </div>
+
+                    <div class="episodeBox__information">
+                        <div class="episodeBox__information__textBox">
+                            <a href="#none" class="textBox__title">Timmy Mike: the nature of design</a>
+                            <div class="textBox__link">
+                                <a href="#none" class="btn-episode">Episode page <img src="img/ico_next.svg" alt="link button"></a>
+                            </div>
+                        </div>
+
+                        <div class="episodeBox__information__subBox">
+                            <div class="subBox__textBox">
+                                <p class="textBox__text">Episode 1 •</p>
+                                <p class="textBox__text">Microphone •</p>
+                                <p class="textBox__text">0:13</p>
+                            </div>
+
+                            <div class="subBox__options">
+                                <div class="options__button options__play"></div>
+                                <div class="options__button options__button1">10s</div>
+                                <div class="options__button options__button2">10s</div>
+                                <div class="options__timeline">
+                                    <span class="timeline__ball"></span>
+                                    <span class="timeline__line"></span>
+                                </div>
+                                <div class="options__time">
+                                    <p class="time__text">00:00</p>
+                                    <p class="time__text">00:00</p>
+                                </div>
+                                <div class="options_sound">
+                                    <a href="#none" class="btn-mute"><span class="a11y-hidden">mute</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section03">
+            <div class="inner">
+                <div class="contents">
+                    <div class="contents__textBox">
+                        <h2 class="section__title textBox__title">Best places to find design inspiration</h2> 
+                        <div class="textBox_information">
+                            <div class="episode">
+                                <div class="options__button options__play"></div>
+                                <div class="episode__information">
+                                    <span class="information__title">Episode 1</span>
+                                    <p class="information__text">Category • 0:13</p>
+                                </div>
+                            </div>
+
+                            <div class="textBox_textarea">
+                                <p class="textBox_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium atque hic autem, odit reprehenderit tempora rem? Nemo dicta placeat magni nam, porro, quae voluptatibus, rem beatae repellat ratione molestiae officiis.</p>
+                                <p class="textBox_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui labore illum, doloremque quidem ad quibusdam debitis placeat, aut ut similique modi consectetur aperiam exercitationem natus deleniti ex dolorum fuga rerum.</p>
+                            </div>
+
+                            <a href="#none" class="btn-episode">Episode page <img src="img/ico_next.svg" alt="link button"></a>
+                        </div>
+                    </div>
+
+                    <div class="contents__pictureBox">
+                        <span class="pictureBox__text">New episode</span>
+                        <img src="img/@thumbnail_mainSection3_img1.png" alt="Best places to find design inspiration">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section04">
+            <div class="contents">
+                <div class="section__headingBox">
+                    <h2 class="section__title">Top podcasts:</h2>
+                    <p class="section__information">Discover the selection of the most popular podcasts.</p>
+                </div>
+                
+                <div class="swiper__list">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide">
+                            <div class="slide__img">
+                                <img src="img/top_podcast_img1.png" alt="SRKP selects: keep your watch">
+                            </div>
+
+                            <div class="slide__information">
+                                <span class="information__episode">
+                                    <p class="episode__text">Episode 8 •</p>
+                                    <p class="episode__text">Technology</p>
+                                </span>
+                                <h3 class="information__title">SRKP selects: keep your watch</h3>
+                                <a href="#none" class="btn-episode">Episode page <img src="img/ico_next.svg" alt="link button"></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
     </main>
+    <!-- 본문 영역 끝 -->
 
+    <!-- FOOTER 영역 시작 -->
     <footer class="footer"></footer>
+    <!-- FOOTER 영역 끝 -->
 </body>
 <!-- JS -->
 <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>

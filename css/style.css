@@ -1,12 +1,16 @@
 @charset "utf-8";
 
 :root {
-	--mainColor: #fff;
-	--subColor: #000;
 	--border: #ededed;
 	--borderBlack: #000;
 	--fontBlack: #000;
+	--fontColor2: #8E8B8C;
+	--fontColor3: #F8F8F8;
+	--bgWhite: #fff;
 	--bgBlack: #000;
+	--bg2: #F8F8F8;
+	--boxShadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.08);
+	--subFont: "Open Sans", sans-serif;
 }
 
 html {
@@ -16,7 +20,7 @@ html {
 
 body {
 	font-size: 1rem;
-	font-family: 'Noto Sans KR', sans-serif;
+	font-family: "Lato", sans-serif;
 	background-color: #fff;
 }
 
@@ -32,3 +36,433 @@ button {
 	background-color: transparent;
 	outline: none;
 }
+
+.a11y-hidden {
+	overflow: hidden;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	clip: rect(1px, 1px, 1px, 1px);
+}
+
+.gnb {
+	display: flex;
+	gap: 5.03rem;
+
+	li {
+
+		&.--active {
+			border-bottom: 1px solid var(--borderBlack);
+		}
+
+		a {
+			color: var(--fontBlack);
+			font-size: 1.5rem;
+			font-weight: 700;
+			line-height: 2.1rem;
+			text-decoration: none;
+		}
+	}
+}
+
+.inner {
+	width: 100%;
+	max-width: 130rem;
+	margin: 0 auto;
+}
+
+.section__headingBox {
+	text-align: center;
+	margin-bottom: 6.5rem;
+}
+
+.section__title {
+	color: var(--fontBlack);
+	font-size: 5rem;
+	font-weight: 700;
+	line-height: 5.5rem;
+	margin-bottom: 2rem;
+}
+
+.section__information {
+	color: var(--fontBlack);
+	font-family: var(--subFont);
+	font-size: 1.7rem;
+	font-weight: 400;
+	line-height: 2.703rem;
+}
+
+.btn-mute {
+	width: 5rem;
+	height: 5.1rem;
+	background: url(../img/ico_mute.svg) no-repeat;
+	display: block;
+}
+
+.btn-episode {
+	color: var(--fontBlack);
+	font-size: 1.5rem;
+	font-weight: 700;
+	line-height: 3rem;
+	text-decoration: none;
+
+	img {
+		width: 1.9rem;
+        height: 1.4rem;
+        margin-left: 1.17rem;
+	}
+}
+
+.options__button {
+
+	&.options__play {
+		width: 7rem;
+		height: 7rem;
+		border-radius: 7rem;
+		border: 2px solid #CECECE;
+	}
+
+	&.options__button1,
+	&.options__button2 {
+		display: flex;
+		width: 4.6rem;
+		height: 5rem;
+		padding: 2.9391rem 1.2316rem 0.5609rem 1.2516rem;
+		flex-direction: column;
+		justify-content: flex-end;
+		align-items: center;
+		color: #8E8B8C;
+		font-size: 1.3rem;
+		font-weight: 400;
+		line-height: 0rem;
+	}
+}
+
+.options__timeline {
+	position: relative;
+	margin-right: 1.6rem;
+
+	.timeline__ball {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		translate: 0 -50%;
+		width: 1.2rem;
+		height: 1.2rem;
+		border-radius: 0.6rem;
+		background-color: var(--bgBlack);
+	}
+
+	.timeline__line {
+		display: flex;
+		width: 57.4172rem;
+		height: 0.2rem;
+		align-items: center;
+		background-color: var(--bgBlack);
+	}
+}
+
+.options__time {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 0.5rem;
+
+	.time__text {
+		color: var(--fontColor2);
+		text-align: center;
+		font-family: var(--subFont);
+		font-size: 1.4rem;
+		font-weight: 400;
+		line-height: 1rem;
+
+		&:nth-child(1) {
+
+			&::after {
+				content: '/';
+				display: inline-block;
+				padding-left: 0.5rem;
+			}
+		}
+	}
+}
+
+.episode__information {
+	
+	.information__title {
+		color: var(--fontBlack);
+		font-size: 1.8rem;
+		font-weight: 600;
+		line-height: 2.703rem;
+		margin-bottom: 0.1rem;
+	}
+
+	.information__text {
+		color: var(--fontColor2);
+		font-family: var(--subFont);
+		font-size: 1.4rem;
+		font-weight: 400;
+		line-height: 2.703rem;
+	}
+}
+
+/* HEADER 영역 시작 */
+.header {
+	position: absolute;
+	inset: 0 0 auto 0;
+	z-index: 1000;
+	display: grid;
+	grid-template-columns: min-content 1fr min-content;
+	align-items: center;
+	height: 9rem;
+	margin-inline: 4.6rem;
+
+	.logo {
+
+		> a {
+			display: block;
+		}
+	}
+
+	.gnb {
+		text-align: center;
+		justify-content: center;
+	}
+
+	.utillity {
+		display: flex;
+		gap: 3.77rem;
+		align-items: center;
+	}
+}
+/* HEADER 영역 끝 */
+
+
+/* 본문 영역 시작 */
+.main {
+
+	.section {
+		width: 100%;
+	}
+
+	/* 메인페이지 */
+	&.main--page {
+
+		.section {
+
+			&.section01 {
+				position: relative;
+				height: 90rem;
+				background: url(../img/@thumbnail_img.png) no-repeat;
+				background-size: cover;
+
+				.inner {
+					height: 100%;
+					display: flex;
+					align-items: center;
+				}
+
+				.section01__textBox {
+
+					.textBox__title {
+						color: var(--fontBlack);
+						font-size: 9.5rem;
+						font-weight: 700;
+						line-height: 10.3rem;
+						margin-bottom: 1.4rem;
+					}
+
+					.textBox__information {
+						color: var(--fontBlack);
+						font-family: var(--subFont);
+						font-size: 1.9rem;
+						font-weight: 400;
+						line-height: 2.7rem;
+						margin-bottom: 5rem;
+					}
+
+					.textBox__btnWrap {
+						display: flex;
+						gap: 2.3rem;
+						align-items: center;
+					}
+				}
+			}
+
+			&.section02 {
+
+				.section01__episodeBox {
+					position: relative;
+					z-index: 100;
+					margin-top: -13.74rem;
+					width: 100%;
+					background-color: #fff;
+					border-radius: 1rem;
+					box-shadow: var(--boxShadow);
+					display: inline-flex;
+					align-items: center;
+					overflow: hidden;
+
+					.episodeBox__img {
+						width: 29.1rem;
+						height: 29.1rem;
+					}
+
+					.episodeBox__information {
+						width: 100%;
+						padding: 3.4rem 3.8rem 3.3rem 6.3rem;
+
+						.episodeBox__information__textBox {
+							width: 100%;
+							display: flex;
+							justify-content: space-between;
+							padding-left: 1rem;
+							margin-bottom: 1.02rem;
+
+							.textBox__title {
+								width: 40.4794rem;
+								color: var(--fontBlack);
+								font-size: 3.8rem;
+								font-weight: 700;
+								line-height: 4.408rem;
+								text-decoration: none;
+							}
+						}
+
+						.episodeBox__information__subBox {
+							width: 100%;
+
+							.subBox__textBox {
+								width: 100%;
+								margin-bottom: 2.7rem;
+								padding-left: 1rem;
+								display: flex;
+								align-items: center;
+
+								.textBox__text {
+									color: var(--fontColor2);
+									font-family: var(--subFont);
+									font-size: 1.4rem;
+									font-weight: 400;
+									line-height: 2.703rem;
+									margin-right: 0.5rem;
+
+									&:last-child {
+										margin-right: 0;
+									}
+								}
+							}
+
+							.subBox__options {
+								display: flex;
+								flex-direction: row;
+								justify-content: space-between;
+								align-items: center;
+							}
+						}
+					}
+				}
+			}
+
+			&.section03 {
+				background-color: var(--bgWhite);
+				padding: 14rem 0 15.17rem;
+
+				.contents {
+					width: 100%;
+					display: flex;
+					gap: 25.5rem;
+					justify-content: space-between;
+					align-items: center;
+
+					.contents__textBox {
+						flex: 0 0 40%;
+
+						.textBox__title {
+							margin-bottom: 2.8rem;
+						}
+
+						.textBox_information {
+
+							.episode {
+								display: flex;
+								gap: 2.1rem;
+								align-items: center;
+								margin-bottom: 3rem;
+							}
+
+							.textBox_textarea {
+								margin-bottom: 3.13rem;
+							}
+
+							.textBox_text {
+								color: var(--fontBlack);
+								font-family: var(--subFont);
+								font-size: 1.7rem;
+								font-weight: 400;
+								line-height: 2.703rem;
+								margin-bottom: 2rem;
+
+								&:last-of-type {
+									margin-bottom: 0;
+								}
+							}
+						}
+					}
+
+					.contents__pictureBox {
+						position: relative;
+						flex: 0 0 40%;
+
+						.pictureBox__text {
+							position: absolute;
+							top: 50%;
+							left: -50%;
+							translate: -25px -50%;
+							transform: rotate(-90deg);
+							color: var(--fontColor3);
+							font-size: 9.2rem;
+							font-weight: 600;
+							line-height: 2.703rem;
+							z-index: 1;
+						}
+
+						img {
+							position: relative;
+							z-index: 2;
+							border-radius: 1rem;
+							box-shadow: var(--boxShadow);
+						}
+					}
+				}
+			}
+
+			&.section04 {
+				background-color: var(--bg2);
+				padding: 9.2rem 0 10.7rem;
+				text-align: center;
+				overflow: hidden;
+
+				.swiper__list {
+
+					.swiper-slide {
+						display: flex;
+						width: 78.5rem;
+						height: 39.25rem;
+						justify-content: center;
+						align-items: flex-start;
+						border-radius: 1rem;
+
+						.slide__img {
+							width: 50%;
+						}
+
+						.slide__information {
+							width: 50%;
+						}
+					}
+				}
+			}
+		}
+	}
+} 
