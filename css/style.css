@@ -2,6 +2,7 @@
 
 :root {
 	--border: #ededed;
+	--border2: #8E8B8C;
 	--borderBlack: #000;
 	--fontBlack: #000;
 	--fontWhite: #fff;
@@ -83,6 +84,10 @@ img {
 	width: 100%;
 	max-width: 130rem;
 	margin: 0 auto;
+
+	@media (width < 1024px) {
+		max-width: 95%;
+	}
 }
 
 
@@ -177,6 +182,17 @@ img {
 			aspect-ratio: 1;
 			background-color: var(--bgBlack);
 			border-radius: 50%;
+		}
+	}
+
+	@media (width < 768px) {
+		width: 2rem;
+		
+		.btn-menu__line {
+	
+			.btn-menu__dot {
+				width: 0.3rem;
+			}
 		}
 	}
 }
@@ -324,6 +340,44 @@ img {
 		}
 	}
 }
+
+.swiper__dots__list {
+	display: flex;
+	gap: 2.6rem;
+	align-items: center;
+
+	> li {
+
+		/* 버튼에 active가 들어간 버튼에 효과를 준다. */
+		&.active {
+
+			> a {
+
+				&::after {
+					content: '';
+                    display: block;
+                    width: 2rem;
+                    aspect-ratio: 1;
+                    border: 1px solid var(--border2);
+					border-radius: 50%;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    translate: -50% -50%;
+				}
+			}
+		}
+
+		> a {
+			position: relative;
+			width: 0.6rem;
+			aspect-ratio: 1;
+			background-color: var(--bgBlack);
+			border-radius: 50%;
+			display: block;
+		}
+	}
+}
 /* 옵션 CSS 끝 */
 
 
@@ -349,6 +403,7 @@ img {
 .information__episode {
 	margin-bottom: 0.3rem;
 	display: flex;
+	gap: 0.5rem;
 	align-items: center;
 
 	.episode__text {
@@ -532,7 +587,7 @@ img {
 	.logo {
 
 		> a {
-			width: 130px;
+			width: 13rem;
 			display: block;
 		}
 	}
@@ -546,6 +601,37 @@ img {
 		display: flex;
 		gap: 3.77rem;
 		align-items: center;
+	}
+
+	@media (width < 1024px) {
+		margin-inline: auto;
+		max-width: 95%;
+
+		.gnb {
+			display: none;
+		}
+	}
+
+	@media (width < 768px) {
+		height: 8rem;
+		
+		.logo {
+			
+			> a {
+				width: 10rem;
+			}
+		}
+
+		.utillity {
+			gap: 2rem;
+
+			.btn-search {
+
+				span {
+					display: none;
+				}
+			}
+		}
 	}
 }
 /* HEADER 영역 끝 */
@@ -647,25 +733,12 @@ img {
 						.episodeBox__information__subBox {
 							width: 100%;
 
-							.subBox__textBox {
+							.information__episode {
 								width: 100%;
 								margin-bottom: 2.7rem;
 								padding-left: 1rem;
 								display: flex;
 								align-items: center;
-
-								.textBox__text {
-									color: var(--fontColor2);
-									font-family: var(--subFont);
-									font-size: 1.4rem;
-									font-weight: 400;
-									line-height: 2.703rem;
-									margin-right: 0.5rem;
-
-									&:last-child {
-										margin-right: 0;
-									}
-								}
 							}
 
 							.subBox__options {
@@ -733,6 +806,7 @@ img {
 						position: relative;
 						flex: 0 0 40%;
 
+						/* 이미지 왼쪽 텍스트를 90도 회전시켜 absolute로 배치하는 작업을 했고 zindex를 이미지보다 아래로 주어 밑에 보이도록 작업했습니다. */
 						.pictureBox__text {
 							position: absolute;
 							top: 50%;
@@ -764,12 +838,21 @@ img {
 				overflow: hidden;
 
 				.swiper__list {
+					/* 이미지를 영역 밖으로 보내기 위해 position을 사용했고 부모에 높이값을 주어 커스텀했습니다. */
+					position: relative;
+					height: 46rem;
 
 					.swiper-wrapper {
+						position: absolute;
+						top: 0;
+						left: 50%;
+						translate: -50% 0;
+
 						display: flex;
 						gap: 8rem;
 						flex-direction: row;
-						justify-content: center;
+						/* justify-content: center; */
+						/* margin-bottom: 6rem; */
 					}
 
 					.swiper-slide {
@@ -780,6 +863,7 @@ img {
 						align-items: center;
 						border-radius: 1rem;
 						background-color: var(--bgWhite);
+						box-shadow: var(--boxShadow);
 						overflow: hidden;
 
 						.slide__img {
@@ -805,9 +889,23 @@ img {
 								line-height: normal;
 								margin-bottom: 2.2rem;
 								border-bottom: 2px solid var(--borderBlack);
+								display: block;
+								text-decoration: none;
 							}
 						}
 					}
+				}
+
+				/* dot 버튼도 슬라이드 이미지와 같이 absolute을 사용하여 커스텀했습니다. */
+				.swiper__options {
+					position: absolute;
+					bottom: 0;
+					left: 50%;
+					translate: -50% 0;
+
+					width: 100%;
+					display: inline-flex;
+					justify-content: center;
 				}
 			}
 
@@ -825,11 +923,6 @@ img {
 						.section__title {
 							margin-bottom: 0;
 						}
-					}
-
-					.essential__episode__list {
-
-						.list__card { }
 					}
 				}
 			}
@@ -854,6 +947,7 @@ img {
 				}
 			}
 
+			/* 호스트소개 영역 CSS */
 			&.section07 {
 				padding: 12.7rem 0 13.8rem;
 
@@ -1016,6 +1110,77 @@ img {
 					> a {
 						color: #ccc;
 						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+
+	@media (width < 1024px) {
+
+		.footer__content {
+			padding: 0;
+			flex-direction: column;
+		}
+
+		.content__logo {
+			margin-bottom: 3rem;
+			margin-right: 0;
+		}
+
+		.content__information {
+			width: 100%;
+
+			.information__slogan {
+				width: 100%;
+				margin-bottom: 5rem;
+			}
+
+			.information__list {
+				flex-direction: column;
+				gap: 1.5rem;
+			}
+		}
+	}
+
+	@media (width < 768px) {
+		padding: 6.5rem 0;
+
+		.content__information {
+
+			.information__slogan {
+				font-size: 2rem;
+				line-height: 2.8rem;
+			}
+
+			.information__list {
+	
+				> li {
+					height: 15rem;
+	
+					.list__title {
+						font-size: 1.5rem;
+						line-height: 1.8rem;
+						margin-bottom: 1.5rem;
+					}
+	 
+					.list__content {
+	
+						&.sns {
+							
+							.list__link {
+								
+								> i {
+									font-size: 1.8rem;
+									line-height: 1.8rem;
+								}
+							}
+						}
+	
+						.list__link {
+                            font-size: 1.4rem;
+                            line-height: 2.4rem;
+						}
 					}
 				}
 			}
