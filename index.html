@@ -38,6 +38,7 @@
         <!-- 
             유틸리티 영역을 만들어 서치버튼과 메뉴버튼을 구성
         -->
+        <h2 class="a11y-hidden">유틸리티 메뉴</h2>
         <div class="utillity">
             <button type="button" class="btn-search"><span>Search</span></button>
             <a href="#none" class="btn-menu" title="메뉴 버튼">
@@ -61,6 +62,67 @@
     </header>
     <!-- HEADER 영역 끝 -->
 
+    <!-- 사이드메뉴 영역 시작 -->
+    <aside class="sideMenu">
+        <h2 class="a11y-hidden">버튼 영역</h2>
+        <div class="btn-wrap">
+            <a href="#none" class="btn-menu" title="메뉴 버튼">
+                <div class="btn-menu__line __line1">
+                    <span class="btn-menu__dot dot1"></span>
+                    <span class="btn-menu__dot dot2"></span>
+                </div>
+                <div class="btn-menu__line __line2">
+                    <span class="btn-menu__dot dot1"></span>
+                </div>
+                <div class="btn-menu__line __line3">
+                    <span class="btn-menu__dot dot1"></span>
+                    <span class="btn-menu__dot dot2"></span>
+                </div>
+            </a>
+        </div>
+
+        <h2 class="a11y-hidden">메뉴</h2>
+        <nav>
+            <ul class="gnb">
+                <li class="--active"><a href="#none">Homes</a></li>
+                <li><a href="#none">Podcast</a></li>
+                <li><a href="#none">Host</a></li>
+                <li><a href="#none">Episode</a></li>
+                <li><a href="#none">Shop</a></li>
+            </ul>
+        </nav>
+
+        <h2 class="a11y-hidden">회사 소개</h2>
+        <div class="company__information">
+            <div class="information__row">
+                <span class="row__title">E-mail</span>
+                <div class="list__linkBox">
+                    <a href="#none" class="list__link email">podcast@example.com</a>
+                </div>
+            </div>
+
+            <div class="information__row">
+                <span class="row__title">Contact Us</span>
+                <div class="list__linkBox">
+                    <a href="#none" class="list__link">Brooklyn, NY 11201 United States</a>
+                    <a href="#none" class="list__link">+2 969 866 7033</a>
+                </div>
+            </div>
+
+            <h2 class="a11y-hidden">SNS 영역</h2>
+            <div class="information__row">
+                <span class="row__title">Follow us on:</span>
+                <div class="list__linkBox sns">
+                    <a href="#none" class="list__link"><span class="a11y-hidden">Facebook</span><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#none" class="list__link"><span class="a11y-hidden">Twitter</span><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#none" class="list__link"><span class="a11y-hidden">Instagram</span><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#none" class="list__link"><span class="a11y-hidden">Youtube</span><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <!-- 사이드메뉴 영역 끝 -->
+
     <!-- 본문 영역 시작 -->
     <main class="main main--page">
         <!-- 메인 비주얼 페이지 -->
@@ -70,9 +132,10 @@
                     <h2 class="textBox__title">New episode<br class="mobile__none"> available now</h2>
                     <p class="textBox__information">Available on Apple Soundcast and Spotify.</p>
 
+                    <h2 class="a11y-hidden">다른 팟캐스트 사이트 버튼</h2>
                     <div class="textBox__btnWrap">
-                        <a href="#" class="btn"><img src="img/btn_img1.png" alt="Apple"></a>
-                        <a href="#" class="btn"><img src="img/btn_img2.png" alt=""></a>
+                        <a href="#" class="btn"><img src="img/btn_img1.png" alt="Apple Podcast"></a>
+                        <a href="#" class="btn"><img src="img/btn_img2.png" alt="SoundCloud"></a>
                     </div>
                 </div>
             </div>
@@ -89,6 +152,8 @@
                     <div class="episodeBox__information">
                         <div class="episodeBox__information__textBox">
                             <a href="#none" class="textBox__title">Timmy Mike: the nature of design</a>
+
+                            <h2 class="a11y-hidden">페이지 이동 버튼</h2>
                             <div class="textBox__link">
                                 <a href="#none" class="btn-episode">Episode page <img src="img/ico_next.svg" alt="link button"></a>
                             </div>
@@ -102,6 +167,7 @@
                             </span>
 
                             <!-- 에피소드 미리보기 옵션 영역 -->
+                            <h2 class="a11y-hidden">미리보기 옵션 박스</h2>
                             <div class="subBox__options">
                                 <div class="options__button options__play"></div>
                                 <div class="options__button options__button1">10s</div>
@@ -128,7 +194,7 @@
         <section class="section section03">
             <div class="inner">
                 <div class="contents">
-                    <!-- 좌측 소개 영역 -->
+                    <!-- 좌측 에피소드 소개 영역 -->
                     <div class="contents__textBox">
                         <h2 class="section__title textBox__title">Best places to find design inspiration</h2> 
                         <div class="textBox_information">
@@ -148,11 +214,12 @@
                                 <p class="textBox_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui labore illum, doloremque quidem ad quibusdam debitis placeat, aut ut similique modi consectetur aperiam exercitationem natus deleniti ex dolorum fuga rerum.</p>
                             </div>
 
+                            <h2 class="a11y-hidden">페이지 이동 버튼</h2>
                             <a href="#none" class="btn-episode">Episode page <img src="img/ico_next.svg" alt="link button"></a>
                         </div>
                     </div>
 
-                    <!-- 우측 이미지 영역 -->
+                    <!-- 우측 에피소드 이미지 영역 -->
                     <div class="contents__pictureBox">
                         <span class="pictureBox__text">New episode</span>
                         <img src="img/@thumbnail_mainSection3_img1.png" alt="Best places to find design inspiration">
@@ -513,10 +580,11 @@
                     <!-- 
                         푸터 인포메이션 구성
                     -->
+                    <h2 class="a11y-hidden">회사 소개</h2>
                     <ul class="information__list">
                         <li>
                             <span class="list__title">Start a conversation:</span>
-                            <div class="list__content">
+                            <div class="list__linkBox">
                                 <a href="#none" class="list__link">podcast@example.com</a>
                                 <a href="#none" class="list__link">+2 969 866 7033</a>
                             </div>
@@ -525,7 +593,7 @@
 
                         <li>
                             <span class="list__title">Find us here:</span>
-                            <div class="list__content">
+                            <div class="list__linkBox">
                                 <a href="#none" class="list__link">Brooklyn, NY 11201<br> United States</a>
                             </div>
                             <a href="#none" class="list__link__last">Privacy Policy</a>
@@ -536,7 +604,8 @@
                             <!-- 
                                 SNS 메뉴 구성
                             -->
-                            <div class="list__content sns">
+                            <h2 class="a11y-hidden">SNS 메뉴</h2>
+                            <div class="list__linkBox sns">
                                 <a href="#none" class="list__link"><span class="a11y-hidden">Facebook</span><i class="fa-brands fa-facebook"></i></a>
                                 <a href="#none" class="list__link"><span class="a11y-hidden">Twitter</span><i class="fa-brands fa-twitter"></i></a>
                                 <a href="#none" class="list__link"><span class="a11y-hidden">Instagram</span><i class="fa-brands fa-instagram"></i></a>
