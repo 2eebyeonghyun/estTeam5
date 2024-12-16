@@ -106,6 +106,11 @@ img {
 	font-weight: 700;
 	line-height: 5.5rem;
 	margin-bottom: 2rem;
+
+	@media (width < 1024px) {
+		font-size: 3.5rem;
+		line-height: 4rem;
+	}
 }
 
 .section__information {
@@ -214,7 +219,7 @@ img {
 	&:hover {
 
 		img {
-			animation: Xmove .7s cubic-bezier(.5, .54, 0, .75) forwards;
+			animation: Xmove .7s ease-in-out forwards;
 		}
 	}
 
@@ -266,7 +271,7 @@ img {
 
 	&.options__play {
 		width: 7rem;
-		height: 7rem;
+		aspect-ratio: 1;
 		border-radius: 7rem;
 		border: 2px solid #CECECE;
 	}
@@ -284,6 +289,13 @@ img {
 		font-size: 1.3rem;
 		font-weight: 400;
 		line-height: 0rem;
+	}
+
+	@media (width < 1024px) {
+
+		&.options__play {
+			width: 4.5rem;
+		}
 	}
 }
 
@@ -513,28 +525,6 @@ img {
 		margin-bottom: 0.4rem;
 	}
 
-	.informationBox__title {
-		position: relative;
-		color: var(--fontBlack);
-		font-size: 2.7rem;
-		font-weight: 700;
-		line-height: 3.402rem;
-		margin-bottom: 2.71rem;
-		text-decoration: none;
-		display: block;
-		
-		&::after {
-			content: '';
-			display: block;
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			width: 100%;
-			height: 2px;
-			background-color: var(--bgBlack);
-		}
-	}
-
 	.informationBox__share_list {
 
 		.share__title {
@@ -584,6 +574,33 @@ img {
 			}
 		}
 	}
+
+	@media (width < 1024px) {
+		gap: 3rem;
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+.informationBox__title {
+	position: relative;
+	color: var(--fontBlack);
+	font-size: 2.7rem;
+	font-weight: 700;
+	line-height: 3.402rem;
+	margin-bottom: 2.71rem;
+	text-decoration: none;
+	display: block;
+
+	&::after {
+		content: '';
+		display: block;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 2px;
+		background-color: var(--bgBlack);
+	}
 }
 
 /* 그리드(Grid) 영역 끝 */
@@ -606,7 +623,7 @@ img {
 	}
 
 	to {
-		width: 57.4172rem;
+		width: 100%;
 	}
 }
 
@@ -631,8 +648,8 @@ img {
 		transform-origin: 0 0
 	}
 }
-
 /* 애니메이션 영역 끝 */
+
 
 /* HEADER 영역 시작 */
 .header {
@@ -695,13 +712,15 @@ img {
 		}
 	}
 }
-
 /* HEADER 영역 끝 */
+
 
 /* SUBHEAD 영역 시작 */
 .subhead {
 	height: 50rem;
-	margin-top: 10rem;
+	margin-top: 11.5rem;
+	margin-inline: 4.5rem;
+	border-radius: 1rem;
 	position: relative;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -729,7 +748,6 @@ img {
 		height: 30rem;
 	}
 }
-
 /* SUBHEAD 영역 끝 */
 
 
@@ -896,12 +914,13 @@ img {
 
 					.episodeBox__img {
 						width: 29.1rem;
-						height: 29.1rem;
+						aspect-ratio: 1;
 					}
 
 					.episodeBox__information {
 						padding: 3.4rem 3.8rem 3.3rem 6.3rem;
-
+                        width: calc(100% - 29.1rem);
+						
 						.episodeBox__information__textBox {
 							width: 100%;
 							display: flex;
@@ -1186,7 +1205,9 @@ img {
 		margin: 10rem 0;
 
 		.section {
+
 			&.section01 {
+
 				.gird__list {
 					/* 사용자 편의를 위해 card를 두개씩 배치 */
 					grid-template-columns: repeat(2, 1fr);
@@ -1297,9 +1318,153 @@ img {
 			}
 		}
 	}
+
+	@media (width < 1024px) {
+
+		&.main--page {
+
+			.section {
+
+				&.section01 {
+
+					.section01__textBox {
+
+						.textBox__title {
+							font-size: 5.5rem;
+							line-height: 6.5rem;
+						}
+	
+						.textBox__information {
+							font-size: 1.6rem;
+						}
+
+						.textBox__btnWrap {
+							gap: 2rem;
+
+							.btn {
+								width: 15rem;
+							}
+						}
+					}
+				}
+
+				&.section02 {
+
+					.section01__episodeBox {
+
+						.episodeBox__img {
+							width: 20rem;
+						}
+
+						.episodeBox__information {
+							padding: 1.5rem;
+							width: calc(100% - 20rem);
+
+							.episodeBox__information__textBox {
+
+								.textBox__title {
+									width: 30rem;
+									font-size: 2rem;
+									line-height: 1.3;
+								}
+							}
+
+							.episodeBox__information__subBox {
+
+								.information__episode {
+									margin-bottom: 2rem;
+								}
+
+								.subBox__options {
+									flex-wrap: wrap;
+									justify-content: normal;
+									gap: 0 3rem;
+
+									.options_sound {
+										order: 5;
+									}
+								}
+							}
+						}
+					}
+
+					@media (width < 1024px) {
+					
+						.options__button {
+					
+							&.options__play {
+								order: 1;
+							}
+					
+							&.options__button1 {
+								order: 2;
+							}
+					
+							&.options__button2 {
+								order: 3;
+							}
+						}
+
+						.options__timeline {
+							width: 100%;
+							order: 6;
+							margin-top: 1.5rem;
+					
+							.timeline__line {
+								width: 100%;
+							}
+						}
+
+						.options__time {
+							order: 4;
+						}
+					}
+				}
+
+				&.section03 {
+
+					.contents {
+						gap: 3rem;
+						align-items: flex-start;
+
+						.contents__textBox {
+							flex: 0 0 calc(100% - 35% - 3rem);
+						}
+
+						.contents__pictureBox {
+							flex: 0 0 35%;
+
+							.pictureBox__text {
+								translate: 0 0;
+								font-size: 3.8rem;
+								top: auto;
+								bottom: -2rem;
+								left: 0;
+								transform: rotate(0);
+							}
+						}
+					}
+				}
+
+				&.section04 {
+
+					.swiper__list {
+						height: 40rem;
+
+						.swiper-wrapper {
+							gap: 3rem;
+						}
+
+						.swiper-slide {
+							width: 65rem;
+							height: 35rem;
+						}
+					}
+				}
+			}
+		}
+	}
 }
-
-
 /* 본문 영역 끝 */
 
 
