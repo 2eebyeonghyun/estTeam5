@@ -41,10 +41,8 @@ section {
       display: flex;
 
       .video {
-        display: inline-block;
         width: 200px;
         height: 100px;
-        background-color: blue;
         border-radius: 0.5rem;
       }
 
