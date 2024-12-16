@@ -1,4 +1,5 @@
 {
     "figma.assetExportDirectory": "/img",
-    "figma.assetPublicPath": "/img"
+    "figma.assetPublicPath": "/img",
+    "liveServer.settings.port": 5502
 }
