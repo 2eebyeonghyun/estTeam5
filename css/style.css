@@ -65,7 +65,10 @@ img {
 
 		/* active된 값에는 밑선을 준다. */
 		&.--active {
-			border-bottom: 1px solid var(--borderBlack);
+
+			> a {
+				border-bottom: 1px solid var(--borderBlack);
+			}
 		}
 
 		a {
@@ -351,7 +354,8 @@ img {
 	>li {
 
 		/* 버튼에 active가 들어간 버튼에 효과를 준다. */
-		&.active {
+		&.active,
+		&:hover {
 
 			>a {
 
@@ -377,6 +381,7 @@ img {
 			background-color: var(--bgBlack);
 			border-radius: 50%;
 			display: block;
+			
 		}
 	}
 }
@@ -418,6 +423,47 @@ img {
 	}
 }
 
+.list__linkBox {
+
+	&.sns {
+		
+		.list__link {
+			display: inline-block;
+			margin-right: 2rem;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+
+	.list__link {
+		color: #ccc;
+		font-family: var(--subFont);
+		font-size: 1.7rem;
+		font-weight: 400;
+		line-height: 2.703rem;
+		text-decoration: none;
+		transition: color .3s;
+		display: block;
+
+		> i {
+			color: var(--fontColor4);
+			font-size: 2.1rem;
+			font-weight: 400;
+			line-height: 2.1rem;
+			transition: color .3s;
+		}
+
+		&:hover {
+			color: var(--fontWhite);
+
+			> i {
+				color: var(--fontWhite); 
+			}
+		}
+	}
+}
 
 /* 그리드(Grid) 영역 시작 */
 .gird__list {
@@ -476,7 +522,7 @@ img {
 		margin-bottom: 2.71rem;
 		text-decoration: none;
 		display: block;
-
+		
 		&::after {
 			content: '';
 			display: block;
@@ -685,6 +731,99 @@ img {
 }
 
 /* SUBHEAD 영역 끝 */
+
+
+/* 사이드메뉴 영역 시작 */
+.sideMenu {
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 1001;
+	width: 0;
+	height: 100vh;
+	background-color: var(--bgWhite);
+	box-shadow: var(--boxShadow);
+	padding: 0 4.5rem 30rem;
+	display: none;
+    
+	&.--active {
+		width: 45rem;
+		display: grid;
+		gap: 5rem;
+    	grid-template-rows: 11.5rem 1fr min-content;
+	}
+
+	.btn-wrap {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+
+		.btn-menu {
+
+			.btn-menu__line {
+
+				&.__line2{
+					justify-content: center;
+				}
+			}
+		}
+	}
+
+	.gnb {
+		flex-direction: column;
+		align-items: center;
+		gap: 6rem;
+
+		> li {
+
+			&:hover {
+
+				> a {
+					color: var(--fontBlack);
+				}
+			}
+
+			&.--active {
+
+				> a {
+					border-bottom: 0;
+				}
+			}
+
+			> a {
+				font-size: 3rem;
+				font-weight: 800;
+				color: var(--fontColor2);
+				transition: all .3s ease-in-out;
+			}
+		}
+	}
+
+	.company__information {
+		display: flex;
+        flex-direction: column;
+        gap: 5rem;
+
+		.row__title {
+			font-size: 2.3rem;
+			line-height: 1.5;
+			font-weight: 700;
+			color: var(--fontBlack);
+			margin-bottom: 1rem;
+			display: block;
+		}
+
+		.list__link {
+			line-height: 1.5;
+            font-weight: 400;
+
+			:is(&:hover, &:hover > i) {
+				color: var(--fontBlack);
+			}
+		}
+	}
+}
+/* 사이드메뉴 영역 끝 */
 
 
 /* 본문 영역 시작 */
@@ -1227,48 +1366,7 @@ img {
 					margin-bottom: 2.3rem;
 					display: block;
 				}
-
-				.list__content {
-
-					&.sns {
-
-						.list__link {
-							display: inline-block;
-							margin-right: 2rem;
-
-							&:last-child {
-								margin-right: 0;
-							}
-						}
-					}
-
-					.list__link {
-						color: #ccc;
-						font-family: var(--subFont);
-						font-size: 1.7rem;
-						font-weight: 400;
-						line-height: 2.703rem;
-						text-decoration: none;
-						transition: color .3s;
-						display: block;
-
-						>i {
-							color: var(--fontColor4);
-							font-size: 2.1rem;
-							font-weight: 400;
-							line-height: 2.1rem;
-						}
-
-						&:hover {
-							color: var(--fontWhite);
-
-							>i {
-								color: var(--fontWhite);
-							}
-						}
-					}
-				}
-
+        
 				.list__link__last {
 					color: var(--fontColor4);
 					font-family: var(--subFont);
