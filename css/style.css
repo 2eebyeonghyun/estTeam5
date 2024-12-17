@@ -357,8 +357,11 @@ img {
 		}
 	}
 }
+/* 옵션 CSS 끝 */
 
-.swiper__dots__list {
+
+/* Swiper 슬라이드 옵션 CSS 시작 */
+.options__dots {
 	display: flex;
 	gap: 2.6rem;
 	align-items: center;
@@ -397,8 +400,7 @@ img {
 		}
 	}
 }
-
-/* 옵션 CSS 끝 */
+/* Swiper 슬라이드 옵션 CSS 끝 */
 
 
 .episode__information {
