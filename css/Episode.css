@@ -705,6 +705,7 @@ img {
                 font-weight: 700;
                 border-radius: 1rem;
                 text-decoration: none;
+                font-family: var(--subFont);
 
                 @media (width < 768px) {
                   line-height: 2rem;
@@ -735,6 +736,7 @@ img {
             span {
               font-size: 1.1rem;
               letter-spacing: 0.2rem;
+              font-family: var(--subFont);
             }
           }
 

@@ -1,6 +1,8 @@
 @charset "utf-8";
+@import url(./common.css);
 
 :root {
+<<<<<<< HEAD
   --border: #ededed;
   --border2: #8e8b8c;
   --borderBlack: #000;
@@ -656,6 +658,25 @@ img {
 }
 /* 애니메이션 영역 끝 */
 
+=======
+	--border: #ededed;
+	--border2: #8E8B8C;
+	--borderBlack: #000;
+	--fontBlack: #000;
+	--fontWhite: #fff;
+	--fontColor2: #8E8B8C;
+	--fontColor3: #F8F8F8;
+	--fontColor4: #969696;
+	--bgWhite: #fff;
+	--bgBlack: #000;
+	--bg2: #F8F8F8;
+	--bg3: #8E8B8C;
+	--boxShadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.08);
+	--subFont: "Open Sans", sans-serif;
+	--padding: 14rem 0;
+}
+
+>>>>>>> bbbd5a186cab72a325e04b43455ce93f8f8ccd33
 /* HEADER 영역 시작 */
 .header {
   position: absolute;
@@ -679,11 +700,26 @@ img {
     justify-content: center;
   }
 
+<<<<<<< HEAD
   .utillity {
     display: flex;
     gap: 3.77rem;
     align-items: center;
   }
+=======
+	.gnb {
+		text-align: center;
+		justify-content: center;
+
+		> li {
+			transition: all .3s ease-in-out;
+
+			&:hover {
+				transform: translateY(-0.3rem);
+			}
+		}
+	}
+>>>>>>> bbbd5a186cab72a325e04b43455ce93f8f8ccd33
 
   @media (width < 1024px) {
     margin-inline: auto;
@@ -716,6 +752,7 @@ img {
 }
 /* HEADER 영역 끝 */
 
+<<<<<<< HEAD
 /* SUBHEAD 영역 시작 */
 .subhead {
   height: 50rem;
@@ -763,6 +800,28 @@ img {
   box-shadow: var(--boxShadow);
   padding: 0 4.5rem 30rem;
   display: none;
+=======
+
+/* 사이드메뉴 영역 시작 */
+.sideMenu {
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 1001;
+	width: 0;
+	height: 100vh;
+	background-color: var(--bgWhite);
+	box-shadow: var(--boxShadow);
+	padding: 0 4.5rem;
+	display: none;
+    
+	&.--active {
+		width: 45rem;
+		display: grid;
+		gap: 5rem;
+    	grid-template-rows: 11.5rem min-content min-content;
+	}
+>>>>>>> bbbd5a186cab72a325e04b43455ce93f8f8ccd33
 
   &.--active {
     width: 45rem;
@@ -790,12 +849,20 @@ img {
     align-items: center;
     gap: 6rem;
 
+<<<<<<< HEAD
     > li {
       &:hover {
         > a {
           color: var(--fontBlack);
         }
       }
+=======
+	.gnb {
+		flex-direction: column;
+		align-items: center;
+		gap: 6rem;
+		margin-bottom: 5rem;
+>>>>>>> bbbd5a186cab72a325e04b43455ce93f8f8ccd33
 
       &.--active {
         > a {
@@ -830,11 +897,74 @@ img {
       line-height: 1.5;
       font-weight: 400;
 
+<<<<<<< HEAD
       :is(&:hover, &:hover > i) {
         color: var(--fontBlack);
       }
     }
   }
+=======
+			> a {
+				font-size: 3rem;
+				font-weight: 800;
+				color: var(--fontColor2);
+				transition: all .3s ease-in-out;
+			}
+		}
+	}
+
+	.company__information {
+		display: flex;
+        flex-direction: column;
+        gap: 5rem;
+
+		.row__title {
+			font-size: 2.3rem;
+			line-height: 1.5;
+			font-weight: 700;
+			color: var(--fontBlack);
+			margin-bottom: 1rem;
+			display: block;
+		}
+
+		.linkBox__link {
+			line-height: 1.5;
+            font-weight: 400;
+
+			:is(&:hover, &:hover > i) {
+				color: var(--fontBlack);
+			}
+		}
+	}
+
+	@media (width < 768px) {
+		padding: 0 2rem;
+
+		&.--active {
+			width: 100%;
+			grid-template-rows: 8rem min-content min-content;
+		}
+
+		.gnb {
+			gap: 3.5rem;
+	
+			> li {
+	
+				> a {
+					font-size: 2.3rem;
+				}
+			}
+		}
+
+		.company__information {
+			gap: 5rem;
+	
+			.row__title {
+				font-size: 1.8rem;
+			}
+		}
+	}
+>>>>>>> bbbd5a186cab72a325e04b43455ce93f8f8ccd33
 }
 /* 사이드메뉴 영역 끝 */
 
@@ -911,6 +1041,7 @@ img {
             padding: 3.4rem 3.8rem 3.3rem 6.3rem;
             width: calc(100% - 29.1rem);
 
+<<<<<<< HEAD
             .information__textBox {
               width: 100%;
               display: flex;
@@ -1429,6 +1560,529 @@ img {
       }
     }
   }
+=======
+			/* 에피소드 소개 영역 CSS */
+			&.section03 {
+				background-color: var(--bgWhite);
+				padding: 14rem 0 15.17rem;
+
+				.contents {
+					width: 100%;
+					display: flex;
+					gap: 25.5rem;
+					justify-content: space-between;
+					align-items: center;
+
+					/* 
+						소개영역과 이미지 영역을 flex를 통해 넓이값을 고정시킨다.
+					*/
+					.contents__textBox {
+						flex: 0 0 40%;
+
+						.section__title {
+							margin-bottom: 2.8rem;
+						}
+
+						.textBox__information {
+
+							.information__episode {
+								display: flex;
+								gap: 2.1rem;
+								align-items: center;
+								margin-bottom: 3rem;
+							}
+
+							.information__textarea {
+								margin-bottom: 3.13rem;
+							}
+
+							.textarea__text {
+								color: var(--fontBlack);
+								font-family: var(--subFont);
+								font-size: 1.7rem;
+								font-weight: 400;
+								line-height: 2.703rem;
+								margin-bottom: 2rem;
+
+								&:last-of-type {
+									margin-bottom: 0;
+								}
+							}
+						}
+					}
+
+					.contents__pictureBox {
+						position: relative;
+						flex: 0 0 40%;
+
+						/* 이미지 왼쪽 텍스트를 90도 회전시켜 absolute로 배치하는 작업을 했고 zindex를 이미지보다 아래로 주어 밑에 보이도록 작업했습니다. */
+						.pictureBox__text {
+							position: absolute;
+							top: 50%;
+							left: -50%;
+							translate: -25px -50%;
+							transform: rotate(-90deg);
+							color: var(--fontColor3);
+							font-size: 9.2rem;
+							font-weight: 600;
+							line-height: 2.703rem;
+							z-index: 1;
+						}
+
+						img {
+							position: relative;
+							z-index: 2;
+							border-radius: 1rem;
+							box-shadow: var(--boxShadow);
+						}
+					}
+				}
+			}
+
+			/* 인기 팟캐스트 영역 CSS */
+			&.section04 {
+				background-color: var(--bg2);
+				padding: 9.2rem 0 10.7rem;
+				text-align: center;
+				overflow: hidden;
+
+				.swiper__list {
+					/* 이미지를 영역 밖으로 보내기 위해 position을 사용했고 부모에 높이값을 주어 커스텀했습니다. */
+					position: relative;
+					height: 46rem;
+
+					.swiper-wrapper {
+						position: absolute;
+						top: 0;
+						left: 50%;
+						translate: -50% 0;
+
+						display: flex;
+						gap: 8rem;
+						flex-direction: row;
+						/* justify-content: center; */
+						/* margin-bottom: 6rem; */
+					}
+
+					.swiper-slide {
+						display: flex;
+						width: 78.5rem;
+						height: 39.25rem;
+						justify-content: center;
+						align-items: center;
+						border-radius: 1rem;
+						background-color: var(--bgWhite);
+						box-shadow: var(--boxShadow);
+						overflow: hidden;
+
+						.slide__img {
+							width: 50%;
+							height: 100%;
+
+							>a {
+								width: 100%;
+								height: 100%;
+								display: block;
+							}
+						}
+
+						.slide__information {
+							width: 50%;
+							padding: 0 4.5rem;
+							text-align: left;
+						}
+					}
+				}
+
+				/* dot 버튼도 슬라이드 이미지와 같이 absolute을 사용하여 커스텀했습니다. */
+				.swiper__options {
+					position: absolute;
+					bottom: 0;
+					left: 50%;
+					translate: -50% 0;
+
+					width: 100%;
+					display: inline-flex;
+					justify-content: center;
+				}
+			}
+
+			/* 필수 에피소드 영역 CSS */
+			&.section05 {
+				padding: 12.4rem 0 21rem;
+
+				.contents {
+
+					.section__headingBox {
+						display: flex;
+						justify-content: space-between;
+						align-items: center;
+
+						.section__title {
+							margin-bottom: 0;
+						}
+					}
+				}
+			}
+
+			/* 비디오 영역 CSS */
+			&.section06 {
+				height: 71.0609rem;
+				background: url(../img/video__img.png) no-repeat;
+				background-size: cover;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				.video__btnBox {
+					width: 9rem;
+					aspect-ratio: 1;
+					background-color: var(--bgWhite);
+					border-radius: 50%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+				}
+			}
+
+			/* 호스트소개 영역 CSS */
+			&.section07 {
+				padding: 12.7rem 0 13.8rem;
+
+				.section__headingBox {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+
+					.section__title {
+						margin-bottom: 0;
+					}
+				}
+
+				.gird__list {
+
+					.card__imgBox {
+						height: 44.7219rem;
+					}
+
+					.card__informationBox {
+
+						.informationBox__title {
+							margin-bottom: 0.8rem;
+
+							&::after {
+								display: none;
+							}
+						}
+
+						.informationBox__job {
+							margin-bottom: 2.53rem;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	/* 팟캐스트페이지  */
+	&.podcast--page {
+		margin: 10rem 0;
+
+		.section {
+
+			&.section01 {
+
+				.gird__list {
+					/* 사용자 편의를 위해 card를 두개씩 배치 */
+					grid-template-columns: repeat(2, 1fr);
+					/* 정중앙 배열을 위해 justify-content와 align-items를 center에 설정  */
+					justify-content: center;
+					align-items: center;
+
+					.card__informationBox {
+						display: flex;
+						flex-direction: column;
+						box-shadow: var(--boxShadow);
+						border-radius: 1.5rem;
+						overflow: hidden;
+						padding: 0;
+						/* card에 이미지 꽉 채워서 보여주기 위해 padding을 0으로 줌 */
+
+						.content {
+							padding: 2rem 4rem;
+
+							.content-title {
+								display: inline-block;
+								text-decoration: none;
+								font-weight: bold;
+								font-size: 2.5rem;
+								color: var(--fontBlack);
+								position: relative;
+
+								&::after {
+									content: '';
+									display: block;
+									width: 0;
+									height: 0.2rem;
+									background-color: var(--bgBlack);
+									transition: width 0.7s;
+									position: absolute;
+									bottom: 0;
+									left: 0;
+								}
+
+								&:hover::after {
+									width: 100%;
+								}
+							}
+
+							/* 모바일 버전 hover효과 해제 */
+							@media (width < 768px) {
+								.content-title {
+									&:hover::after {
+										display: none;
+									}
+								}
+							}
+
+							.content-info {
+								padding: 1rem;
+
+								.content-num {
+									color: var(--fontColor2);
+									font-size: 1.5rem;
+								}
+
+								.content-detail {
+									display: inline-block;
+									text-decoration: none;
+									color: var(--fontBlack);
+									font-size: 2rem;
+									font-weight: bold;
+
+									&::after {
+										content: '';
+										display: block;
+										width: 0;
+										height: 0.2rem;
+										background-color: var(--bgBlack);
+										transition: width 0.7s;
+									}
+
+									&:hover::after {
+										width: 100%;
+									}
+								}
+
+								/* 모바일 버전 hover효과 해제 */
+								@media (width < 768px) {
+									.content-detail {
+										&:hover::after {
+											display: none;
+										}
+									}
+								}
+							}
+						}
+
+						&:hover .card__imgBox img {
+							transform: scale(1.15);
+							opacity: 0.7;
+							transition: transform 0.7s, opacity 0.7s;
+						}
+					}
+				}
+
+				/* 모바일 환경에서는 card를 한개씩 배치 */
+				@media (width < 768px) {
+					.gird__list {
+						grid-template-columns: repeat(1, 1fr);
+					}
+				}
+			}
+		}
+	}
+
+	@media (width < 1024px) {
+
+		&.main--page {
+
+			.section {
+
+				&.section01 {
+
+					.section01__textBox {
+
+						.textBox__title {
+							font-size: 5.5rem;
+							line-height: 6.5rem;
+						}
+	
+						.textBox__information {
+							font-size: 1.6rem;
+						}
+
+						.textBox__btnWrap {
+							gap: 2rem;
+
+							.btn {
+								width: 15rem;
+							}
+						}
+					}
+				}
+
+				&.section03 {
+
+					.contents {
+						gap: 3rem;
+						align-items: flex-start;
+
+						.contents__textBox {
+							flex: 0 0 calc(100% - 35% - 3rem);
+						}
+
+						.contents__pictureBox {
+							flex: 0 0 35%;
+
+							.pictureBox__text {
+								translate: 0 0;
+								font-size: 3.8rem;
+								top: auto;
+								bottom: -2rem;
+								left: 0;
+								transform: rotate(0);
+							}
+						}
+					}
+				}
+
+				&.section04 {
+
+					.swiper__list {
+						height: 40rem;
+
+						.swiper-wrapper {
+							gap: 3rem;
+						}
+
+						.swiper-slide {
+							width: 65rem;
+							height: 35rem;
+						}
+					}
+				}
+
+				&.section07 {
+
+					.gird__list {
+
+						.card__imgBox {
+							height: 35rem;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@media (width < 768px) {
+		&.main--page {
+
+			.section {
+
+				&.section01 {
+					height: 70rem;
+					background-position: left;
+
+					.section01__textBox {
+
+						.textBox__title {
+							font-size: 4.3rem;
+							line-height: 5.3rem;
+						}
+	
+						.textBox__information {
+							font-size: 1.8rem;
+							line-height: 2.8rem;
+							margin-bottom: 3rem;
+						}
+	
+						.textBox__btnWrap {
+							flex-direction: column;
+							gap: 1.5rem;
+							align-items: flex-start;
+
+							.btn {
+								width: 20rem;
+							}
+						}
+					}
+				}
+
+				&.section03 {
+					padding: 7rem 0;
+
+					.contents {
+						flex-direction: column;
+
+						.contents__textBox {
+							order: 2;
+							width: 100%;
+						}
+
+						.contents__pictureBox {
+							order: 1;
+							width: 100%;
+						}
+					}
+				}
+
+				&.section04 {
+					padding: 7rem 0;
+
+					.contents {
+
+						.section__headingBox {
+							text-align: center;
+						}
+					}
+
+					.swiper__list {
+
+						.swiper-slide {
+							width: 25rem;
+							height: auto;
+							flex-direction: column;
+
+							.slide__img {
+								width: 100%;
+								height: 20rem;
+							}
+
+							.slide__information {
+								width: 100%;
+								padding: 1.5rem;
+
+								.information__title {
+									font-size: 1.8rem;
+								}
+							}
+						}
+					}
+				}
+
+				&.section05 {
+					padding: 7rem 0;
+				}
+
+				&.section07 {
+					padding: 7rem 0;
+				}
+			}
+		}
+	}
+>>>>>>> bbbd5a186cab72a325e04b43455ce93f8f8ccd33
 }
 /* 본문 영역 끝 */
 

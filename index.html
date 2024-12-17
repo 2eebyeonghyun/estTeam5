@@ -147,7 +147,7 @@
         <h2 class="a11y-hidden">에피소드 미리보기 영역</h2>
         <section class="section section02">
             <div class="inner">
-                <div class="section02__episodeBox">
+                <div class="episodeBox">
                     <div class="episodeBox__img">
                         <img src="img/Essential_img1.png" alt="Timmy Mike">
                     </div>
@@ -176,11 +176,11 @@
                                     <button class="btn-play"><span class="a11y-hidden">play</span></button>
                                 </div>
                                 <div class="options__button options__button1">
-                                    <button class="btn-skip10"><span class="a11y-hidden">skip 10s</span></button>
+                                    <button class="btn-skip10"><span class="a11y-hidden">backwark</span><i class="fa-solid fa-backward"></i></button>
                                     <div class="button__text">10s</div>
                                 </div>
                                 <div class="options__button options__button2">
-                                    <button class="btn-jump10"><span class="a11y-hidden">jump 10s</span></button>
+                                    <button class="btn-jump10"><span class="a11y-hidden">forward</span><i class="fa-solid fa-forward"></i></button>
                                     <div class="button__text">10s</div>
                                 </div>
                                 <div class="options__timeline">
@@ -193,6 +193,9 @@
                                 </div>
                                 <div class="options__sound">
                                     <a href="#none" class="btn-mute"><span class="a11y-hidden">mute</span></a>
+                                    <div class="sound__options">
+                                        <input type="range" value="50" min="0" max="100" step="1" class="options_range">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -265,7 +268,11 @@
                                     <p class="categoryBox__text">Episode 8 •</p>
                                     <p class="categoryBox__text">Technology</p>
                                 </span>
-                                <a href="#none" class="information__title">SRKP selects: keep your watch</a>
+
+                                <div class="informationBox__titleBox">
+                                    <a href="#none" class="informationBox__title">SRKP selects: keep your watch</a>
+                                </div>
+
                                 <a href="#none" class="btn-episode">Episode page <img src="img/ico_next.svg" alt="link button"></a>
                             </div>
                         </li>
@@ -280,7 +287,11 @@
                                     <p class="categoryBox__text">Episode 8 •</p>
                                     <p class="categoryBox__text">Technology</p>
                                 </span>
-                                <a href="#none" class="information__title">SRKP selects: keep your watch</a>
+
+                                <div class="informationBox__titleBox">
+                                    <a href="#none" class="informationBox__title">SRKP selects: keep your watch</a>
+                                </div>
+
                                 <a href="#none" class="btn-episode">Episode page <img src="img/ico_next.svg" alt="link button"></a>
                             </div>
                         </li>
@@ -295,7 +306,11 @@
                                     <p class="categoryBox__text">Episode 8 •</p>
                                     <p class="categoryBox__text">Technology</p>
                                 </span>
-                                <a href="#none" class="information__title">SRKP selects: keep your watch</a>
+
+                                <div class="informationBox__titleBox">
+                                    <a href="#none" class="informationBox__title">SRKP selects: keep your watch</a>
+                                </div>
+
                                 <a href="#none" class="btn-episode">Episode page <img src="img/ico_next.svg" alt="link button"></a>
                             </div>
                         </li>
@@ -310,7 +325,11 @@
                                     <p class="categoryBox__text">Episode 8 •</p>
                                     <p class="categoryBox__text">Technology</p>
                                 </span>
-                                <a href="#none" class="information__title">SRKP selects: keep your watch</a>
+
+                                <div class="informationBox__titleBox">
+                                    <a href="#none" class="informationBox__title">SRKP selects: keep your watch</a>
+                                </div>
+
                                 <a href="#none" class="btn-episode">Episode page <img src="img/ico_next.svg" alt="link button"></a>
                             </div>
                         </li>
@@ -325,7 +344,11 @@
                                     <p class="categoryBox__text">Episode 8 •</p>
                                     <p class="categoryBox__text">Technology</p>
                                 </span>
-                                <a href="#none" class="information__title">SRKP selects: keep your watch</a>
+
+                                <div class="informationBox__titleBox">
+                                    <a href="#none" class="informationBox__title">SRKP selects: keep your watch</a>
+                                </div>
+
                                 <a href="#none" class="btn-episode">Episode page <img src="img/ico_next.svg" alt="link button"></a>
                             </div>
                         </li>
@@ -366,7 +389,9 @@
                                     <p class="categoryBox__text">Technology</p>
                                 </span>
 
-                                <a href="#none" class="informationBox__title">SRKP selects: how the new ages work</a>
+                                <div class="informationBox__titleBox">
+                                    <a href="#none" class="informationBox__title">SRKP selects: how the new ages work</a>
+                                </div>
                                 
                                 <div class="informationBox__share_list">
                                     <a href="#none" class="share__title"><span>Share</span></a>
@@ -386,8 +411,10 @@
                                     <p class="categoryBox__text">Technology</p>
                                 </span>
 
-                                <a href="#none" class="informationBox__title">SRKP selects: a new mindset today</a>
-                                
+                                <div class="informationBox__titleBox">
+                                    <a href="#none" class="informationBox__title">SRKP selects: a new mindset today</a>
+                                </div>
+
                                 <div class="informationBox__share_list">
                                     <a href="#none" class="share__title"><span>Share</span></a>
                                 </div>
@@ -406,8 +433,10 @@
                                     <p class="categoryBox__text">Technology</p>
                                 </span>
 
-                                <a href="#none" class="informationBox__title">SRKP selects: the latest trends now</a>
-                                
+                                <div class="informationBox__titleBox">
+                                    <a href="#none" class="informationBox__title">SRKP selects: the latest trends now</a>
+                                </div>
+
                                 <div class="informationBox__share_list">
                                     <a href="#none" class="share__title"><span>Share</span></a>
                                 </div>
@@ -426,8 +455,10 @@
                                     <p class="categoryBox__text">Technology</p>
                                 </span>
 
-                                <a href="#none" class="informationBox__title">SRKP selects: organize your day</a>
-                                
+                                <div class="informationBox__titleBox">
+                                    <a href="#none" class="informationBox__title">SRKP selects: organize your day</a>
+                                </div>
+
                                 <div class="informationBox__share_list">
                                     <a href="#none" class="share__title"><span>Share</span></a>
                                 </div>
@@ -446,8 +477,10 @@
                                     <p class="categoryBox__text">Technology</p>
                                 </span>
 
-                                <a href="#none" class="informationBox__title">SRKP selects: how to plan your work</a>
-                                
+                                <div class="informationBox__titleBox">
+                                    <a href="#none" class="informationBox__title">SRKP selects: how to plan your work</a>
+                                </div>
+
                                 <div class="informationBox__share_list">
                                     <a href="#none" class="share__title"><span>Share</span></a>
                                 </div>
@@ -466,8 +499,10 @@
                                     <p class="categoryBox__text">Technology</p>
                                 </span>
 
-                                <a href="#none" class="informationBox__title">SRKP selects: trying the best phones</a>
-                                
+                                <div class="informationBox__titleBox">
+                                    <a href="#none" class="informationBox__title">SRKP selects: trying the best phones</a>
+                                </div>
+
                                 <div class="informationBox__share_list">
                                     <a href="#none" class="share__title"><span>Share</span></a>
                                 </div>
