@@ -1,49 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--  ㅇ-->
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOSt1</title>
+    <title>Team5 Project : Resonator</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/host.css">
 
     <!-- Fontawesome CDN Link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-
-    <!-- css -->
-    <link rel="stylesheet" href="../css/host.css">
 </head>
 
 <body>
-
-
     <!-- HEADER 영역 시작 -->
     <header class="header">
-        <h1 class="logo"><a href="/" title="Rosonator"><img src="../img/logo.png" alt="Resonator"></a></h1>
+        <h1 class="logo"><a href="../index.html" title="Rosonator"><img src="../img/logo.png" alt="Resonator"></a></h1>
 
         <!-- 
-                웹 접근성을 고려하여 accessibility 클래스를 통한 문구구성 및 네비게이션 버튼 구성
-            -->
+            웹 접근성을 고려하여 accessibility 클래스를 통한 문구구성 및 네비게이션 버튼 구성
+        -->
         <h2 class="a11y-hidden">메뉴</h2>
         <nav>
             <ul class="gnb">
-                <li class="--active"><a href="#none">Homes</a></li>
-                <li><a href="podcast/">Podcast</a></li>
-                <li><a href="host/">Host</a></li>
-                <li><a href="Episode/">Episode</a></li>
+                <li><a href="../index.html">Homes</a></li>
+                <li><a href="../podcast/">Podcast</a></li>
+                <li class="--active"><a href="host/">Host</a></li>
+                <li><a href="../Episode/">Episode</a></li>
                 <li><a href="#none">Shop</a></li>
             </ul>
         </nav>
 
         <!-- 
-                유틸리티 영역을 만들어 서치버튼과 메뉴버튼을 구성
-            -->
+            유틸리티 영역을 만들어 서치버튼과 메뉴버튼을 구성
+        -->
         <h2 class="a11y-hidden">유틸리티 메뉴</h2>
         <div class="utillity">
             <button type="button" class="btn-search"><span>Search</span></button>
@@ -91,10 +85,10 @@
         <h2 class="a11y-hidden">메뉴</h2>
         <nav>
             <ul class="gnb">
-                <li class="--active"><a href="#none">Homes</a></li>
-                <li><a href="podcast/">Podcast</a></li>
-                <li><a href="host/">Host</a></li>
-                <li><a href="Episode/">Episode</a></li>
+                <li><a href="../index.html">Homes</a></li>
+                <li><a href="../podcast/">Podcast</a></li>
+                <li class="--active"><a href="host/">Host</a></li>
+                <li><a href="../Episode/">Episode</a></li>
                 <li><a href="#none">Shop</a></li>
             </ul>
         </nav>
@@ -120,144 +114,184 @@
             <div class="information__row">
                 <span class="row__title">Follow us on:</span>
                 <div class="list__linkBox sns">
-                    <a href="#none" class="linkBox__link"><span class="a11y-hidden">Facebook</span><i
-                            class="fa-brands fa-facebook"></i></a>
-                    <a href="#none" class="linkBox__link"><span class="a11y-hidden">Twitter</span><i
-                            class="fa-brands fa-twitter"></i></a>
-                    <a href="#none" class="linkBox__link"><span class="a11y-hidden">Instagram</span><i
-                            class="fa-brands fa-instagram"></i></a>
-                    <a href="#none" class="linkBox__link"><span class="a11y-hidden">Youtube</span><i
-                            class="fa-brands fa-youtube"></i></a>
+                    <a href="#none" class="linkBox__link"><span class="a11y-hidden">Facebook</span><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#none" class="linkBox__link"><span class="a11y-hidden">Twitter</span><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#none" class="linkBox__link"><span class="a11y-hidden">Instagram</span><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#none" class="linkBox__link"><span class="a11y-hidden">Youtube</span><i class="fa-brands fa-youtube"></i></a>
                 </div>
             </div>
         </div>
     </aside>
     <!-- 사이드메뉴 영역 끝 -->
 
-
-    <!DOCTYPE html>
-    <html lang="en">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>host_test</title>
-        <!-- css -->
-        <link rel="stylesheet" href="host1.css">
-    </head>
-
-    <body>
+    <!-- SUBHEAD 영역 시작-->
+    <div class="subhead host__subhead">
+        <div class="inner">
+            <span class="subtitle">Title Name</span>
+        </div>
+    </div>
+    <!-- SUBHEAD 영역 끝-->
 
 
-        <!-- HEADER 밑에 큰 이미지 -->
-        <article class="img_team">
-            <div class="info text_ourteam">Our Team</div>
-            <div class="info text_meet">Meet the Host</div>
-        </article>
+    <!-- 본문 영역 -->
+    <main class="main host--page">
+        <h2 class="a11y-hidden">호스트소개 영역</h2>
+        <section class="section section01">
+            <div class="inner">
+                <div class="section__headingBox sub__headingBox">
+                    <h2 class="section__title">Meet your hosts:</h2>
+                </div>
 
-        <!-- 소개글 -->
-        <section>
-            <div class="info text_1stline">Meet Our Pods Squad</div>
-            <div class="info text_2ndline">United Voices, Limitless Stories </div>
-            <div class="info text_3rdline">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id ante eu
-                purus
-                luctus viverra id vitae augue.</div>
+                <ul class="gird__list">
+                    <li class="list__card">
+                        <div class="card__imgBox">
+                            <img class="imgBox__image" src="../img/host_img1.png" alt="Bella Jimenez">
+                        </div>
+                        <div class="card__overlay">
+                            <div class="overlay__information">
+                                <h3 class="information__name informationBox__title">Bella Jimenez</h3>
+                                <p class="information__job informationBox__job">Professional Host</p>
+
+                                <ul class="informationBox__sns">
+                                    <li><a href="#none" class="btn-facebook"><span class="a11y-hidden">Facebook</span></a></li>
+                                    <li><a href="#none" class="btn-instagram"><span class="a11y-hidden">Instagram</span></a></li>
+                                    <li><a href="#none" class="btn-twitter"><span class="a11y-hidden">Twitter</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="list__card">
+                        <div class="card__imgBox">
+                            <img class="imgBox__image" src="../img/host_img2.png" alt="Edwin Watson">
+                        </div>
+                        <div class="card__overlay">
+                            <div class="overlay__information">
+                                <h3 class="information__name informationBox__title">Edwin Watson</h3>
+                                <p class="information__job informationBox__job">Professional Host</p>
+
+                                <ul class="informationBox__sns">
+                                    <li><a href="#none" class="btn-facebook"><span class="a11y-hidden">Facebook</span></a></li>
+                                    <li><a href="#none" class="btn-instagram"><span class="a11y-hidden">Instagram</span></a></li>
+                                    <li><a href="#none" class="btn-twitter"><span class="a11y-hidden">Twitter</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="list__card">
+                        <div class="card__imgBox">
+                            <img class="imgBox__image" src="../img/host_img3.png" alt="Caitlin Henderson">
+                        </div>
+                        <div class="card__overlay">
+                            <div class="overlay__information">
+                                <h3 class="information__name informationBox__title">Caitlin Henderson</h3>
+                                <p class="information__job informationBox__job">Professional Host</p>
+
+                                <ul class="informationBox__sns">
+                                    <li><a href="#none" class="btn-facebook"><span class="a11y-hidden">Facebook</span></a></li>
+                                    <li><a href="#none" class="btn-instagram"><span class="a11y-hidden">Instagram</span></a></li>
+                                    <li><a href="#none" class="btn-twitter"><span class="a11y-hidden">Twitter</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="list__card">
+                        <div class="card__imgBox">
+                            <img class="imgBox__image" src="../img/host_img4.jpg" alt="Andrew Jackson">
+                        </div>
+                        <div class="card__overlay">
+                            <div class="overlay__information">
+                                <h3 class="information__name informationBox__title">Andrew Jackson</h3>
+                                <p class="information__job informationBox__job">Professional Host</p>
+
+                                <ul class="informationBox__sns">
+                                    <li><a href="#none" class="btn-facebook"><span class="a11y-hidden">Facebook</span></a></li>
+                                    <li><a href="#none" class="btn-instagram"><span class="a11y-hidden">Instagram</span></a></li>
+                                    <li><a href="#none" class="btn-twitter"><span class="a11y-hidden">Twitter</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="list__card">
+                        <div class="card__imgBox">
+                            <img class="imgBox__image" src="../img/host_img5.jpg" alt="Isobel Marks">
+                        </div>
+                        <div class="card__overlay">
+                            <div class="overlay__information">
+                                <h3 class="information__name informationBox__title">Isobel Marks</h3>
+                                <p class="information__job informationBox__job">Professional Host</p>
+
+                                <ul class="informationBox__sns">
+                                    <li><a href="#none" class="btn-facebook"><span class="a11y-hidden">Facebook</span></a></li>
+                                    <li><a href="#none" class="btn-instagram"><span class="a11y-hidden">Instagram</span></a></li>
+                                    <li><a href="#none" class="btn-twitter"><span class="a11y-hidden">Twitter</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="list__card">
+                        <div class="card__imgBox">
+                            <img class="imgBox__image" src="../img/host_img6.jpg" alt="Wesley Porter">
+                        </div>
+                        <div class="card__overlay">
+                            <div class="overlay__information">
+                                <h3 class="information__name informationBox__title">Wesley Porter</h3>
+                                <p class="information__job informationBox__job">Professional Host</p>
+
+                                <ul class="informationBox__sns">
+                                    <li><a href="#none" class="btn-facebook"><span class="a11y-hidden">Facebook</span></a></li>
+                                    <li><a href="#none" class="btn-instagram"><span class="a11y-hidden">Instagram</span></a></li>
+                                    <li><a href="#none" class="btn-twitter"><span class="a11y-hidden">Twitter</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </section>
 
-        <!-- host 소개 시작 -->
-        <div class="image_container">
-            <div class="image_box">
-                <div class="image_content">
-                    <img class="hosts" src="../img/host_img1.jpg" alt="Jaxon Kingslay의 사진입니다.">
-                    <div class="overlay"></div>
+        <h2 class="a11y-hidden">구독 서비스 영역</h2>
+        <section class="section section02">
+            <div class="inner">
+                <div class="subscriibe__box">
+                    <div class="box__textBox">
+                        <h3 class="textBox__title">What Do You Want to Hear Today? Subscribe For The Latest Episodes</h3>
+                        <p class="textBox__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia fugiat.</p>
+                    </div>
+
+                    <form action="?" class="box__form" name="subsFrm">
+                        <div class="form__row">
+                            <label for="email">
+                                <input type="email" name="email" class="__input email" id="email" placeholder="email">
+                            </label>
+    
+                            <button type="submit" class="btn-form"><span>Subscribe</span></button>
+                        </div>
+                    </form>
                 </div>
-                <h3>Jaxon Kingslay</h3>
-                <p>Professional Host</p>
             </div>
-
-            <div class="image_box">
-                <div class="image_content">
-                    <img class="hosts" src="../img/host_img2.jpg" alt="Celeste Harrington의 사진입니다.">
-                    <div class="overlay"></div>
-                </div>
-                <h3>Celeste Harrington</h3>
-                <p>Professional Host</p>
-            </div>
-
-            <div class="image_box">
-                <div class="image_content">
-                    <img class="hosts" src="../img/host_img3.jpg" alt="Sebastian Wilde의 사진입니다.">
-                    <div class="overlay"></div>
-                </div>
-                <h3>Sebastian Wilde</h3>
-                <p>Professional Host</p>
-            </div>
-
-            <div class="image_box">
-                <div class="image_content">
-                    <img class="hosts" src="../img/host_img4.jpg" alt="Landon Kensington의 사진입니다.">
-                    <div class="overlay"></div>
-                </div>
-                <h3>Landon Kensington</h3>
-                <p>Professional Host</p>
-            </div>
-
-            <div class="image_box">
-                <div class="image_content">
-                    <img class="hosts" src="../img/host_img5.jpg" alt="Adelaide Montgomery의 사진입니다.">
-                    <div class="overlay"></div>
-                </div>
-                <h3>Adelaide Montgomery</h3>
-                <p>Professional Host</p>
-            </div>
-
-            <div class="image_box">
-                <div class="image_content">
-                    <img class="hosts" src="../img/host_img6.jpg" alt="Harrison Beaumont의 사진입니다.">
-                    <div class="overlay"></div>
-                </div>
-                <h3>Harrison Beaumont</h3>
-                <p>Professional Host</p>
-            </div>
-        </div>
-        <!-- 호스트 소개 끝 -->
-
-        <!-- 호스트 사진 아래 구독란 시작-->
-        <!-- 구독 설명란 -->
-        <article class="img_mic">
-            <div class="text text_subscriibe">
-                What Do You Want to Hear Today? Subscribe For The Latest Episodes
-            </div>
-            <div class="text text_lorem">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia fugiat.</div>
-            <!-- 메일 작성란 -->
-            <input type="email" placeholder="  Email">
-            <button type="button" class="button">Subscribe</button>
-        </article>
-        <!-- 구독란 끝 -->
-
-
-
-    </body>
-
-    </html>
-
+        </section>
+    </main>
 
     <!-- FOOTER 영역 시작 -->
     <footer class="footer">
         <div class="inner">
             <div class="footer__content">
                 <div class="content__logo">
-                    <span class="logo__img"><img src="./img/footer_logo.png" alt="Resonator"></span>
+                    <span class="logo__img"><img src="../img/footer_logo.png" alt="Resonator"></span>
                     <p class="logo__text">The great connection.</p>
                 </div>
 
                 <div class="content__information">
-                    <h3 class="information__slogan">We collaborate with ambitious brands and people; let’s build
-                        something great together.</h3>
-
+                    <h3 class="information__slogan">We collaborate with ambitious brands and people; let’s build something great together.</h3>
+                    
                     <!-- 
-                            푸터 인포메이션 구성
-                        -->
+                        푸터 인포메이션 구성
+                    -->
                     <h2 class="a11y-hidden">회사 소개</h2>
                     <ul class="information__list">
                         <li>
@@ -280,21 +314,16 @@
                         <li>
                             <span class="list__title">Follow us on:</span>
                             <!-- 
-                                    SNS 메뉴 구성
-                                -->
+                                SNS 메뉴 구성
+                            -->
                             <h2 class="a11y-hidden">SNS 메뉴</h2>
                             <div class="list__linkBox sns">
-                                <a href="#none" class="linkBox__link"><span class="a11y-hidden">Facebook</span><i
-                                        class="fa-brands fa-facebook"></i></a>
-                                <a href="#none" class="linkBox__link"><span class="a11y-hidden">Twitter</span><i
-                                        class="fa-brands fa-twitter"></i></a>
-                                <a href="#none" class="linkBox__link"><span class="a11y-hidden">Instagram</span><i
-                                        class="fa-brands fa-instagram"></i></a>
-                                <a href="#none" class="linkBox__link"><span class="a11y-hidden">Youtube</span><i
-                                        class="fa-brands fa-youtube"></i></a>
+                                <a href="#none" class="linkBox__link"><span class="a11y-hidden">Facebook</span><i class="fa-brands fa-facebook"></i></a>
+                                <a href="#none" class="linkBox__link"><span class="a11y-hidden">Twitter</span><i class="fa-brands fa-twitter"></i></a>
+                                <a href="#none" class="linkBox__link"><span class="a11y-hidden">Instagram</span><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#none" class="linkBox__link"><span class="a11y-hidden">Youtube</span><i class="fa-brands fa-youtube"></i></a>
                             </div>
-                            <p class="list__link__last">© 2021 <a href="#none">Qode Interactive.</a> All Rights Reserved
-                            </p>
+                            <p class="list__link__last">© 2021 <a href="#none">Qode Interactive.</a> All Rights Reserved</p>
                         </li>
                     </ul>
                 </div>
@@ -303,5 +332,6 @@
     </footer>
     <!-- FOOTER 영역 끝 -->
 </body>
-
+<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script src="../js/main.js" defer></script>
 </html>
