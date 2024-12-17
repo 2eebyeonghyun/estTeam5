@@ -13,7 +13,7 @@
         rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/podcast.css">
 
     <!-- Fontawesome CDN Link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
@@ -72,182 +72,74 @@
     </div>
     <!-- SUBHEAD 영역 끝-->
 
-    <!-- card들 배치하는 main section 시작 -->
+    <!-- MAIN SECTION 영역 시작 -->
     <main class="main podcast--page">
         <section class="section section01">
             <div class="inner">
+
+                <div class="section__headingBox">
+                    <h2 class="section__title">All podcasts:</h2>
+                </div>
+
                 <div class="gird__list">
-                    <!-- card 1개, card안에는 이미지와 content title, episode -->
+
+
                     <div class="card__informationBox">
-                        <!-- 나중에 image를 클릭하면 다른 페이지로 전환하기 위해 a링크 추가 -->
+                        <!-- card 상단 image 부분 -->
                         <a href="">
-                            <!-- card 상단 image 부분 -->
                             <div class="card__imgBox">
-                                <img src="../img/podcast_img1.png" alt="podcast-main">
+                                <img src="../img/podcast_img1.png" alt="podcast__img1">
                             </div>
                         </a>
                         <!-- card 하단 content(글) 부분 -->
-                        <div class="content">
-                            <!-- title에 링크를 나중에 title 클릭하면 다른 페이지로 전환하기 위해서 -->
-                            <a href="" class="content-title">content title</a>
-                            <!-- content info로 에피소드 번호와 에피소드 타이틀을 미리 보여주기 위해 div로 묶음-->
-                            <div class="content-info">
-                                <h3 class="content-num">Episode 1</h3>
-                                <a href="" class="content-detail">Episode title Episode title Episode title</a>
+                        <div class="card__content">
+                            <a href="" class="content__title">content title</a>
+
+                            <div class="content__info">
+                                <h3 class="content__num">Episode 1</h3>
+                                <div class="info__playnsubtitle">
+                                    <div class="options__button options__play">
+                                        <button class="btn-play"><span class="a11y-hidden">play</span></button>
+                                    </div>
+                                    <a href="" class="content__detail">Episode title Episode title Episode title</a>
+                                </div>
                             </div>
-                            <div class="content-info">
-                                <h3 class="content-num">Episode 2</h3>
-                                <a href="" class="content-detail">Episode title Episode title Episode title</a>
+                            <div class="content__info">
+                                <h3 class="content__num">Episode 2</h3>
+                                <div class="info__playnsubtitle">
+                                    <div class="options__button options__play">
+                                        <button class="btn-play"><span class="a11y-hidden">play</span></button>
+                                    </div>
+                                    <a href="" class="content__detail">Episode title Episode title Episode title</a>
+                                </div>
                             </div>
-                            <div class="content-info">
-                                <h3 class="content-num">Episode 3</h3>
-                                <a href="" class="content-detail">Episode title Episode title Episode title</a>
+                            <div class="content__info">
+                                <h3 class="content__num">Episode 3</h3>
+                                <div class="info__playnsubtitle">
+                                    <div class="options__button options__play">
+                                        <button class="btn-play"><span class="a11y-hidden">play</span></button>
+                                    </div>
+                                    <a href="" class="content__detail">Episode title Episode title Episode title</a>
+                                </div>
                             </div>
+
                         </div>
-                    </div>
-                    <!-- card 1개, card안에는 이미지와 content title, episode -->
-                    <div class="card__informationBox">
-                        <!-- 나중에 image를 클릭하면 다른 페이지로 전환하기 위해 a링크 추가 -->
-                        <a href="">
-                            <!-- card 상단 image 부분 -->
-                            <div class="card__imgBox">
-                                <img src="../img/podcast_img1.png" alt="podcast-main">
-                            </div>
-                        </a>
-                        <!-- card 하단 content(글) 부분 -->
-                        <div class="content">
-                            <!-- title에 링크를 나중에 title 클릭하면 다른 페이지로 전환하기 위해서 -->
-                            <a href="" class="content-title">content title</a>
-                            <!-- content info로 에피소드 번호와 에피소드 타이틀을 미리 보여주기 위해 div로 묶음-->
-                            <div class="content-info">
-                                <h3 class="content-num">Episode 1</h3>
-                                <a href="" class="content-detail">Episode title Episode title Episode title</a>
-                            </div>
-                            <div class="content-info">
-                                <h3 class="content-num">Episode 2</h3>
-                                <a href="" class="content-detail">Episode title Episode title Episode title</a>
-                            </div>
-                            <div class="content-info">
-                                <h3 class="content-num">Episode 3</h3>
-                                <a href="" class="content-detail">Episode title Episode title Episode title</a>
-                            </div>
+
+                        <div class="card__footer">
+                            <a href="#none" class="btn-episode">
+                                View All Episodes
+                                <img src="../img/ico_next.svg" alt="link button">
+                            </a>
                         </div>
+
                     </div>
-                    <!-- card 1개, card안에는 이미지와 content title, episode -->
-                    <div class="card__informationBox">
-                        <!-- 나중에 image를 클릭하면 다른 페이지로 전환하기 위해 a링크 추가 -->
-                        <a href="">
-                            <!-- card 상단 image 부분 -->
-                            <div class="card__imgBox">
-                                <img src="../img/podcast_img1.png" alt="podcast-main">
-                            </div>
-                        </a>
-                        <!-- card 하단 content(글) 부분 -->
-                        <div class="content">
-                            <!-- title에 링크를 나중에 title 클릭하면 다른 페이지로 전환하기 위해서 -->
-                            <a href="" class="content-title">content title</a>
-                            <!-- content info로 에피소드 번호와 에피소드 타이틀을 미리 보여주기 위해 div로 묶음-->
-                            <div class="content-info">
-                                <h3 class="content-num">Episode 1</h3>
-                                <a href="" class="content-detail">Episode title Episode title Episode title</a>
-                            </div>
-                            <div class="content-info">
-                                <h3 class="content-num">Episode 2</h3>
-                                <a href="" class="content-detail">Episode title Episode title Episode title</a>
-                            </div>
-                            <div class="content-info">
-                                <h3 class="content-num">Episode 3</h3>
-                                <a href="" class="content-detail">Episode title Episode title Episode title</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- card 1개, card안에는 이미지와 content title, episode -->
-                    <div class="card__informationBox">
-                        <!-- 나중에 image를 클릭하면 다른 페이지로 전환하기 위해 a링크 추가 -->
-                        <a href="">
-                            <!-- card 상단 image 부분 -->
-                            <div class="card__imgBox">
-                                <img src="../img/podcast_img1.png" alt="podcast-main">
-                            </div>
-                        </a>
-                        <!-- card 하단 content(글) 부분 -->
-                        <div class="content">
-                            <!-- title에 링크를 나중에 title 클릭하면 다른 페이지로 전환하기 위해서 -->
-                            <a href="" class="content-title">content title</a>
-                            <!-- content info로 에피소드 번호와 에피소드 타이틀을 미리 보여주기 위해 div로 묶음-->
-                            <div class="content-info">
-                                <h3 class="content-num">Episode 1</h3>
-                                <a href="" class="content-detail">Episode title Episode title Episode title</a>
-                            </div>
-                            <div class="content-info">
-                                <h3 class="content-num">Episode 2</h3>
-                                <a href="" class="content-detail">Episode title Episode title Episode title</a>
-                            </div>
-                            <div class="content-info">
-                                <h3 class="content-num">Episode 3</h3>
-                                <a href="" class="content-detail">Episode title Episode title Episode title</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- card 1개, card안에는 이미지와 content title, episode -->
-                    <div class="card__informationBox">
-                        <!-- 나중에 image를 클릭하면 다른 페이지로 전환하기 위해 a링크 추가 -->
-                        <a href="">
-                            <!-- card 상단 image 부분 -->
-                            <div class="card__imgBox">
-                                <img src="../img/podcast_img1.png" alt="podcast-main">
-                            </div>
-                        </a>
-                        <!-- card 하단 content(글) 부분 -->
-                        <div class="content">
-                            <!-- title에 링크를 나중에 title 클릭하면 다른 페이지로 전환하기 위해서 -->
-                            <a href="" class="content-title">content title</a>
-                            <!-- content info로 에피소드 번호와 에피소드 타이틀을 미리 보여주기 위해 div로 묶음-->
-                            <div class="content-info">
-                                <h3 class="content-num">Episode 1</h3>
-                                <a href="" class="content-detail">Episode title Episode title Episode title</a>
-                            </div>
-                            <div class="content-info">
-                                <h3 class="content-num">Episode 2</h3>
-                                <a href="" class="content-detail">Episode title Episode title Episode title</a>
-                            </div>
-                            <div class="content-info">
-                                <h3 class="content-num">Episode 3</h3>
-                                <a href="" class="content-detail">Episode title Episode title Episode title</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- card 1개, card안에는 이미지와 content title, episode -->
-                    <div class="card__informationBox">
-                        <!-- 나중에 image를 클릭하면 다른 페이지로 전환하기 위해 a링크 추가 -->
-                        <a href="">
-                            <!-- card 상단 image 부분 -->
-                            <div class="card__imgBox">
-                                <img src="../img/podcast_img1.png" alt="podcast-main">
-                            </div>
-                        </a>
-                        <!-- card 하단 content(글) 부분 -->
-                        <div class="content">
-                            <!-- title에 링크를 나중에 title 클릭하면 다른 페이지로 전환하기 위해서 -->
-                            <a href="" class="content-title">content title</a>
-                            <!-- content info로 에피소드 번호와 에피소드 타이틀을 미리 보여주기 위해 div로 묶음-->
-                            <div class="content-info">
-                                <h3 class="content-num">Episode 1</h3>
-                                <a href="" class="content-detail">Episode title Episode title Episode title</a>
-                            </div>
-                            <div class="content-info">
-                                <h3 class="content-num">Episode 2</h3>
-                                <a href="" class="content-detail">Episode title Episode title Episode title</a>
-                            </div>
-                            <div class="content-info">
-                                <h3 class="content-num">Episode 3</h3>
-                                <a href="" class="content-detail">Episode title Episode title Episode title</a>
-                            </div>
-                        </div>
-                    </div>
+
+
+
+                </div>
         </section>
     </main>
-    <!-- card들 배치하는 main section 끝 -->
+    <!-- MAIN SECTION 영역 끝 -->
 
     <!-- FOOTER 영역 시작 -->
     <footer class="footer">
