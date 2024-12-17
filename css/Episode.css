@@ -740,9 +740,6 @@ img {
             }
           }
 
-          @media (width < 768px) {
-          }
-
           display: flex;
           gap: 0.1rem;
         }
