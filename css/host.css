@@ -1,17 +1,302 @@
-nav {
-    background-image: url(../img/host_team.jpg);
+@charset "utf-8";
+
+
+:root {
+    --border: #ededed;
+    --border2: #8E8B8C;
+    --borderBlack: #000;
+    --fontBlack: #000;
+    --fontWhite: #fff;
+    --fontColor2: #8E8B8C;
+    --fontColor3: #F8F8F8;
+    --fontColor4: #969696;
+    --bgWhite: #fff;
+    --bgBlack: #000;
+    --bg2: #F8F8F8;
+    --bg3: #8E8B8C;
+    --boxShadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.08);
+    --subFont: "Open Sans", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1rem;
+    font-family: "Lato", sans-serif;
+    background-color: #fff;
+}
+
+/* 기본 옵션 */
+* {
+    color: #000;
+    box-sizing: border-box;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+
+.a11y-hidden {
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* 네비게이션 CSS */
+.gnb {
+    display: flex;
+    gap: 5.03rem;
+
+    li {
+
+        /* active된 값에는 밑선을 준다. */
+        &.--active {
+
+            >a {
+                border-bottom: 1px solid var(--borderBlack);
+            }
+        }
+
+        a {
+            color: var(--fontBlack);
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 2.1rem;
+            text-decoration: none;
+        }
+    }
+}
+
+.header {
+    position: absolute;
+    inset: 0 0 auto 0;
+    z-index: 1000;
+    display: grid;
+    grid-template-columns: min-content 1fr min-content;
+    align-items: center;
+    height: 11.5rem;
+    margin-inline: 4.6rem;
+
+    .logo {
+
+        >a {
+            width: 13rem;
+            display: block;
+        }
+    }
+
+    .gnb {
+        text-align: center;
+        justify-content: center;
+    }
+
+    .utillity {
+        display: flex;
+        gap: 3.77rem;
+        align-items: center;
+    }
+
+    @media (width < 1024px) {
+        margin-inline: auto;
+        max-width: 95%;
+
+        .gnb {
+            display: none;
+        }
+    }
+
+    @media (width < 768px) {
+        height: 8rem;
+
+        .logo {
+
+            >a {
+                width: 10rem;
+            }
+        }
+
+        .utillity {
+            gap: 2rem;
+
+            .btn-search {
+
+                span {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+/* HEADER 영역 끝 */
+
+
+/* SUBHEAD 영역 시작 */
+.subhead {
+    height: 50rem;
+    margin-top: 11.5rem;
+    margin-inline: 4.5rem;
+    border-radius: 1rem;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &.podcast__subhead {
+        background-image: url(../img/sub_head.png);
+    }
+
+    .inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 100%;
+
+        .subtitle {
+            position: absolute;
+            font-weight: bold;
+            font-size: 5rem;
+            color: var(--fontBlack);
+        }
+    }
+
+    @media (width < 768px) {
+        height: 30rem;
+    }
+}
+
+/* SUBHEAD 영역 끝 */
+
+
+/* 사이드메뉴 영역 시작 */
+.sideMenu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1001;
+    width: 0;
+    height: 100vh;
+    background-color: var(--bgWhite);
+    box-shadow: var(--boxShadow);
+    padding: 0 4.5rem 30rem;
+    display: none;
+
+    &.--active {
+        width: 45rem;
+        display: grid;
+        gap: 5rem;
+        grid-template-rows: 11.5rem 1fr min-content;
+    }
+
+    .btn-wrap {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        .btn-menu {
+
+            .btn-menu__line {
+
+                &.__line2 {
+                    justify-content: center;
+                }
+            }
+        }
+    }
+
+    .gnb {
+        flex-direction: column;
+        align-items: center;
+        gap: 6rem;
+
+        >li {
+
+            &:hover {
+
+                >a {
+                    color: var(--fontBlack);
+                }
+            }
+
+            &.--active {
+
+                >a {
+                    border-bottom: 0;
+                }
+            }
+
+            >a {
+                font-size: 3rem;
+                font-weight: 800;
+                color: var(--fontColor2);
+                transition: all .3s ease-in-out;
+            }
+        }
+    }
+
+    .company__information {
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+
+        .row__title {
+            font-size: 2.3rem;
+            line-height: 1.5;
+            font-weight: 700;
+            color: var(--fontBlack);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .list__link {
+            line-height: 1.5;
+            font-weight: 400;
+
+            :is(&:hover, &:hover > i) {
+                color: var(--fontBlack);
+            }
+        }
+    }
+}
+
+/* 사이드메뉴 영역 끝 */
+
+
+
+/* 팀, 마이크 사진 */
+article {
     width: 99%;
     height: 300px;
     margin: 0 auto;
     border-radius: 50px;
     background-repeat: no-repeat;
     background-position: center;
+    position: relative;
+}
+
+.img_team {
+    background-image: url(../img/host_team.jpg);
 }
 
 /* 소개글 시작 */
 /* 소개글 부모 영역에 margin, 가운데 정렬 줌 */
 section {
-    margin-top: 150px;
+    margin-top: 100px;
     text-align: center;
 }
 
@@ -30,7 +315,7 @@ section {
 .text_3rdline {
     font-size: 18px;
     color: #737373;
-    margin-bottom: 50px;
+    margin-bottom: 80px;
 }
 
 /* 소개글 끝 */
@@ -97,3 +382,217 @@ section {
     margin: 0;
     text-align: center;
 }
+
+/* host 소개 끝 */
+
+/* 구독란 시작 */
+.img_mic {
+    /* position: relative; */
+    margin-top: 80px;
+    background-image: url(../img/host_mic.jpg);
+}
+
+/* 이미지가 밝은 색이라 짙은 반투명 배경색으로 이미지 덮고 부모 사이즈인 100% 맞춤 */
+/* 배경 이미지 보다. 앞으로 나와서 이미지 덮을 수 있게 z-index 설정 */
+/* 부모 기준으로 배치 위해 absolute */
+.img-cover {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+/* 이미지 커버 보다 앞으로 나올 수 있게 z-index를 2로 설정 */
+.text_subscriibe {
+    font-size: 45px;
+    font-weight: bold;
+    margin-top: 25px;
+    z-index: 2;
+}
+
+.text {
+    /* img 기준으로 txt 이동을 위해 */
+    position: absolute;
+    width: 650px;
+    margin-left: 700px;
+}
+
+.text_lorem {
+    font-size: 18px;
+    margin-top: 200px;
+}
+
+/* 메일 입력란, 버튼 */
+button input {
+    position: absolute;
+}
+
+input {
+    width: 650px;
+    height: 40px;
+    margin-left: 700px;
+    margin-top: 240px;
+}
+
+/* 버튼이 입력란 안으로 올 수 있게 -음수로 배치 */
+button {
+    width: 100px;
+    height: 40px;
+    margin-left: -106px;
+}
+
+/* 푸터 영역 시작 */
+.footer {
+    width: 100%;
+    background-color: var(--bgBlack);
+    padding: 13.4rem 0 13rem;
+
+    .footer__content {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        padding: 1rem 1.5rem;
+    }
+
+    .content__logo {
+        width: 14.7rem;
+        margin-right: 18.55rem;
+
+        .logo__img {
+            display: block;
+            margin-bottom: 1.1rem;
+        }
+
+        .logo__text {
+            color: var(--fontColor4);
+            font-family: var(--subFont);
+            font-size: 1.3rem;
+            font-weight: 400;
+            line-height: 2.067rem;
+        }
+    }
+
+    .content__information {
+        width: calc(100% - 33.25rem);
+
+        .information__slogan {
+            width: 60.2106rem;
+            color: var(--fontWhite);
+            font-size: 2.7rem;
+            font-weight: 700;
+            line-height: 3.402rem;
+            margin-bottom: 11.33rem;
+        }
+
+        .information__list {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            >li {
+                height: 21.4703rem;
+                display: grid;
+                grid-template-rows: min-content 1fr min-content;
+                ;
+
+                .list__title {
+                    color: var(--fontColor4);
+                    font-size: 1.8rem;
+                    font-weight: 700;
+                    line-height: 2.304rem;
+                    margin-bottom: 2.3rem;
+                    display: block;
+                }
+
+                .list__link__last {
+                    color: var(--fontColor4);
+                    font-family: var(--subFont);
+                    font-size: 1.3rem;
+                    font-weight: 400;
+                    line-height: 2.067rem;
+                    text-decoration: none;
+
+                    >a {
+                        color: #ccc;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (width < 1024px) {
+
+        .footer__content {
+            padding: 0;
+            flex-direction: column;
+        }
+
+        .content__logo {
+            margin-bottom: 3rem;
+            margin-right: 0;
+        }
+
+        .content__information {
+            width: 100%;
+
+            .information__slogan {
+                width: 100%;
+                margin-bottom: 5rem;
+            }
+
+            .information__list {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+        }
+    }
+
+    @media (width < 768px) {
+        padding: 6.5rem 0;
+
+        .content__information {
+
+            .information__slogan {
+                font-size: 2rem;
+                line-height: 2.8rem;
+            }
+
+            .information__list {
+
+                >li {
+                    height: 15rem;
+
+                    .list__title {
+                        font-size: 1.5rem;
+                        line-height: 1.8rem;
+                        margin-bottom: 1.5rem;
+                    }
+
+                    .list__content {
+
+                        &.sns {
+
+                            .list__link {
+
+                                >i {
+                                    font-size: 1.8rem;
+                                    line-height: 1.8rem;
+                                }
+                            }
+                        }
+
+                        .list__link {
+                            font-size: 1.4rem;
+                            line-height: 2.4rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 푸터 영역 끝 */
