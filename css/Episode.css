@@ -61,7 +61,6 @@ img {
   gap: 5.03rem;
 
   li {
-
     /* active된 값에는 밑선을 준다. */
     &.--active {
       border-bottom: 1px solid var(--borderBlack);
@@ -336,11 +335,10 @@ img {
   gap: 2.6rem;
   align-items: center;
 
-  >li {
-
+  > li {
     /* 버튼에 active가 들어간 버튼에 효과를 준다. */
     &.active {
-      >a {
+      > a {
         &::after {
           content: "";
           display: block;
@@ -356,7 +354,7 @@ img {
       }
     }
 
-    >a {
+    > a {
       position: relative;
       width: 0.6rem;
       aspect-ratio: 1;
@@ -409,7 +407,7 @@ img {
   /* 한 줄에 일정한 크기로 3개 구성 */
   grid-template-columns: repeat(3, 1fr);
 
-  >li {
+  > li {
     background-color: var(--bgWhite);
     border-radius: 1rem;
     overflow: hidden;
@@ -497,7 +495,7 @@ img {
     gap: 1.54rem;
     align-items: center;
 
-    >li {
+    > li {
       width: 2.2rem;
       aspect-ratio: 1;
       background-color: var(--bg3);
@@ -508,7 +506,7 @@ img {
         background-color: var(--bgBlack);
       }
 
-      >a {
+      > a {
         width: 100%;
         aspect-ratio: 1;
         display: flex;
@@ -579,7 +577,7 @@ img {
   margin-inline: 4.6rem;
 
   .logo {
-    >a {
+    > a {
       width: 13rem;
       display: block;
     }
@@ -609,7 +607,7 @@ img {
     height: 8rem;
 
     .logo {
-      >a {
+      > a {
         width: 10rem;
       }
     }
@@ -626,113 +624,184 @@ img {
   }
 }
 
-.section-section01 {
-  .container {
+.subhead {
+  height: 50rem;
+  margin-top: 11.5rem;
+  margin-inline: 4.5rem;
+  border-radius: 1rem;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &.podcast__subhead {
+    background-image: url(../img/sub_head.png);
+  }
+
+  .inner {
     display: flex;
-    flex-direction: column;
-    gap: 3.5rem;
-    margin: 2rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     height: 100%;
 
-    @media (width < 1024px) {
-      gap: 2rem;
+    .subtitle {
+      position: absolute;
+      font-weight: bold;
+      font-size: 5rem;
+      color: var(--fontBlack);
     }
   }
 
-  .content-box {
-    display: flex;
-
-    @media (width < 1024px) {
-      display: block;
-      text-align: center;
-    }
-
-    .video {
-      width: 200px;
-      height: 100px;
-      border-radius: 1rem;
-
-      @media (width < 1024px) {
-        width: 400px;
-        height: 200px;
-      }
-
-      img {
-        width: 100%;
-        object-fit: cover;
-        border-radius: 1rem;
-      }
-    }
-
-    .description {
-      display: flex;
-      flex-direction: column;
-      margin: 1rem;
-
-      @media (width < 1024px) {
-        margin: 1rem 15rem;
-      }
-
-      a {
-        position: relative;
-        display: block;
-        margin-bottom: 1.5rem;
-        font-size: 1.5rem;
-        color: var(--textColor);
-        font-weight: 700;
-        border-radius: 1rem;
-        text-decoration: none;
-
-        @media (width < 1024px) {
-          line-height: 2rem;
-          font-size: 1.7rem;
-        }
-
-        &:after {
-          content: "";
-          position: absolute;
-          left: 0;
-          bottom: -1.1rem;
-          width: 0;
-          height: 0.1rem;
-          margin: 0.5rem 0 0;
-          transition: all 0.2s ease-in-out;
-          transition-duration: 0.3s;
-          opacity: 0;
-          background-color: #333;
-
-          @media (width < 1024px) {
-            display: none;
-          }
-        }
-
-        &:hover:after {
-          width: 100%;
-          opacity: 1;
-
-          @media (width < 1024px) {
-            display: none;
-          }
-        }
-      }
-    }
-
-    span {
-      font-size: 1.1rem;
-      letter-spacing: 0.2rem;
-
-      @media (width < 1024px) {
-        font-size: 1.2rem;
-        font-weight: 600;
-      }
-    }
+  @media (width < 768px) {
+    height: 30rem;
   }
-
-  @media (width < 1024px) {}
-
-  display: flex;
-  gap: 0.1rem;
 }
+
+/* 에피소프페이지 */
+
+.main {
+  .section {
+    width: 100%;
+  }
+  &.episode--page {
+    .section {
+      &.section01 {
+        padding: 14rem 0;
+        .content__cardlist {
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+          margin: 2rem;
+          height: 100%;
+
+          .cardlist__item {
+            display: flex;
+            border-bottom: 1px solid var(--border2);
+            padding-bottom: 4rem;
+
+            .item__video {
+              width: 200px;
+              height: 100px;
+              border-radius: 1rem;
+
+              img {
+                border-radius: 1rem;
+                width: 100%;
+                object-fit: fill;
+              }
+            }
+
+            .item__description {
+              display: flex;
+              flex-direction: column;
+              margin: 1rem;
+
+              a {
+                position: relative;
+                display: block;
+                margin-bottom: 1rem;
+                font-size: 1.5rem;
+                color: var(--textColor);
+                font-weight: 700;
+                border-radius: 1rem;
+                text-decoration: none;
+                font-family: var(--subFont);
+
+                @media (width < 768px) {
+                  line-height: 2rem;
+                  font-size: 1.7rem;
+                }
+
+                &:after {
+                  content: "";
+                  position: absolute;
+                  left: 0;
+                  bottom: -1.1rem;
+                  width: 0;
+                  height: 0.1rem;
+                  margin: 0.5rem 0 0;
+                  transition: all 0.2s ease-in-out;
+                  transition-duration: 0.3s;
+                  opacity: 0;
+                  background-color: #333;
+                }
+
+                &:hover:after {
+                  width: 100%;
+                  opacity: 1;
+                }
+              }
+            }
+
+            span {
+              font-size: 1.1rem;
+              letter-spacing: 0.2rem;
+              font-family: var(--subFont);
+            }
+          }
+
+          display: flex;
+          gap: 0.1rem;
+        }
+      }
+    }
+  }
+}
+
+@media (width < 768px) {
+  .main {
+    .section {
+    }
+    &.episode--page {
+      .section {
+        &.section01 {
+          padding: 4rem 0;
+
+          .content__cardlist {
+            display: flex;
+            gap: 0.1rem;
+            width: 100%;
+
+            .cardlist__item {
+              display: block;
+              margin-bottom: 2rem;
+              width: 100%;
+              text-align: center;
+
+              .item__video {
+                width: 100%;
+                height: 300px;
+              }
+              .item__description {
+                a {
+                  line-height: 2rem;
+                  font-size: 1.7rem;
+
+                  &:after {
+                    display: none;
+                  }
+
+                  &:hover:after {
+                    display: none;
+                  }
+                }
+
+                span {
+                  font-size: 1.2rem;
+                  font-weight: 600;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* 메인 section01 시작 */
+
+/* 메인 section01 끝 */
 
 .footer {
   width: 100%;
@@ -782,7 +851,7 @@ img {
       flex-wrap: wrap;
       justify-content: space-between;
 
-      >li {
+      > li {
         height: 21.4703rem;
         display: grid;
         grid-template-rows: min-content 1fr min-content;
@@ -818,7 +887,7 @@ img {
             transition: color 0.3s;
             display: block;
 
-            >i {
+            > i {
               color: var(--fontColor4);
               font-size: 2.1rem;
               font-weight: 400;
@@ -828,7 +897,7 @@ img {
             &:hover {
               color: var(--fontWhite);
 
-              >i {
+              > i {
                 color: var(--fontWhite);
               }
             }
@@ -843,7 +912,7 @@ img {
           line-height: 2.067rem;
           text-decoration: none;
 
-          >a {
+          > a {
             color: #ccc;
             text-decoration: none;
           }
@@ -888,7 +957,7 @@ img {
       }
 
       .information__list {
-        >li {
+        > li {
           height: 15rem;
 
           .list__title {
@@ -900,7 +969,7 @@ img {
           .list__content {
             &.sns {
               .list__link {
-                >i {
+                > i {
                   font-size: 1.8rem;
                   line-height: 1.8rem;
                 }
