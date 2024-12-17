@@ -98,6 +98,12 @@ img {
 .section__headingBox {
 	text-align: center;
 	margin-bottom: 6.5rem;
+
+	@media (width < 768px) {
+		flex-wrap: wrap;
+		text-align: left;
+		margin-bottom: 4rem;
+	}
 }
 
 .section__title {
@@ -111,6 +117,12 @@ img {
 		font-size: 3.5rem;
 		line-height: 4rem;
 	}
+
+	@media (width < 768px) {
+		font-size: 2.7rem;
+		line-height: 1.5;
+		margin-bottom: 1.5rem;
+	}
 }
 
 .section__information {
@@ -119,6 +131,11 @@ img {
 	font-size: 1.7rem;
 	font-weight: 400;
 	line-height: 2.703rem;
+
+	@media (width < 768px) {
+		font-size: 1.4rem;
+		line-height: 1.5;
+	}
 }
 
 /* 섹션 타이틀 CSS 끝 */
@@ -171,6 +188,14 @@ img {
 		background: url(../img/ico_play.svg) no-repeat;
 		background-size: cover;
 	}
+
+	@media (width < 1024px) {
+		
+		&::after {
+			width: 1.7rem;
+			height: 2rem;
+		}
+	}
 }
 
 .btn-skip10 {
@@ -182,15 +207,30 @@ img {
 
 	&::after {
 		content: '';
-		display: block;
-		width: 2.2rem;
-		height: 2.5rem;
-		background: url(../img/ico_skip.svg) no-repeat;
-		background-size: cover;
+        display: block;
+        width: 1.7rem;
+        height: 1.2rem;
+        background: url(../img/ico_skip.svg) no-repeat;
+        background-size: cover;
 	}
 }
 
-.btn-jump10 {}
+.btn-jump10 {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&::after {
+		content: '';
+        display: block;
+        width: 1.7rem;
+        height: 1.2rem;
+        background: url(../img/ico_jump.svg) no-repeat;
+        background-size: cover;
+	}
+}
 
 .btn-menu {
 	display: flex;
@@ -247,6 +287,15 @@ img {
 		height: 1.4rem;
 		margin-left: 1.17rem;
 	}
+
+	@media (width < 768px) {
+		font-size: 1.3rem;
+
+		img {
+			width: 1.2rem;
+			height: .8rem;
+		}
+	}
 }
 
 .btn-facebook {
@@ -300,7 +349,6 @@ img {
 		display: flex;
 		width: 4.6rem;
 		height: 5rem;
-		padding: 2.9391rem 1.2316rem 0.5609rem 1.2516rem;
 		flex-direction: column;
 		justify-content: flex-end;
 		align-items: center;
@@ -317,6 +365,12 @@ img {
 
 		&.options__play {
 			width: 4.5rem;
+		}
+
+		&.options__button1,
+		&.options__button2 {
+			width: 3rem;
+			height: 4rem;
 		}
 	}
 }
@@ -456,6 +510,14 @@ img {
 		font-size: 1.4rem;
 		font-weight: 400;
 		line-height: 2.703rem;
+	}
+
+	@media (width < 768px) {
+
+		.categoryBox__text {
+			font-size: 1.2rem;
+			line-height: 1.3;
+		}
 	}
 }
 
@@ -611,6 +673,30 @@ img {
 	@media (width < 1024px) {
 		gap: 3rem;
 		grid-template-columns: repeat(2, 1fr);
+
+		.card__imgBox {
+			height: 35rem;
+		}
+
+		.card__informationBox {
+			padding: 2.5rem;
+		}
+	}
+
+	@media (width < 768px) {
+		grid-template-columns: repeat(1, 1fr);
+
+		.card__imgBox {
+			height: 30rem;
+		}
+
+		.card__informationBox {
+			padding: 2rem;
+		}
+
+		.informationBox__job {
+			font-size: 1.2rem;
+		}
 	}
 }
 
@@ -633,6 +719,11 @@ img {
 		width: 100%;
 		height: 2px;
 		background-color: var(--bgBlack);
+	}
+
+	@media (width < 768px) {
+		font-size: 2rem;
+		line-height: 1.4;
 	}
 }
 
@@ -864,12 +955,39 @@ img {
 			display: block;
 		}
 
-		.list__link {
+		.linkBox__link {
 			line-height: 1.5;
             font-weight: 400;
 
 			:is(&:hover, &:hover > i) {
 				color: var(--fontBlack);
+			}
+		}
+	}
+
+	@media (width < 768px) {
+		padding: 0 2rem 30rem;
+
+		&.--active {
+			width: 100%;
+		}
+
+		.gnb {
+			gap: 3.5rem;
+	
+			> li {
+	
+				> a {
+					font-size: 2.3rem;
+				}
+			}
+		}
+
+		.company__information {
+			gap: 5rem;
+	
+			.row__title {
+				font-size: 1.8rem;
 			}
 		}
 	}
@@ -1487,6 +1605,160 @@ img {
 							height: 35rem;
 						}
 					}
+				}
+
+				&.section07 {
+
+					.gird__list {
+
+						.card__imgBox {
+							height: 35rem;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@media (width < 768px) {
+		&.main--page {
+
+			.section {
+
+				&.section01 {
+					height: 70rem;
+					background-position: left;
+
+					.section01__textBox {
+
+						.textBox__title {
+							font-size: 4.3rem;
+							line-height: 5.3rem;
+						}
+	
+						.textBox__information {
+							font-size: 1.8rem;
+							line-height: 2.8rem;
+							margin-bottom: 3rem;
+						}
+	
+						.textBox__btnWrap {
+							flex-direction: column;
+							gap: 1.5rem;
+							align-items: flex-start;
+
+							.btn {
+								width: 20rem;
+							}
+						}
+					}
+				}
+
+				&.section02 {
+					margin-top: -10rem;
+
+					.section02__episodeBox {
+					
+						.episodeBox__img {
+							display: none;
+						}
+
+						.episodeBox__information {
+							width: 100%;
+							
+							.information__textBox {
+								padding-left: 0;
+
+								.textBox__title {
+									width: 100%;
+									font-size: 2.5rem;
+								}
+
+								.textBox__link {
+									display: none;
+								}
+							}
+
+							.information__subBox {
+								
+								.subBox__episode {
+									padding-left: 0;
+								}
+
+								.subBox__options {
+
+									.options__play {
+										width: 7rem;
+									}
+
+									.options__time,
+									.options__sound {
+										display: none;
+									}
+								}
+							}
+						}
+					}
+				}
+
+				&.section03 {
+					padding: 7rem 0;
+
+					.contents {
+						flex-direction: column;
+
+						.contents__textBox {
+							order: 2;
+							width: 100%;
+						}
+
+						.contents__pictureBox {
+							order: 1;
+							width: 100%;
+						}
+					}
+				}
+
+				&.section04 {
+					padding: 7rem 0;
+
+					.contents {
+
+						.section__headingBox {
+							text-align: center;
+						}
+					}
+
+					.swiper__list {
+
+						.swiper-slide {
+							width: 25rem;
+							height: auto;
+							flex-direction: column;
+
+							.slide__img {
+								width: 100%;
+								height: 20rem;
+							}
+
+							.slide__information {
+								width: 100%;
+								padding: 1.5rem;
+
+								.information__title {
+									font-size: 1.8rem;
+								}
+							}
+						}
+					}
+				}
+
+				&.section05 {
+					padding: 7rem 0;
+				}
+
+				&.section07 {
+					padding: 7rem 0;
 				}
 			}
 		}
