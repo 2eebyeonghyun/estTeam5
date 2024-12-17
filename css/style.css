@@ -166,12 +166,31 @@ img {
 	&::after {
 		content: '';
 		display: block;
-		width: 2.5rem;
-		height: 2.8rem;
+		width: 2.2rem;
+		height: 2.5rem;
 		background: url(../img/ico_play.svg) no-repeat;
 		background-size: cover;
 	}
 }
+
+.btn-skip10 {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&::after {
+		content: '';
+		display: block;
+		width: 2.2rem;
+		height: 2.5rem;
+		background: url(../img/ico_skip.svg) no-repeat;
+		background-size: cover;
+	}
+}
+
+.btn-jump10 {}
 
 .btn-menu {
 	display: flex;
@@ -285,6 +304,9 @@ img {
 		flex-direction: column;
 		justify-content: flex-end;
 		align-items: center;
+	}
+
+	.button__text {
 		color: var(--fontColor2);
 		font-size: 1.3rem;
 		font-weight: 400;

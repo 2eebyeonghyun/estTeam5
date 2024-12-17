@@ -172,9 +172,17 @@
                             <!-- 에피소드 미리보기 옵션 영역 -->
                             <h2 class="a11y-hidden">미리보기 옵션 박스</h2>
                             <div class="subBox__options">
-                                <div class="options__button options__play"></div>
-                                <div class="options__button options__button1">10s</div>
-                                <div class="options__button options__button2">10s</div>
+                                <div class="options__button options__play">
+                                    <button class="btn-play"><span class="a11y-hidden">play</span></button>
+                                </div>
+                                <div class="options__button options__button1">
+                                    <button class="btn-skip10"><span class="a11y-hidden">skip 10s</span></button>
+                                    <div class="button__text">10s</div>
+                                </div>
+                                <div class="options__button options__button2">
+                                    <button class="btn-jump10"><span class="a11y-hidden">jump 10s</span></button>
+                                    <div class="button__text">10s</div>
+                                </div>
                                 <div class="options__timeline">
                                     <span class="timeline__ball"></span>
                                     <span class="timeline__line"></span>
@@ -203,7 +211,9 @@
                         <h2 class="section__title">Best places to find design inspiration</h2> 
                         <div class="textBox__information">
                             <div class="information__episode">
-                                <div class="options__button options__play"></div>
+                                <div class="options__button options__play">
+                                    <button class="btn-play"><span class="a11y-hidden">play</span></button>
+                                </div>
                                 <div class="episode__information">
                                     <span class="information__title">Episode 1</span>
                                     <span class="episode__categoryBox">
