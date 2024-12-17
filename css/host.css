@@ -289,33 +289,61 @@ article {
     position: relative;
 }
 
+/* 헤더 밑에 큰 이미지, 소개글 텍스트 */
+.info {
+    text-align: center;
+}
+
 .img_team {
     background-image: url(../img/host_team.jpg);
 }
 
+/* 부모요소 article에 relative 설정 */
+/* 자녀 속성에 absolute, 자식 요소 전체 중앙정렬 transform */
+.text_ourteam {
+    color: #f0f0f0;
+    font-size: 80px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* 부모요소 article에 relative 설정 */
+/* 자녀 속성에 absolute, 자식 요소 전체 중앙정렬 transform */
+.text_meet {
+    color: #f0f0f0;
+    font-size: 20px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
 /* 소개글 시작 */
-/* 소개글 부모 영역에 margin, 가운데 정렬 줌 */
+/* 소개글 부모 영역에 margin */
 section {
     margin-top: 100px;
-    text-align: center;
-}
 
-.text_1stline {
-    color: #9d9d9d;
-    font-size: 1rem;
-    margin-bottom: 20px;
-}
 
-.text_2ndline {
-    font-size: 60px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
+    .text_1stline {
+        color: #9d9d9d;
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
 
-.text_3rdline {
-    font-size: 18px;
-    color: #737373;
-    margin-bottom: 80px;
+    .text_2ndline {
+        font-size: 60px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    .text_3rdline {
+        font-size: 18px;
+        color: #737373;
+        margin-bottom: 50px;
+    }
 }
 
 /* 소개글 끝 */
@@ -323,62 +351,66 @@ section {
 /* host소개 시작 */
 /* 이미지 세개씩 화면에서 삼등분 차지하기 위해 부모영역에 grid 주고 minmax 사용  */
 /* 이미지 가운데 정렬 place-items 사용 */
-.image-container {
+.image_container {
     display: grid;
     justify-items: center;
     grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
-}
-
-.image-box {
-    height: 415px;
-    margin-bottom: 100px;
-}
-
-/* host 이미지, 오버레이 포함 */
-.image-content {
-    width: 410px;
-    height: 415px;
-    background-color: #f0f0f0;
-    border-radius: 20px;
-    position: relative;
-    overflow: hidden;
-    /* overlay를 hover 시작 전에 안 보이게 */
-}
-
-/* host 이미지들 */
-.hosts {
-    width: 100%;
-    height: 100%;
-    /* 배경이 있는 이미지를 인물 위주로 확대하면서 빈공간이 생기지 않게 하기 위해 */
-    object-fit: cover;
-    border-radius: 20px;
-}
 
 
-/* 이미지 위에 마우스 올렸을 때 그림자가 아래에서 위로 생기게 */
-.overlay {
-    position: absolute;
-    bottom: -100%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    transition: bottom 0.3s ease-in-out;
-    /* 처음과 끝이 느리게 */
+    .image_box {
+        height: 415px;
+        margin-top: 40px;
+        margin-bottom: 100px;
+    }
+
+    /* host 이미지, 오버레이 포함 */
+    .image_content {
+        width: 410px;
+        height: 415px;
+        background-color: #f0f0f0;
+        border-radius: 20px;
+        position: relative;
+        overflow: hidden;
+        /* overlay를 hover 시작 전에 안 보이게 */
+    }
+
+    /* host 이미지들 */
+    .hosts {
+        width: 100%;
+        height: 100%;
+        /* 배경이 있는 이미지를 인물 위주로 확대하면서 빈공간이 생기지 않게 하기 위해 */
+        object-fit: cover;
+        border-radius: 20px;
+    }
+
+
+    /* 이미지 위에 마우스 올렸을 때 그림자가 아래에서 위로 생기게 */
+    .overlay {
+        position: absolute;
+        bottom: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        transition: bottom 0.3s ease-in-out;
+        /* 처음과 끝이 느리게 */
+    }
+
+    .image_box:hover .overlay {
+        bottom: 0;
+    }
+
 }
 
-.image-box:hover .overlay {
-    bottom: 0;
-}
 
 /* host 이름 */
-.image-box h3 {
-    margin: 10px 0 5px;
+.image_box h3 {
+    margin: 30px 0 5px;
     text-align: center;
 }
 
 /* host 설명 */
-.image-box p {
+.image_box p {
     margin: 0;
     text-align: center;
 }
@@ -387,45 +419,36 @@ section {
 
 /* 구독란 시작 */
 .img_mic {
-    /* position: relative; */
+    position: relative;
     margin-top: 80px;
     background-image: url(../img/host_mic.jpg);
-}
 
-/* 이미지가 밝은 색이라 짙은 반투명 배경색으로 이미지 덮고 부모 사이즈인 100% 맞춤 */
-/* 배경 이미지 보다. 앞으로 나와서 이미지 덮을 수 있게 z-index 설정 */
-/* 부모 기준으로 배치 위해 absolute */
-.img-cover {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-    z-index: 1;
-}
 
-/* 이미지 커버 보다 앞으로 나올 수 있게 z-index를 2로 설정 */
-.text_subscriibe {
-    font-size: 45px;
-    font-weight: bold;
-    margin-top: 25px;
-    z-index: 2;
-}
+    /* 이미지 보다 앞으로 나올 수 있게 z-index를 1로 설정 */
+    .text_subscriibe {
+        font-size: 45px;
+        font-weight: bold;
+        margin-top: 25px;
+        z-index: 1;
+    }
 
-.text {
-    /* img 기준으로 txt 이동을 위해 */
-    position: absolute;
-    width: 650px;
-    margin-left: 700px;
-}
+    .text {
+        /* img 기준으로 txt 이동을 위해 */
+        position: absolute;
+        width: 650px;
+        margin-left: 700px;
+    }
 
-.text_lorem {
-    font-size: 18px;
-    margin-top: 200px;
+    .text_lorem {
+        font-size: 18px;
+        margin-top: 200px;
+    }
 }
 
 /* 메일 입력란, 버튼 */
 button input {
     position: absolute;
+
 }
 
 input {
@@ -433,6 +456,8 @@ input {
     height: 40px;
     margin-left: 700px;
     margin-top: 240px;
+    border: 1px solid black;
+    border-radius: 5px;
 }
 
 /* 버튼이 입력란 안으로 올 수 있게 -음수로 배치 */
@@ -440,6 +465,97 @@ button {
     width: 100px;
     height: 40px;
     margin-left: -106px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+/* 버튼 위에 커서 올리면 글자색, 배경색 변화 */
+.button:hover {
+    background-color: #000000;
+    transition: 0.5s;
+    color: #f0f0f0;
+
+}
+
+@media screen and (max-width: 1024px) {
+    .image_container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .image_content {
+        width: 100%;
+        max-width: 350px;
+        height: 355px;
+    }
+
+    .text_ourteam {
+        font-size: 60px;
+    }
+
+    .text_2ndline {
+        font-size: 45px;
+    }
+
+    .img_mic .text {
+        width: 500px;
+        margin-left: 400px;
+    }
+
+    .img_mic .text_subscriibe {
+        font-size: 35px;
+    }
+
+    input {
+        width: 500px;
+        margin-left: 400px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .image_container {
+        grid-template-columns: 1fr;
+    }
+
+    .image_content {
+        width: 100%;
+        max-width: 300px;
+        height: 305px;
+    }
+
+    .text_ourteam {
+        font-size: 40px;
+    }
+
+    .text_meet {
+        font-size: 16px;
+    }
+
+    .text_2ndline {
+        font-size: 35px;
+    }
+
+    .img_mic .text {
+        width: 300px;
+        margin-left: 50px;
+    }
+
+    .img_mic .text_subscriibe {
+        font-size: 25px;
+    }
+
+    .img_mic .text_lorem {
+        margin-top: 150px;
+    }
+
+    input {
+        width: 300px;
+        margin-left: 50px;
+        margin-top: 200px;
+    }
+
+    button {
+        margin-left: -106px;
+    }
 }
 
 /* 푸터 영역 시작 */
