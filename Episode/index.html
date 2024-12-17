@@ -17,94 +17,110 @@
 
   <body>
     <header class="header">
-      <h1 class="logo"><a href="/" title="Rosonator"><img src="../img/logo.png" alt="Resonator"></a></h1>
+      <h1 class="logo">
+        <a href="/" title="Rosonator"><img src="../img/logo.png" alt="Resonator" /></a>
+      </h1>
 
       <!-- 
           웹 접근성을 고려하여 accessibility 클래스를 통한 문구구성 및 네비게이션 버튼 구성
       -->
       <h2 class="a11y-hidden">메뉴</h2>
       <nav>
-          <ul class="gnb">
-              <li class="--active"><a href="#none">Homes</a></li>
-              <li><a href="#none">Podcast</a></li>
-              <li><a href="#none">Host</a></li>
-              <li><a href="#none">Episode</a></li>
-              <li><a href="#none">Shop</a></li>
-          </ul>
+        <ul class="gnb">
+          <li class="--active"><a href="#none">Homes</a></li>
+          <li><a href="#none">Podcast</a></li>
+          <li><a href="#none">Host</a></li>
+          <li><a href="#none">Episode</a></li>
+          <li><a href="#none">Shop</a></li>
+        </ul>
       </nav>
 
       <!-- 
           유틸리티 영역을 만들어 서치버튼과 메뉴버튼을 구성
       -->
       <div class="utillity">
-          <button type="button" class="btn-search"><span>Search</span></button>
-          <a href="#none" class="btn-menu" title="메뉴 버튼">
-              <div class="btn-menu__line __line1">
-                  <span class="btn-menu__dot dot1"></span>
-                  <span class="btn-menu__dot dot2"></span>
-                  <span class="btn-menu__dot dot3"></span>
-              </div>
-              <div class="btn-menu__line __line2">
-                  <span class="btn-menu__dot dot1"></span>
-                  <span class="btn-menu__dot dot2"></span>
-                  <span class="btn-menu__dot dot3"></span>
-              </div>
-              <div class="btn-menu__line __line3">
-                  <span class="btn-menu__dot dot1"></span>
-                  <span class="btn-menu__dot dot2"></span>
-                  <span class="btn-menu__dot dot3"></span>
-              </div>
-          </a>
+        <button type="button" class="btn-search"><span>Search</span></button>
+        <a href="#none" class="btn-menu" title="메뉴 버튼">
+          <div class="btn-menu__line __line1">
+            <span class="btn-menu__dot dot1"></span>
+            <span class="btn-menu__dot dot2"></span>
+            <span class="btn-menu__dot dot3"></span>
+          </div>
+          <div class="btn-menu__line __line2">
+            <span class="btn-menu__dot dot1"></span>
+            <span class="btn-menu__dot dot2"></span>
+            <span class="btn-menu__dot dot3"></span>
+          </div>
+          <div class="btn-menu__line __line3">
+            <span class="btn-menu__dot dot1"></span>
+            <span class="btn-menu__dot dot2"></span>
+            <span class="btn-menu__dot dot3"></span>
+          </div>
+        </a>
       </div>
-  </header>
-    <main class="main-episode--page">
-      <section class="section-section01">
+    </header>
+    <div class="subhead podcast__subhead">
+      <div class="inner">
+        <span class="subtitle">Title Name</span>
+      </div>
+    </div>
+
+    <main class="main episode--page">
+      <!-- &.episode--page -->
+      <!--  클래스명 네이밍으로 다시 수정 -->
+
+      <section class="section section01">
         <div class="inner">
           <h2 class="a11y-hidden">Episode</h2>
-          <ul class="container">
-            <li class="content-box">
-              <video class="video" poster="../img/@thumbnail_img.png" controls></video>
-              <div class="description">
-                <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor laudantium, quaerat eos mollitia</a>
-                <span>Cal newPort.조회수 7천회.3일전</span>
-              </div>
-            </li>
-            <li class="content-box">
-              <video class="video" poster="../img/@thumbnail_img.png" controls></video>
-              <div class="description">
-                <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor laudantium, quaerat eos mollitia</a>
-                <span>Cal newPort.조회수 7천회.3일전</span>
-              </div>
-            </li>
-            <li class="content-box">
-              <video class="video" poster="../img/@thumbnail_img.png" controls></video>
-              <div class="description">
-                <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor laudantium, quaerat eos mollitia</a>
-                <span>Cal newPort.조회수 7천회.3일전</span>
-              </div>
-            </li>
-            <li class="content-box">
-              <video class="video" poster="../img/@thumbnail_img.png" controls></video>
-              <div class="description">
-                <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor laudantium, quaerat eos mollitia</a>
-                <span>Cal newPort.조회수 7천회.3일전</span>
-              </div>
-            </li>
-            <li class="content-box">
-              <video class="video" poster="../img/@thumbnail_img.png" controls></video>
-              <div class="description">
-                <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor laudantium, quaerat eos mollitia</a>
-                <span>Cal newPort.조회수 7천회.3일전</span>
-              </div>
-            </li>
-            <li class="content-box">
-              <video class="video" poster="../img/@thumbnail_img.png" controls></video>
-              <div class="description">
-                <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor laudantium, quaerat eos mollitia</a>
-                <span>Cal newPort.조회수 7천회.3일전</span>
-              </div>
-            </li>
-            
+          <div class="section__headingBox">
+            <h2 class="section__title">Episode:</h2>
+          </div>
+          <div class="section01__content">
+            <ul class="content__cardlist">
+              <li class="cardlist__item">
+                <video class="item__video" poster="../img/@thumbnail_img.png" controls></video>
+                <div class="item__description">
+                  <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor laudantium, quaerat eos mollitia, Dolor laudantium, quaerat eos mollitia</a>
+                  <span>Cal newPort.조회수 7천회.3일전</span>
+                </div>
+              </li>
+              <li class="cardlist__item">
+                <video class="item__video" poster="../img/@thumbnail_img.png" controls></video>
+                <div class="item__description">
+                  <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor laudantium, quaerat eos mollitia, Dolor laudantium, quaerat eos mollitia</a>
+                  <span>Cal newPort.조회수 7천회.3일전</span>
+                </div>
+              </li>
+              <li class="cardlist__item">
+                <video class="item__video" poster="../img/@thumbnail_img.png" controls></video>
+                <div class="item__description">
+                  <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor laudantium, quaerat eos mollitia, Dolor laudantium, quaerat eos mollitia</a>
+                  <span>Cal newPort.조회수 7천회.3일전</span>
+                </div>
+              </li>
+              <li class="cardlist__item">
+                <video class="item__video" poster="../img/@thumbnail_img.png" controls></video>
+                <div class="item__description">
+                  <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor laudantium, quaerat eos mollitia, Dolor laudantium, quaerat eos mollitia</a>
+                  <span>Cal newPort.조회수 7천회.3일전</span>
+                </div>
+              </li>
+              <li class="cardlist__item">
+                <video class="item__video" poster="../img/@thumbnail_img.png" controls></video>
+                <div class="item__description">
+                  <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor laudantium, quaerat eos mollitia, Dolor laudantium, quaerat eos mollitia</a>
+                  <span>Cal newPort.조회수 7천회.3일전</span>
+                </div>
+              </li>
+              <li class="cardlist__item">
+                <video class="item__video" poster="../img/@thumbnail_img.png" controls></video>
+                <div class="item__description">
+                  <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor laudantium, quaerat eos mollitia, Dolor laudantium, quaerat eos mollitia</a>
+                  <span>Cal newPort.조회수 7천회.3일전</span>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
     </main>
