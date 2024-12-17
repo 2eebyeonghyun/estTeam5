@@ -119,6 +119,7 @@ img {
 	}
 
 	@media (width < 768px) {
+		width: 100%;
 		font-size: 2.7rem;
 		line-height: 1.5;
 		margin-bottom: 1.5rem;
@@ -211,7 +212,7 @@ img {
         width: 1.7rem;
         height: 1.2rem;
         background: url(../img/ico_skip.svg) no-repeat;
-        background-size: cover;
+        background-size: contain;
 	}
 }
 
@@ -228,7 +229,7 @@ img {
         width: 1.7rem;
         height: 1.2rem;
         background: url(../img/ico_jump.svg) no-repeat;
-        background-size: cover;
+        background-size: contain;
 	}
 }
 
@@ -342,6 +343,11 @@ img {
 		aspect-ratio: 1;
 		border-radius: 7rem;
 		border: 2px solid #CECECE;
+		transition: border .3s ease-in-out;
+
+		&:hover {
+			border: 2px solid var(--borderBlack);
+		}
 	}
 
 	&.options__button1,
@@ -885,14 +891,14 @@ img {
 	height: 100vh;
 	background-color: var(--bgWhite);
 	box-shadow: var(--boxShadow);
-	padding: 0 4.5rem 30rem;
+	padding: 0 4.5rem;
 	display: none;
     
 	&.--active {
 		width: 45rem;
 		display: grid;
 		gap: 5rem;
-    	grid-template-rows: 11.5rem 1fr min-content;
+    	grid-template-rows: 11.5rem min-content min-content;
 	}
 
 	.btn-wrap {
@@ -915,6 +921,7 @@ img {
 		flex-direction: column;
 		align-items: center;
 		gap: 6rem;
+		margin-bottom: 5rem;
 
 		> li {
 
@@ -966,10 +973,11 @@ img {
 	}
 
 	@media (width < 768px) {
-		padding: 0 2rem 30rem;
+		padding: 0 2rem;
 
 		&.--active {
 			width: 100%;
+			grid-template-rows: 8rem min-content min-content;
 		}
 
 		.gnb {
