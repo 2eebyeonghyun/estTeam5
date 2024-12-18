@@ -876,6 +876,7 @@ img {
 }
 
 /* 타이틀에 호버시 밑줄이 나오는 효과를 주었습니다. */
+/* 이부분은 정말 어떻게 작업해야하는지 몰라서 본사이트 css를 참고하였습니다. 죄송합니돳 ㅠ */
 .informationBox__title {
   color: var(--fontBlack);
   font-size: 2.7rem;
