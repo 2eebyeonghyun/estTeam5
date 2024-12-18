@@ -193,6 +193,7 @@ img {
 
       .subBox__options {
         display: flex;
+        gap: 1rem;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
@@ -500,7 +501,7 @@ img {
   &.options__button1,
   &.options__button2 {
     display: flex;
-    width: 4.6rem;
+    width: 4.5rem;
     height: 5rem;
     flex-direction: column;
     justify-content: flex-end;
