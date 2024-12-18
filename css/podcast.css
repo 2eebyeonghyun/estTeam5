@@ -308,49 +308,55 @@
 	&.podcast--inner {
 
 		.section {
-			padding: 14rem 0 0;
+			padding: 7rem 0 0;
 
 			&.section03 {}
 
 			&.section04 {
 				.inner {
-					display: flex;
-					align-items: center;
-
 					.box__episodecontent {
-						margin: 10rem;
+						width: 100%;
+						display: flex;
+						flex-direction: row;
+						/* gap: 25.5rem; */
+						justify-content: space-between;
+						align-items: center;
 
-						.content {
-							.content__script {
-								width: 55rem;
+						.episodecontent__content {
+							width: 50%;
+
+							.section__title {
+								margin-bottom: 2rem;
+							}
+
+							.content__information {
+								flex: 0 0 40%;
 								height: 30rem;
 								overflow-y: scroll;
+								padding: 0.5rem;
+								background-color: var(--bg2);
+								border-radius: 1rem;
+								box-shadow: var(--boxShadow);
 
-								.script__item {
-									padding: 1.5rem;
+								.information__row {
+									margin-bottom: 1.5rem;
 
-									.script__name {
+									.row__name {
 										font-size: 2.5rem;
 										font-weight: bold;
 									}
 
-									.script__detail {
-										padding: 1rem 0;
+									.row__description {
 										font-size: 1.7rem;
 										line-height: 3rem;
+									}
+
+									&:last-child {
+										margin-bottom: 0;
 									}
 								}
 							}
 						}
-					}
-
-					.box__episodeimage {
-						width: 60rem;
-						height: 50rem;
-						background-image: url(../img/podcast_img2.png);
-						background-repeat: no-repeat;
-						background-size: cover;
-						border-radius: 1.5rem;
 					}
 				}
 			}
