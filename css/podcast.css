@@ -232,6 +232,7 @@
 							padding: 3rem 2.5rem;
 
 							.informationBox__titleBox {
+								
 								.informationBox__title {
 									font-size: 4rem;
 								}
@@ -241,6 +242,8 @@
 								display: flex;
 								flex-direction: column;
 								gap: 2.5rem;
+								/* 20241218 마진바텀 추가했습니다. */
+								margin-bottom: 3rem;
 
 								.content__info {
 									display: flex;
@@ -252,22 +255,14 @@
 										font-size: 1.5rem;
 									}
 
+									/* btn-play는 동일한 구조로 사용하는게 좋을 거 같아서 삭제 하였고 detail 클래스에 넓이값을 추가햇습니다. */
 									.info__playnsubtitle {
 										display: flex;
 										align-items: center;
-										justify-content: center;
 										gap: 2rem;
 
-										.options__play {
-											width: 10rem;
-											transition: all .7s;
-
-											&:hover {
-												background-color: var(--bg3);
-											}
-										}
-
 										.content__detail {
+											width: calc(100% - 9rem);
 											display: inline-block;
 											text-decoration: none;
 											color: var(--fontBlack);
@@ -489,25 +484,35 @@
 
 		/* 팟캐스트 페이지 */
 		&.podcast--page {
+
 			.section {
+
 				&.section01 {
+
 					.gird__list {
+
 						.card__informationBox {
+
 							.card__content {
-								.content__title {
-									display: inline-block;
-									font-size: 3rem;
-									margin-top: 1rem;
+
+								.informationBox__titleBox {
+								
+									.informationBox__title {
+										font-size: 3rem;
+									}
 								}
 
 								.content__episode {
+
 									.content__info {
+
 										.content__num {
 											font-size: 1.3rem;
 										}
 
 										.info__playnsubtitle {
 											.content__detail {
+												width: calc(100% - 4.5rem);
 												display: inline-block;
 												font-size: 1.7rem;
 												overflow: hidden;
@@ -516,7 +521,6 @@
 												-webkit-box-orient: vertical;
 											}
 										}
-
 									}
 								}
 							}
@@ -531,7 +535,9 @@
 
 		/* 팟캐스트 페이지 */
 		&.podcast--page {
+
 			.section {
+
 				&.section01 {
 					padding: 7rem 0;
 
@@ -545,12 +551,15 @@
 							}
 
 							.card__content {
+								padding: 2rem;
+
 								.content__title {
 									display: inline-block;
 									font-size: 3.5rem;
 								}
 
 								.content__info {
+
 									.content__num {
 										font-size: 1.5rem;
 									}
@@ -565,12 +574,8 @@
 									}
 								}
 							}
-
 						}
-
 					}
-
-
 				}
 			}
 		}
