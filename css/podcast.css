@@ -232,7 +232,7 @@
 							padding: 3rem 2.5rem;
 
 							.informationBox__titleBox {
-								
+
 								.informationBox__title {
 									font-size: 4rem;
 								}
@@ -305,7 +305,54 @@
 		.section {
 			padding: 7rem 0 0;
 
-			&.section03 {}
+			&.section03 {
+				height: 80rem;
+
+				/* 가로 배치 */
+				.podcast__about {
+					display: flex;
+
+					.podcast__information {
+						width: 600rem;
+						height: 50rem;
+						margin-top: 20rem;
+						margin-left: -17rem;
+
+						.information__subject {
+							font-size: 6rem;
+							font-weight: bold;
+							margin-bottom: 6rem;
+						}
+
+						.information__text {
+							font-size: 2.4rem;
+							font-weight: 300;
+							margin-bottom: 5rem;
+							line-height: 3rem;
+						}
+					}
+
+					/* 버튼 박스 오른쪽에서 시작 */
+					.about__btnBox {
+						width: 200rem;
+						align-items: flex-end;
+						margin-top: 32rem;
+						margin-right: -10rem;
+
+						.textarea__listenOn {
+							font-size: 2.5rem;
+							margin-left: 10rem;
+							margin-bottom: 3rem;
+						}
+
+						.btn-episode {
+							margin-left: 10rem;
+							font-size: 2rem;
+							line-height: 4rem;
+						}
+					}
+				}
+			}
 
 			&.section04 {
 				.inner {
@@ -504,7 +551,7 @@
 							.card__content {
 
 								.informationBox__titleBox {
-								
+
 									.informationBox__title {
 										font-size: 3rem;
 									}
