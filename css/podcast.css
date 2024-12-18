@@ -310,6 +310,8 @@
 		.section {
 			padding: 14rem 0 0;
 
+			&.section03 {}
+
 			&.section04 {
 				.inner {
 					display: flex;
