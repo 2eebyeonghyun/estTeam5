@@ -24,7 +24,7 @@
 		text-align: center;
 		justify-content: center;
 
-		> li {
+		>li {
 			transition: all .3s ease-in-out;
 
 			&:hover {
@@ -70,6 +70,7 @@
 		}
 	}
 }
+
 /* HEADER 영역 끝 */
 
 
@@ -85,12 +86,12 @@
 	box-shadow: var(--boxShadow);
 	padding: 0 4.5rem;
 	display: none;
-    
+
 	&.--active {
 		width: 45rem;
 		display: grid;
 		gap: 5rem;
-    	grid-template-rows: 11.5rem min-content min-content;
+		grid-template-rows: 11.5rem min-content min-content;
 	}
 
 	.btn-wrap {
@@ -102,7 +103,7 @@
 
 			.btn-menu__line {
 
-				&.__line2{
+				&.__line2 {
 					justify-content: center;
 				}
 			}
@@ -115,23 +116,23 @@
 		gap: 6rem;
 		margin-bottom: 5rem;
 
-		> li {
+		>li {
 
 			&:hover {
 
-				> a {
+				>a {
 					color: var(--fontBlack);
 				}
 			}
 
 			&.--active {
 
-				> a {
+				>a {
 					border-bottom: 0;
 				}
 			}
 
-			> a {
+			>a {
 				font-size: 3rem;
 				font-weight: 800;
 				color: var(--fontColor2);
@@ -142,8 +143,8 @@
 
 	.company__information {
 		display: flex;
-        flex-direction: column;
-        gap: 5rem;
+		flex-direction: column;
+		gap: 5rem;
 
 		.row__title {
 			font-size: 2.3rem;
@@ -156,7 +157,7 @@
 
 		.linkBox__link {
 			line-height: 1.5;
-            font-weight: 400;
+			font-weight: 400;
 
 			:is(&:hover, &:hover > i) {
 				color: var(--fontBlack);
@@ -174,10 +175,10 @@
 
 		.gnb {
 			gap: 3.5rem;
-	
-			> li {
-	
-				> a {
+
+			>li {
+
+				>a {
 					font-size: 2.3rem;
 				}
 			}
@@ -185,296 +186,397 @@
 
 		.company__information {
 			gap: 5rem;
-	
+
 			.row__title {
 				font-size: 1.8rem;
 			}
 		}
 	}
 }
+
 /* 사이드메뉴 영역 끝 */
 
 
 /* 본문 영역 시작 */
 .main {
 
-    .section {
-        width: 100%;
-    }
+	.section {
+		width: 100%;
+	}
 
-    /* 팟캐스트페이지  */
-    &.podcast--page {
-        .section {
+	/* 팟캐스트페이지  */
+	&.podcast--page {
+		.section {
 
-            &.section01 {
-                padding: 14rem 0;
+			&.section01 {
+				padding: 14rem 0;
 
-                .gird__list {
-                    /* 사용자 편의를 위해 card를 두개씩 배치 */
-                    grid-template-columns: repeat(2, 1fr);
-                    justify-content: center;
-                    align-items: center;
+				.gird__list {
+					/* 사용자 편의를 위해 card를 두개씩 배치 */
+					grid-template-columns: repeat(2, 1fr);
+					justify-content: center;
+					align-items: center;
 
-                    .card__informationBox {
-                        display: flex;
-                        flex-direction: column;
-                        box-shadow: var(--boxShadow);
-                        border-radius: 1.5rem;
-                        overflow: hidden;
-                        /* card에 이미지 꽉 채워서 보여주기 위해 padding을 0으로 줌 */
-                        padding: 0;
+					.card__informationBox {
+						display: flex;
+						flex-direction: column;
+						box-shadow: var(--boxShadow);
+						border-radius: 1.5rem;
+						overflow: hidden;
+						/* card에 이미지 꽉 채워서 보여주기 위해 padding을 0으로 줌 */
+						padding: 0;
 
-                        .card__content {
-                            padding: 2rem 4rem;
+						.card__content {
+							display: flex;
+							flex-direction: column;
+							padding: 3rem 2.5rem;
 
-                            .content__title {
-                                display: inline-block;
-                                text-decoration: none;
-                                font-weight: bold;
-                                font-size: 4rem;
-                                color: var(--fontBlack);
-                                position: relative;
+							.informationBox__titleBox {
+								.informationBox__title {
+									font-size: 4rem;
+								}
+							}
 
-                                &::after {
-                                    content: '';
-                                    display: block;
-                                    width: 0;
-                                    height: 0.2rem;
-                                    background-color: var(--bgBlack);
-                                    transition: width 0.7s;
-                                    position: absolute;
-                                    bottom: 0;
-                                    left: 0;
-                                }
+							.content__episode {
+								display: flex;
+								flex-direction: column;
+								gap: 2.5rem;
 
-                                &:hover::after {
-                                    width: 100%;
-                                }
-                            }
+								.content__info {
+									display: flex;
+									flex-direction: column;
+									gap: 1.5rem;
 
-                            .content__info {
-                                padding: 1rem;
+									.content__num {
+										color: var(--fontColor2);
+										font-size: 1.5rem;
+									}
 
-                                .content__num {
-                                    color: var(--fontColor2);
-                                    font-size: 1.5rem;
-                                    margin: 1.5rem;
-                                }
+									.info__playnsubtitle {
+										display: flex;
+										align-items: center;
+										justify-content: center;
+										gap: 2rem;
 
-                                .info__playnsubtitle {
-                                    display: flex;
-                                    align-items: center;
+										.options__play {
+											width: 10rem;
+											transition: all .7s;
 
-                                    .options__play {
-                                        width: 5rem;
-                                        margin: 0 1.5rem;
-                                        transition: all .7s;
+											&:hover {
+												background-color: var(--bg3);
+											}
+										}
 
-                                        &:hover {
-                                            background-color: var(--bg3);
-                                        }
-                                    }
+										.content__detail {
+											display: inline-block;
+											text-decoration: none;
+											color: var(--fontBlack);
+											font-size: 2rem;
+											font-weight: bold;
+											overflow: hidden;
+											display: -webkit-box;
+											-webkit-line-clamp: 2;
+											-webkit-box-orient: vertical;
+											line-height: 1.5;
+											position: relative;
+										}
+									}
+								}
+							}
 
-                                    .content__detail {
-                                        display: inline-block;
-                                        text-decoration: none;
-                                        color: var(--fontBlack);
-                                        font-size: 2rem;
-                                        font-weight: bold;
+							.card__footer {
+								display: flex;
+								justify-content: flex-end;
+							}
 
-                                        &::after {
-                                            content: '';
-                                            display: block;
-                                            width: 0;
-                                            height: 0.2rem;
-                                            background-color: var(--bgBlack);
-                                            transition: width 0.7s;
-                                        }
+						}
 
-                                        &:hover::after {
-                                            width: 100%;
-                                        }
-                                    }
-                                }
-                            }
-                        }
 
-                        .card__footer {
-                            display: flex;
-                            justify-content: flex-end;
 
-                            .btn-episode {
-                                margin: 3rem;
-                            }
-                        }
+						&:hover .card__imgBox img {
+							transform: scale(1.1);
+							opacity: 0.7;
+							transition: transform 0.7s, opacity 0.7s;
+						}
+					}
+				}
+			}
+		}
+	}
 
-                        &:hover .card__imgBox img {
-                            transform: scale(1.1);
-                            opacity: 0.7;
-                            transition: transform 0.7s, opacity 0.7s;
-                        }
-                    }
-                }
-            }
-        }
-    }
+	/* 팟캐스트inner페이지 */
+	&.podcast--inner {
 
-    /* 팟캐스트inner페이지 */
-    &.podcast--inner {
+		.section {
+			padding: 14rem 0 0;
 
-        .section {
-            &.section04 {
-                .inner {
-                    display: flex;
-                    align-items: center;
+			&.section04 {
+				.inner {
+					display: flex;
+					align-items: center;
 
-                    .box__episodecontent {
-                        margin: 10rem;
+					.box__episodecontent {
+						margin: 10rem;
 
-                        .content {
-                            .content__script {
-                                width: 55rem;
-                                height: 30rem;
-                                overflow-y: scroll;
+						.content {
+							.content__script {
+								width: 55rem;
+								height: 30rem;
+								overflow-y: scroll;
 
-                                .script__item {
-                                    padding: 1.5rem;
+								.script__item {
+									padding: 1.5rem;
 
-                                    .script__name {
-                                        font-size: 2.5rem;
-                                        font-weight: bold;
-                                    }
+									.script__name {
+										font-size: 2.5rem;
+										font-weight: bold;
+									}
 
-                                    .script__detail {
-                                        padding: 1rem 0;
-                                        font-size: 1.7rem;
-                                        line-height: 3rem;
-                                    }
-                                }
-                            }
-                        }
-                    }
+									.script__detail {
+										padding: 1rem 0;
+										font-size: 1.7rem;
+										line-height: 3rem;
+									}
+								}
+							}
+						}
+					}
 
-                    .box__episodeimage {
-                        width: 60rem;
-                        height: 50rem;
-                        background-image: url(../img/podcast_img2.png);
-                        background-repeat: no-repeat;
-                        background-size: cover;
-                        border-radius: 1.5rem;
-                    }
-                }
-            }
+					.box__episodeimage {
+						width: 60rem;
+						height: 50rem;
+						background-image: url(../img/podcast_img2.png);
+						background-repeat: no-repeat;
+						background-size: cover;
+						border-radius: 1.5rem;
+					}
+				}
+			}
 
-            &.section05 {
-                .informationBox__title {
-                    &::after {
-                        display: none;
-                    }
-                }
-            }
+			&.section05 {
+				.informationBox__title {
+					&::after {
+						display: none;
+					}
+				}
+			}
 
-            &.section06 {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 100%;
-                height: 50rem;
-                background-color: var(--bg2);
-                margin-top: 20rem;
+			&.section06 {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 100%;
+				height: 50rem;
+				background-color: var(--bg2);
+				position: relative;
 
-                .inner {
-                    .card__imgBox {
-                        .essential__episodeList {
-                            display: flex;
-                            align-items: center;
 
-                            .list__card {
-                                position: relative;
+				.inner {
+					display: flex;
+					position: absolute;
+					gap: 20rem;
+					overflow: hidden;
 
-                                .btn-sound {
-                                    position: absolute;
-                                    top: 1rem;
-                                    right: 1rem;
-                                    z-index: 100;
-                                }
-                            }
+					.inner__card {
+						display: flex;
+					}
 
-                            .card__info {
-                                display: flex;
-                                flex-direction: column;
+					.card__imgBox {
+						.essential__episodeList {
+							display: flex;
+							align-items: center;
 
-                                .info__title {
-                                    color: var(--fontColor2);
-                                    font-size: 3rem;
-                                    font-weight: bold;
-                                }
+							.list__card {
+								position: relative;
 
-                                .info__content {
-                                    color: var(--fontBlack);
-                                    font-size: 4rem;
-                                    font-weight: bold;
-                                    display: inline-block;
-                                    padding: 3rem 1rem;
-                                }
+								.btn-sound {
+									position: absolute;
+									top: 1rem;
+									right: 1rem;
+									z-index: 100;
+								}
+							}
 
-                                .info__footer {
-                                    color: var(--fontColor2);
-                                    font-size: 2.5rem;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
+							.card__info {
+								display: flex;
+								flex-direction: column;
 
-    @media (width < 1024px) {}
+								.info__title {
+									color: var(--fontColor2);
+									font-size: 2.5rem;
+									font-weight: bold;
+								}
 
-    @media (width < 768px) {
+								.info__content {
+									color: var(--fontBlack);
+									font-size: 2rem;
+									font-weight: bold;
+									display: inline-block;
+									padding: 3rem 0;
+								}
 
-        /* 팟캐스트 페이지 */
-        &.podcast--page {
-            .section {
-                &.section01 {
+								.info__footer {
+									color: var(--fontColor2);
+									font-size: 1.5rem;
+								}
+							}
+						}
+					}
+
+					.section__arrow {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						position: absolute;
+						top: 50%;
+						right: 0.5rem;
+
+						.arrow__prev {
+							display: flex;
+							flex-direction: row-reverse;
+							justify-content: center;
+							align-items: center;
+							opacity: 0.5;
+							transition: all 0.7s;
+
+							.prev__title {
+								text-decoration: none;
+								display: inline-block;
+								font-size: 1.7rem;
+								font-weight: bold;
+								padding: 0 1rem;
+							}
+
+							&:hover {
+								opacity: 1;
+								transform: skew(10deg);
+							}
+						}
+
+						.arrow__divide {
+							font-size: 2.5rem;
+							font-weight: lighter;
+						}
+
+						.arrow__next {
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							opacity: 0.5;
+							transition: all 0.7s;
+
+
+							.next__title {
+								text-decoration: none;
+								display: inline-block;
+								font-size: 1.7rem;
+								font-weight: bold;
+								padding: 0 1rem;
+							}
+
+							&:hover {
+								opacity: 1;
+								transform: skew(10deg);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@media (width < 1024px) {
+
+		/* 팟캐스트 페이지 */
+		&.podcast--page {
+			.section {
+				&.section01 {
+					.gird__list {
+						.card__informationBox {
+							.card__content {
+								.content__title {
+									display: inline-block;
+									font-size: 3rem;
+									margin-top: 1rem;
+								}
+
+								.content__episode {
+									.content__info {
+										.content__num {
+											font-size: 1.3rem;
+										}
+
+										.info__playnsubtitle {
+											.content__detail {
+												display: inline-block;
+												font-size: 1.7rem;
+												overflow: hidden;
+												display: -webkit-box;
+												-webkit-line-clamp: 1;
+												-webkit-box-orient: vertical;
+											}
+										}
+
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@media (width < 768px) {
+
+		/* 팟캐스트 페이지 */
+		&.podcast--page {
+			.section {
+				&.section01 {
 					padding: 7rem 0;
-					
-                    .gird__list {
-                        width: 100%;
-                        grid-template-columns: repeat(1, 1fr);
 
-                        .card__informationBox {
-                            .card__imgBox {
-                                height: 30rem;
-                            }
+					.gird__list {
+						width: 100%;
+						grid-template-columns: repeat(1, 1fr);
 
-                            .content {
-                                .content__title {
-                                    font-size: 2.3rem;
-                                }
+						.card__informationBox {
+							.card__imgBox {
+								height: 30rem;
+							}
 
-                                .content__info {
-                                    .content__num {
-                                        font-size: 1.4rem;
-                                    }
+							.card__content {
+								.content__title {
+									display: inline-block;
+									font-size: 3.5rem;
+								}
 
-                                    .content__detail {
-                                        font-size: 1.5rem;
-                                    }
-                                }
-                            }
+								.content__info {
+									.content__num {
+										font-size: 1.5rem;
+									}
 
-                        }
+									.content__detail {
+										display: inline-block;
+										font-size: 1.7rem;
+										overflow: hidden;
+										display: -webkit-box;
+										-webkit-line-clamp: 1;
+										-webkit-box-orient: vertical;
+									}
+								}
+							}
 
-                    }
+						}
+
+					}
 
 
-                }
-            }
-        }
-    }
+				}
+			}
+		}
+	}
 }
+
 /* 본문 영역 끝 */
 
 
@@ -541,7 +643,7 @@
 					margin-bottom: 2.3rem;
 					display: block;
 				}
-        
+
 				.list__link__last {
 					color: var(--fontColor4);
 					font-family: var(--subFont);
