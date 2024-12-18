@@ -283,6 +283,15 @@
       }
     }
   }
+  &.podcast--inner {
+    .section {
+      &.section01 {
+        .section01__textBanner {
+          background: url(../img/@thumbnail_img.png) no-repeat;
+        }
+      }
+    }
+  }
 
   @media (width < 1024px) {
     &.episode--page {
