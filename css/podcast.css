@@ -3,742 +3,1141 @@
 
 /* HEADER 영역 시작 */
 .header {
-	position: absolute;
-	inset: 0 0 auto 0;
-	z-index: 1000;
-	display: grid;
-	grid-template-columns: min-content 1fr min-content;
-	align-items: center;
-	height: 11.5rem;
-	margin-inline: 4.6rem;
+  position: absolute;
+  inset: 0 0 auto 0;
+  z-index: 1000;
+  display: grid;
+  grid-template-columns: min-content 1fr min-content;
+  align-items: center;
+  height: 11.5rem;
+  margin-inline: 4.6rem;
 
-	.logo {
+  .logo {
+    > a {
+      width: 13rem;
+      display: block;
+    }
+  }
 
-		>a {
-			width: 13rem;
-			display: block;
-		}
-	}
+  .gnb {
+    text-align: center;
+    justify-content: center;
 
-	.gnb {
-		text-align: center;
-		justify-content: center;
+    > li {
+      transition: all 0.3s ease-in-out;
 
-		>li {
-			transition: all .3s ease-in-out;
+      &:hover {
+        transform: translateY(-0.3rem);
+      }
+    }
+  }
 
-			&:hover {
-				transform: translateY(-0.3rem);
-			}
-		}
-	}
+  .utillity {
+    display: flex;
+    gap: 3.77rem;
+    align-items: center;
+  }
 
-	.utillity {
-		display: flex;
-		gap: 3.77rem;
-		align-items: center;
-	}
+  @media (width < 1024px) {
+    margin-inline: auto;
+    max-width: 95%;
 
-	@media (width < 1024px) {
-		margin-inline: auto;
-		max-width: 95%;
+    .gnb {
+      display: none;
+    }
+  }
 
-		.gnb {
-			display: none;
-		}
-	}
+  @media (width < 768px) {
+    height: 8rem;
 
-	@media (width < 768px) {
-		height: 8rem;
+    .logo {
+      > a {
+        width: 10rem;
+      }
+    }
 
-		.logo {
+    .utillity {
+      gap: 2rem;
 
-			>a {
-				width: 10rem;
-			}
-		}
-
-		.utillity {
-			gap: 2rem;
-
-			.btn-search {
-
-				span {
-					display: none;
-				}
-			}
-		}
-	}
+      .btn-search {
+        span {
+          display: none;
+        }
+      }
+    }
+  }
 }
 
 /* HEADER 영역 끝 */
 
-
 /* 사이드메뉴 영역 시작 */
 .sideMenu {
-	position: fixed;
-	top: 0;
-	right: 0;
-	z-index: 1001;
-	width: 0;
-	height: 100vh;
-	background-color: var(--bgWhite);
-	box-shadow: var(--boxShadow);
-	padding: 0 4.5rem;
-	display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1001;
+  width: 0;
+  height: 100vh;
+  background-color: var(--bgWhite);
+  box-shadow: var(--boxShadow);
+  padding: 0 4.5rem;
+  display: none;
 
-	&.--active {
-		width: 45rem;
-		display: grid;
-		gap: 5rem;
-		grid-template-rows: 11.5rem min-content min-content;
-	}
+  &.--active {
+    width: 45rem;
+    display: grid;
+    gap: 5rem;
+    grid-template-rows: 11.5rem min-content min-content;
+  }
 
-	.btn-wrap {
-		display: flex;
-		justify-content: flex-end;
-		align-items: center;
+  .btn-wrap {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 
-		.btn-menu {
+    .btn-menu {
+      .btn-menu__line {
+        &.__line2 {
+          justify-content: center;
+        }
+      }
+    }
+  }
 
-			.btn-menu__line {
+  .gnb {
+    flex-direction: column;
+    align-items: center;
+    gap: 6rem;
+    margin-bottom: 5rem;
 
-				&.__line2 {
-					justify-content: center;
-				}
-			}
-		}
-	}
+    > li {
+      &:hover {
+        > a {
+          color: var(--fontBlack);
+        }
+      }
 
-	.gnb {
-		flex-direction: column;
-		align-items: center;
-		gap: 6rem;
-		margin-bottom: 5rem;
+      &.--active {
+        > a {
+          border-bottom: 0;
+        }
+      }
 
-		>li {
+      > a {
+        font-size: 3rem;
+        font-weight: 800;
+        color: var(--fontColor2);
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
 
-			&:hover {
+  .company__information {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
 
-				>a {
-					color: var(--fontBlack);
-				}
-			}
+    .row__title {
+      font-size: 2.3rem;
+      line-height: 1.5;
+      font-weight: 700;
+      color: var(--fontBlack);
+      margin-bottom: 1rem;
+      display: block;
+    }
 
-			&.--active {
+    .linkBox__link {
+      line-height: 1.5;
+      font-weight: 400;
 
-				>a {
-					border-bottom: 0;
-				}
-			}
+      :is(&:hover, &:hover > i) {
+        color: var(--fontBlack);
+      }
+    }
+  }
 
-			>a {
-				font-size: 3rem;
-				font-weight: 800;
-				color: var(--fontColor2);
-				transition: all .3s ease-in-out;
-			}
-		}
-	}
+  @media (width < 768px) {
+    padding: 0 2rem;
 
-	.company__information {
-		display: flex;
-		flex-direction: column;
-		gap: 5rem;
+    &.--active {
+      width: 100%;
+      grid-template-rows: 8rem min-content min-content;
+    }
 
-		.row__title {
-			font-size: 2.3rem;
-			line-height: 1.5;
-			font-weight: 700;
-			color: var(--fontBlack);
-			margin-bottom: 1rem;
-			display: block;
-		}
+    .gnb {
+      gap: 3.5rem;
 
-		.linkBox__link {
-			line-height: 1.5;
-			font-weight: 400;
+      > li {
+        > a {
+          font-size: 2.3rem;
+        }
+      }
+    }
 
-			:is(&:hover, &:hover > i) {
-				color: var(--fontBlack);
-			}
-		}
-	}
+    .company__information {
+      gap: 5rem;
 
-	@media (width < 768px) {
-		padding: 0 2rem;
-
-		&.--active {
-			width: 100%;
-			grid-template-rows: 8rem min-content min-content;
-		}
-
-		.gnb {
-			gap: 3.5rem;
-
-			>li {
-
-				>a {
-					font-size: 2.3rem;
-				}
-			}
-		}
-
-		.company__information {
-			gap: 5rem;
-
-			.row__title {
-				font-size: 1.8rem;
-			}
-		}
-	}
+      .row__title {
+        font-size: 1.8rem;
+      }
+    }
+  }
 }
 
 /* 사이드메뉴 영역 끝 */
 
-
 /* 본문 영역 시작 */
 .main {
-
-	.section {
-		width: 100%;
-	}
-
-	/* 팟캐스트페이지  */
-	&.podcast--page {
-		.section {
-
-			&.section01 {
-				padding: 14rem 0;
-
-				.gird__list {
-					/* 사용자 편의를 위해 card를 두개씩 배치 */
-					grid-template-columns: repeat(2, 1fr);
-					justify-content: center;
-					align-items: center;
-
-					.card__informationBox {
-						display: flex;
-						flex-direction: column;
-						box-shadow: var(--boxShadow);
-						border-radius: 1.5rem;
-						overflow: hidden;
-						/* card에 이미지 꽉 채워서 보여주기 위해 padding을 0으로 줌 */
-						padding: 0;
-
-						.card__content {
-							display: flex;
-							flex-direction: column;
-							padding: 3rem 2.5rem;
-
-							.informationBox__titleBox {
-								.informationBox__title {
-									font-size: 4rem;
-								}
-							}
-
-							.content__episode {
-								display: flex;
-								flex-direction: column;
-								gap: 2.5rem;
-
-								.content__info {
-									display: flex;
-									flex-direction: column;
-									gap: 1.5rem;
-
-									.content__num {
-										color: var(--fontColor2);
-										font-size: 1.5rem;
-									}
-
-									.info__playnsubtitle {
-										display: flex;
-										align-items: center;
-										justify-content: center;
-										gap: 2rem;
-
-										.options__play {
-											width: 10rem;
-											transition: all .7s;
-
-											&:hover {
-												background-color: var(--bg3);
-											}
-										}
-
-										.content__detail {
-											display: inline-block;
-											text-decoration: none;
-											color: var(--fontBlack);
-											font-size: 2rem;
-											font-weight: bold;
-											overflow: hidden;
-											display: -webkit-box;
-											-webkit-line-clamp: 2;
-											-webkit-box-orient: vertical;
-											line-height: 1.5;
-											position: relative;
-										}
-									}
-								}
-							}
-
-							.card__footer {
-								display: flex;
-								justify-content: flex-end;
-							}
-
-						}
-
-
-
-						&:hover .card__imgBox img {
-							transform: scale(1.1);
-							opacity: 0.7;
-							transition: transform 0.7s, opacity 0.7s;
-						}
-					}
-				}
-			}
-		}
-	}
-
-	/* 팟캐스트inner페이지 */
-	&.podcast--inner {
-
-		.section {
-			padding: 7rem 0 0;
-
-			&.section03 {}
-
-			&.section04 {
-				.inner {
-					.box__episodecontent {
-						width: 100%;
-						display: flex;
-						flex-direction: row;
-						/* gap: 25.5rem; */
-						justify-content: space-between;
-						align-items: center;
-
-						.episodecontent__content {
-							width: 50%;
-
-							.section__title {
-								margin-bottom: 2rem;
-							}
-
-							.content__information {
-								flex: 0 0 40%;
-								height: 30rem;
-								overflow-y: scroll;
-								padding: 0.5rem;
-								background-color: var(--bg2);
-								border-radius: 1rem;
-								box-shadow: var(--boxShadow);
-
-								.information__row {
-									margin-bottom: 1.5rem;
-
-									.row__name {
-										font-size: 2.5rem;
-										font-weight: bold;
-									}
-
-									.row__description {
-										font-size: 1.7rem;
-										line-height: 3rem;
-									}
-
-									&:last-child {
-										margin-bottom: 0;
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-
-			&.section05 {
-				.informationBox__title {
-					&::after {
-						display: none;
-					}
-				}
-			}
-
-			&.section06 {
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				width: 100%;
-				height: 50rem;
-				background-color: var(--bg2);
-				position: relative;
-
-
-				.inner {
-					display: flex;
-					position: absolute;
-					gap: 20rem;
-					overflow: hidden;
-
-					.inner__card {
-						display: flex;
-					}
-
-					.card__imgBox {
-						.essential__episodeList {
-							display: flex;
-							align-items: center;
-
-							.list__card {
-								position: relative;
-
-								.btn-sound {
-									position: absolute;
-									top: 1rem;
-									right: 1rem;
-									z-index: 100;
-								}
-							}
-
-							.card__info {
-								display: flex;
-								flex-direction: column;
-
-								.info__title {
-									color: var(--fontColor2);
-									font-size: 2.5rem;
-									font-weight: bold;
-								}
-
-								.info__content {
-									color: var(--fontBlack);
-									font-size: 2rem;
-									font-weight: bold;
-									display: inline-block;
-									padding: 3rem 0;
-								}
-
-								.info__footer {
-									color: var(--fontColor2);
-									font-size: 1.5rem;
-								}
-							}
-						}
-					}
-
-					.section__arrow {
-						display: flex;
-						align-items: center;
-						justify-content: center;
-						position: absolute;
-						top: 50%;
-						right: 0.5rem;
-
-						.arrow__prev {
-							display: flex;
-							flex-direction: row-reverse;
-							justify-content: center;
-							align-items: center;
-							opacity: 0.5;
-							transition: all 0.7s;
-
-							.prev__title {
-								text-decoration: none;
-								display: inline-block;
-								font-size: 1.7rem;
-								font-weight: bold;
-								padding: 0 1rem;
-							}
-
-							&:hover {
-								opacity: 1;
-								transform: skew(10deg);
-							}
-						}
-
-						.arrow__divide {
-							font-size: 2.5rem;
-							font-weight: lighter;
-						}
-
-						.arrow__next {
-							display: flex;
-							justify-content: center;
-							align-items: center;
-							opacity: 0.5;
-							transition: all 0.7s;
-
-
-							.next__title {
-								text-decoration: none;
-								display: inline-block;
-								font-size: 1.7rem;
-								font-weight: bold;
-								padding: 0 1rem;
-							}
-
-							&:hover {
-								opacity: 1;
-								transform: skew(10deg);
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-
-	@media (width < 1024px) {
-
-		/* 팟캐스트 페이지 */
-		&.podcast--page {
-			.section {
-				&.section01 {
-					.gird__list {
-						.card__informationBox {
-							.card__content {
-								.content__title {
-									display: inline-block;
-									font-size: 3rem;
-									margin-top: 1rem;
-								}
-
-								.content__episode {
-									.content__info {
-										.content__num {
-											font-size: 1.3rem;
-										}
-
-										.info__playnsubtitle {
-											.content__detail {
-												display: inline-block;
-												font-size: 1.7rem;
-												overflow: hidden;
-												display: -webkit-box;
-												-webkit-line-clamp: 1;
-												-webkit-box-orient: vertical;
-											}
-										}
-
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-
-	@media (width < 768px) {
-
-		/* 팟캐스트 페이지 */
-		&.podcast--page {
-			.section {
-				&.section01 {
-					padding: 7rem 0;
-
-					.gird__list {
-						width: 100%;
-						grid-template-columns: repeat(1, 1fr);
-
-						.card__informationBox {
-							.card__imgBox {
-								height: 30rem;
-							}
-
-							.card__content {
-								.content__title {
-									display: inline-block;
-									font-size: 3.5rem;
-								}
-
-								.content__info {
-									.content__num {
-										font-size: 1.5rem;
-									}
-
-									.content__detail {
-										display: inline-block;
-										font-size: 1.7rem;
-										overflow: hidden;
-										display: -webkit-box;
-										-webkit-line-clamp: 1;
-										-webkit-box-orient: vertical;
-									}
-								}
-							}
-
-						}
-
-					}
-
-
-				}
-			}
-		}
-	}
+  .section {
+    width: 100%;
+  }
+
+  /* 팟캐스트페이지  */
+  &.podcast--page {
+    .section {
+      &.section01 {
+        padding: 14rem 0;
+
+        .gird__list {
+          /* 사용자 편의를 위해 card를 두개씩 배치 */
+          grid-template-columns: repeat(2, 1fr);
+          justify-content: center;
+          align-items: center;
+
+          .card__informationBox {
+            display: flex;
+            flex-direction: column;
+            box-shadow: var(--boxShadow);
+            border-radius: 1.5rem;
+            overflow: hidden;
+            /* card에 이미지 꽉 채워서 보여주기 위해 padding을 0으로 줌 */
+            padding: 0;
+
+            .card__content {
+              display: flex;
+              flex-direction: column;
+              padding: 3rem 2.5rem;
+
+              .informationBox__titleBox {
+                .informationBox__title {
+                  font-size: 4rem;
+                }
+              }
+
+              .content__episode {
+                display: flex;
+                flex-direction: column;
+                gap: 2.5rem;
+
+                .content__info {
+                  display: flex;
+                  flex-direction: column;
+                  gap: 1.5rem;
+
+                  .content__num {
+                    color: var(--fontColor2);
+                    font-size: 1.5rem;
+                  }
+
+                  .info__playnsubtitle {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 2rem;
+
+                    .options__play {
+                      width: 10rem;
+                      transition: all 0.7s;
+
+                      &:hover {
+                        background-color: var(--bg3);
+                      }
+                    }
+
+                    .content__detail {
+                      display: inline-block;
+                      text-decoration: none;
+                      color: var(--fontBlack);
+                      font-size: 2rem;
+                      font-weight: bold;
+                      overflow: hidden;
+                      display: -webkit-box;
+                      -webkit-line-clamp: 2;
+                      -webkit-box-orient: vertical;
+                      line-height: 1.5;
+                      position: relative;
+                    }
+                  }
+                }
+              }
+
+              .card__footer {
+                display: flex;
+                justify-content: flex-end;
+              }
+            }
+
+            &:hover .card__imgBox img {
+              transform: scale(1.1);
+              opacity: 0.7;
+              transition: transform 0.7s, opacity 0.7s;
+            }
+          }
+        }
+      }
+      &.section02 {
+        .episodeBox {
+          /* 영역을 아래 마진탑 값 만큼 이동시킨다. */
+          margin-top: -15.36rem;
+          position: relative;
+          z-index: 100;
+          width: 100%;
+          background-color: #fff;
+          border-radius: 1rem;
+          box-shadow: var(--boxShadow);
+          display: inline-flex;
+          align-items: center;
+          overflow: hidden;
+
+          .episodeBox__img {
+            width: 29.1rem;
+            aspect-ratio: 1;
+          }
+
+          .episodeBox__information {
+            padding: 3.4rem 3.8rem 3.3rem 6.3rem;
+            width: calc(100% - 29.1rem);
+
+            .information__textBox {
+              width: 100%;
+              display: flex;
+              justify-content: space-between;
+              padding-left: 1rem;
+              margin-bottom: 1.02rem;
+
+              .textBox__title {
+                width: 40.4794rem;
+                color: var(--fontBlack);
+                font-size: 3.8rem;
+                font-weight: 700;
+                line-height: 4.408rem;
+                text-decoration: none;
+              }
+            }
+
+            .information__subBox {
+              width: 100%;
+
+              .subBox__episode {
+                width: 100%;
+                margin-bottom: 2.7rem;
+                padding-left: 1rem;
+                display: flex;
+                align-items: center;
+              }
+
+              .subBox__options {
+                display: flex;
+                gap: 1rem;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+
+                .btn-mute {
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  translate: -50% -50%;
+                  z-index: 2;
+                }
+              }
+            }
+          }
+
+          @media (width < 1024px) {
+            .episodeBox__img {
+              width: 20rem;
+            }
+
+            .episodeBox__information {
+              padding: 1.5rem;
+              width: calc(100% - 20rem);
+
+              .information__textBox {
+                .textBox__title {
+                  width: 30rem;
+                  font-size: 2rem;
+                  line-height: 1.3;
+                }
+              }
+
+              .information__subBox {
+                .subBox__episode {
+                  margin-bottom: 2rem;
+                }
+
+                .subBox__options {
+                  flex-wrap: wrap;
+                  justify-content: normal;
+                  gap: 0 3rem;
+
+                  .options__sound {
+                    order: 5;
+                  }
+                }
+              }
+            }
+
+            .options__button {
+              &.options__play {
+                order: 1;
+              }
+
+              &.options__button1 {
+                order: 2;
+              }
+
+              &.options__button2 {
+                order: 3;
+              }
+            }
+
+            .options__timeline {
+              width: 100%;
+              order: 6;
+              margin-top: 1.5rem;
+
+              .timeline__line {
+                width: 100%;
+              }
+            }
+
+            .options__time {
+              order: 4;
+            }
+          }
+
+          @media (width < 768px) {
+            margin-top: -10rem;
+
+            .episodeBox__img {
+              display: none;
+            }
+
+            .episodeBox__information {
+              width: 100%;
+
+              .information__textBox {
+                padding-left: 0;
+
+                .textBox__title {
+                  width: 100%;
+                  font-size: 2.5rem;
+                }
+
+                .textBox__link {
+                  display: none;
+                }
+              }
+
+              .information__subBox {
+                .subBox__episode {
+                  padding-left: 0;
+                }
+
+                .subBox__options {
+                  .options__play {
+                    width: 6rem;
+                  }
+
+                  .options__time,
+                  .options__sound {
+                    display: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* 팟캐스트inner페이지 */
+  &.podcast--inner {
+    .section {
+      /* podcast subpage 시작  */
+
+      &.section01 {
+        height: 90rem;
+        background: url(../img/@thumbnail_img.png) no-repeat;
+        .inner {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          .textBanner__information {
+            font-size: 6.5rem;
+            color: var(--fontWhite);
+            font-weight: 700;
+          }
+          .information__btnWrap {
+            display: flex;
+            margin-top: 5rem;
+
+            justify-content: center;
+            .btn {
+              font-size: 0;
+              display: inline-block;
+              padding: 1rem;
+              align-items: center;
+              border-radius: 2.5rem;
+              img {
+                width: 100%;
+                height: 100%;
+                border-radius: 2.5rem;
+              }
+            }
+          }
+        }
+      }
+      &.section02 {
+        .episodeBox {
+          /* 영역을 아래 마진탑 값 만큼 이동시킨다. */
+          margin-top: -15.36rem;
+          position: relative;
+          z-index: 100;
+          width: 100%;
+          background-color: #fff;
+          border-radius: 1rem;
+          box-shadow: var(--boxShadow);
+          display: inline-flex;
+          align-items: center;
+          overflow: hidden;
+
+          .episodeBox__img {
+            width: 29.1rem;
+            aspect-ratio: 1;
+          }
+
+          .episodeBox__information {
+            padding: 3.4rem 3.8rem 3.3rem 6.3rem;
+            width: calc(100% - 29.1rem);
+
+            .information__textBox {
+              width: 100%;
+              display: flex;
+              justify-content: space-between;
+              padding-left: 1rem;
+              margin-bottom: 1.02rem;
+
+              .textBox__title {
+                width: 40.4794rem;
+                color: var(--fontBlack);
+                font-size: 3.8rem;
+                font-weight: 700;
+                line-height: 4.408rem;
+                text-decoration: none;
+              }
+            }
+
+            .information__subBox {
+              width: 100%;
+
+              .subBox__episode {
+                width: 100%;
+                margin-bottom: 2.7rem;
+                padding-left: 1rem;
+                display: flex;
+                align-items: center;
+              }
+
+              .subBox__options {
+                display: flex;
+                gap: 1rem;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+
+                .btn-mute {
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  translate: -50% -50%;
+                  z-index: 2;
+                }
+              }
+            }
+          }
+
+          @media (width < 1024px) {
+            .episodeBox__img {
+              width: 20rem;
+            }
+
+            .episodeBox__information {
+              padding: 1.5rem;
+              width: calc(100% - 20rem);
+
+              .information__textBox {
+                .textBox__title {
+                  width: 30rem;
+                  font-size: 2rem;
+                  line-height: 1.3;
+                }
+              }
+
+              .information__subBox {
+                .subBox__episode {
+                  margin-bottom: 2rem;
+                }
+
+                .subBox__options {
+                  flex-wrap: wrap;
+                  justify-content: normal;
+                  gap: 0 3rem;
+
+                  .options__sound {
+                    order: 5;
+                  }
+                }
+              }
+            }
+
+            .options__button {
+              &.options__play {
+                order: 1;
+              }
+
+              &.options__button1 {
+                order: 2;
+              }
+
+              &.options__button2 {
+                order: 3;
+              }
+            }
+
+            .options__timeline {
+              width: 100%;
+              order: 6;
+              margin-top: 1.5rem;
+
+              .timeline__line {
+                width: 100%;
+              }
+            }
+
+            .options__time {
+              order: 4;
+            }
+          }
+
+          @media (width < 768px) {
+            margin-top: -10rem;
+
+            .episodeBox__img {
+              display: none;
+            }
+
+            .episodeBox__information {
+              width: 100%;
+
+              .information__textBox {
+                padding-left: 0;
+
+                .textBox__title {
+                  width: 100%;
+                  font-size: 2.5rem;
+                }
+
+                .textBox__link {
+                  display: none;
+                }
+              }
+
+              .information__subBox {
+                .subBox__episode {
+                  padding-left: 0;
+                }
+
+                .subBox__options {
+                  .options__play {
+                    width: 6rem;
+                  }
+
+                  .options__time,
+                  .options__sound {
+                    display: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &.section03 {
+      }
+
+      &.section04 {
+        .inner {
+          .box__episodecontent {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            /* gap: 25.5rem; */
+            justify-content: space-between;
+            align-items: center;
+
+            .episodecontent__content {
+              width: 50%;
+
+              .section__title {
+                margin-bottom: 2rem;
+              }
+
+              .content__information {
+                flex: 0 0 40%;
+                height: 30rem;
+                overflow-y: scroll;
+                padding: 0.5rem;
+                background-color: var(--bg2);
+                border-radius: 1rem;
+                box-shadow: var(--boxShadow);
+
+                .information__row {
+                  margin-bottom: 1.5rem;
+
+                  .row__name {
+                    font-size: 2.5rem;
+                    font-weight: bold;
+                  }
+
+                  .row__description {
+                    font-size: 1.7rem;
+                    line-height: 3rem;
+                  }
+
+                  &:last-child {
+                    margin-bottom: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &.section05 {
+        .informationBox__title {
+          &::after {
+            display: none;
+          }
+        }
+      }
+
+      &.section06 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 50rem;
+        background-color: var(--bg2);
+        position: relative;
+
+        .inner {
+          display: flex;
+          position: absolute;
+          gap: 20rem;
+          overflow: hidden;
+
+          .inner__card {
+            display: flex;
+          }
+
+          .card__imgBox {
+            .essential__episodeList {
+              display: flex;
+              align-items: center;
+
+              .list__card {
+                position: relative;
+
+                .btn-sound {
+                  position: absolute;
+                  top: 1rem;
+                  right: 1rem;
+                  z-index: 100;
+                }
+              }
+
+              .card__info {
+                display: flex;
+                flex-direction: column;
+
+                .info__title {
+                  color: var(--fontColor2);
+                  font-size: 2.5rem;
+                  font-weight: bold;
+                }
+
+                .info__content {
+                  color: var(--fontBlack);
+                  font-size: 2rem;
+                  font-weight: bold;
+                  display: inline-block;
+                  padding: 3rem 0;
+                }
+
+                .info__footer {
+                  color: var(--fontColor2);
+                  font-size: 1.5rem;
+                }
+              }
+            }
+          }
+
+          .section__arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 50%;
+            right: 0.5rem;
+
+            .arrow__prev {
+              display: flex;
+              flex-direction: row-reverse;
+              justify-content: center;
+              align-items: center;
+              opacity: 0.5;
+              transition: all 0.7s;
+
+              .prev__title {
+                text-decoration: none;
+                display: inline-block;
+                font-size: 1.7rem;
+                font-weight: bold;
+                padding: 0 1rem;
+              }
+
+              &:hover {
+                opacity: 1;
+                transform: skew(10deg);
+              }
+            }
+
+            .arrow__divide {
+              font-size: 2.5rem;
+              font-weight: lighter;
+            }
+
+            .arrow__next {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              opacity: 0.5;
+              transition: all 0.7s;
+
+              .next__title {
+                text-decoration: none;
+                display: inline-block;
+                font-size: 1.7rem;
+                font-weight: bold;
+                padding: 0 1rem;
+              }
+
+              &:hover {
+                opacity: 1;
+                transform: skew(10deg);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  /*section01 페이지*/
+
+  @media (width < 1024px) {
+    &.podcast--inner {
+      .section {
+        /* podcast subpage 시작  */
+
+        &.section01 {
+          .inner {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+
+            .textBanner__information {
+              font-size: 10rem;
+              color: var(--fontWhite);
+              font-weight: 700;
+            }
+            .information__btnWrap {
+              display: flex;
+              margin-top: 5rem;
+
+              justify-content: center;
+              .btn {
+                font-size: 0;
+                display: inline-block;
+                padding: 1rem;
+                align-items: center;
+                border-radius: 2.5rem;
+                img {
+                  width: 100%;
+                  height: 100%;
+                  border-radius: 2.5rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* section02  페이지 */
+  @media (width < 1024) {
+  }
+
+  @media (width < 1024px) {
+    /* 팟캐스트 페이지 */
+    &.podcast--page {
+      .section {
+        &.section01 {
+          .gird__list {
+            .card__informationBox {
+              .card__content {
+                .content__title {
+                  display: inline-block;
+                  font-size: 3rem;
+                  margin-top: 1rem;
+                }
+
+                .content__episode {
+                  .content__info {
+                    .content__num {
+                      font-size: 1.3rem;
+                    }
+
+                    .info__playnsubtitle {
+                      .content__detail {
+                        display: inline-block;
+                        font-size: 1.7rem;
+                        overflow: hidden;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 1;
+                        -webkit-box-orient: vertical;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (width < 768px) {
+    /* 팟캐스트 페이지 */
+    &.podcast--page {
+      .section {
+        &.section01 {
+          padding: 7rem 0;
+
+          .gird__list {
+            width: 100%;
+            grid-template-columns: repeat(1, 1fr);
+
+            .card__informationBox {
+              .card__imgBox {
+                height: 30rem;
+              }
+
+              .card__content {
+                .content__title {
+                  display: inline-block;
+                  font-size: 3.5rem;
+                }
+
+                .content__info {
+                  .content__num {
+                    font-size: 1.5rem;
+                  }
+
+                  .content__detail {
+                    display: inline-block;
+                    font-size: 1.7rem;
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 1;
+                    -webkit-box-orient: vertical;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 /* 본문 영역 끝 */
 
-
 /* 푸터 영역 시작 */
 .footer {
-	width: 100%;
-	background-color: var(--bgBlack);
-	padding: 13.4rem 0 13rem;
+  width: 100%;
+  background-color: var(--bgBlack);
+  padding: 13.4rem 0 13rem;
 
-	.footer__content {
-		width: 100%;
-		display: flex;
-		flex-direction: row;
-		padding: 1rem 1.5rem;
-	}
+  .footer__content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 1rem 1.5rem;
+  }
 
-	.content__logo {
-		width: 14.7rem;
-		margin-right: 18.55rem;
+  .content__logo {
+    width: 14.7rem;
+    margin-right: 18.55rem;
 
-		.logo__img {
-			display: block;
-			margin-bottom: 1.1rem;
-		}
+    .logo__img {
+      display: block;
+      margin-bottom: 1.1rem;
+    }
 
-		.logo__text {
-			color: var(--fontColor4);
-			font-family: var(--subFont);
-			font-size: 1.3rem;
-			font-weight: 400;
-			line-height: 2.067rem;
-		}
-	}
+    .logo__text {
+      color: var(--fontColor4);
+      font-family: var(--subFont);
+      font-size: 1.3rem;
+      font-weight: 400;
+      line-height: 2.067rem;
+    }
+  }
 
-	.content__information {
-		width: calc(100% - 33.25rem);
+  .content__information {
+    width: calc(100% - 33.25rem);
 
-		.information__slogan {
-			width: 60.2106rem;
-			color: var(--fontWhite);
-			font-size: 2.7rem;
-			font-weight: 700;
-			line-height: 3.402rem;
-			margin-bottom: 11.33rem;
-		}
+    .information__slogan {
+      width: 60.2106rem;
+      color: var(--fontWhite);
+      font-size: 2.7rem;
+      font-weight: 700;
+      line-height: 3.402rem;
+      margin-bottom: 11.33rem;
+    }
 
-		.information__list {
-			display: flex;
-			flex-direction: row;
-			flex-wrap: wrap;
-			justify-content: space-between;
+    .information__list {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
 
-			>li {
-				height: 21.4703rem;
-				display: grid;
-				grid-template-rows: min-content 1fr min-content;
-				;
+      > li {
+        height: 21.4703rem;
+        display: grid;
+        grid-template-rows: min-content 1fr min-content;
+        .list__title {
+          color: var(--fontColor4);
+          font-size: 1.8rem;
+          font-weight: 700;
+          line-height: 2.304rem;
+          margin-bottom: 2.3rem;
+          display: block;
+        }
 
-				.list__title {
-					color: var(--fontColor4);
-					font-size: 1.8rem;
-					font-weight: 700;
-					line-height: 2.304rem;
-					margin-bottom: 2.3rem;
-					display: block;
-				}
+        .list__link__last {
+          color: var(--fontColor4);
+          font-family: var(--subFont);
+          font-size: 1.3rem;
+          font-weight: 400;
+          line-height: 2.067rem;
+          text-decoration: none;
 
-				.list__link__last {
-					color: var(--fontColor4);
-					font-family: var(--subFont);
-					font-size: 1.3rem;
-					font-weight: 400;
-					line-height: 2.067rem;
-					text-decoration: none;
+          > a {
+            color: #ccc;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
 
-					>a {
-						color: #ccc;
-						text-decoration: none;
-					}
-				}
-			}
-		}
-	}
+  @media (width < 1024px) {
+    .footer__content {
+      padding: 0;
+      flex-direction: column;
+    }
 
-	@media (width < 1024px) {
+    .content__logo {
+      margin-bottom: 3rem;
+      margin-right: 0;
+    }
 
-		.footer__content {
-			padding: 0;
-			flex-direction: column;
-		}
+    .content__information {
+      width: 100%;
 
-		.content__logo {
-			margin-bottom: 3rem;
-			margin-right: 0;
-		}
+      .information__slogan {
+        width: 100%;
+        margin-bottom: 5rem;
+      }
 
-		.content__information {
-			width: 100%;
+      .information__list {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+    }
+  }
 
-			.information__slogan {
-				width: 100%;
-				margin-bottom: 5rem;
-			}
+  @media (width < 768px) {
+    padding: 6.5rem 0;
 
-			.information__list {
-				flex-direction: column;
-				gap: 1.5rem;
-			}
-		}
-	}
+    .content__information {
+      .information__slogan {
+        font-size: 2rem;
+        line-height: 2.8rem;
+      }
 
-	@media (width < 768px) {
-		padding: 6.5rem 0;
+      .information__list {
+        > li {
+          height: 15rem;
 
-		.content__information {
+          .list__title {
+            font-size: 1.5rem;
+            line-height: 1.8rem;
+            margin-bottom: 1.5rem;
+          }
 
-			.information__slogan {
-				font-size: 2rem;
-				line-height: 2.8rem;
-			}
+          .list__content {
+            &.sns {
+              .list__link {
+                > i {
+                  font-size: 1.8rem;
+                  line-height: 1.8rem;
+                }
+              }
+            }
 
-			.information__list {
-
-				>li {
-					height: 15rem;
-
-					.list__title {
-						font-size: 1.5rem;
-						line-height: 1.8rem;
-						margin-bottom: 1.5rem;
-					}
-
-					.list__content {
-
-						&.sns {
-
-							.list__link {
-
-								>i {
-									font-size: 1.8rem;
-									line-height: 1.8rem;
-								}
-							}
-						}
-
-						.list__link {
-							font-size: 1.4rem;
-							line-height: 2.4rem;
-						}
-					}
-				}
-			}
-		}
-	}
+            .list__link {
+              font-size: 1.4rem;
+              line-height: 2.4rem;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 /* 푸터 영역 끝 */
