@@ -257,28 +257,31 @@
 
                 padding-bottom: 7rem;
 
+
                 .subscriibe__box {
                     width: 100%;
                     height: 40rem;
                     background: url(../img/host_mic.jpg) no-repeat;
-                    padding: 4rem;
+                    /* padding: 4rem; */
                     box-shadow: var(--boxShadow);
                     border-radius: 1rem;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
+                    align-items: flex-end;
+                    /* 오른쪽에서 시작 */
+
 
                     .box__textBox {
-                        /* margin-left: 50rem; */
                         width: 70rem;
-                        margin-bottom: 5rem;
+                        margin-bottom: 4rem;
 
                         .textBox__title {
                             font-size: 4rem;
                             line-height: 1.3;
                             font-weight: 800;
                             color: var(--fontBlack);
-                            margin-bottom: 1.5rem;
+                            margin-bottom: 4rem;
                         }
 
                         .textBox__text {
@@ -286,25 +289,22 @@
                         }
                     }
 
+                    /* email 입력란 사이즈 및 마진 */
                     .box__form {
-                        width: 75rem;
-
+                        width: 69rem;
+                        margin-right: 1rem;
 
                         .form__row {
-                            width: 100%;
                             /* fix */
                             position: relative;
-
 
                             label {
                                 width: 100%;
                                 height: 6rem;
 
                                 .__input {
-                                    width: 100;
                                     border: 1px solid black;
                                     border-radius: 0.5rem;
-
                                 }
                             }
 
@@ -313,7 +313,7 @@
                                 border: 1px solid black;
                                 border-radius: 0.5rem;
                                 top: 50%;
-                                right: 0;
+                                right: 0.5rem;
                                 translate: 0 -50%;
                                 position: absolute;
 
@@ -336,7 +336,7 @@
         }
     }
 
-    @media (width < 1024px) {
+    @media (width < 1300px) {
 
         &.host--page {
             .section {
@@ -404,11 +404,14 @@
     @media (width < 768px) {
 
         &.host--page {
+
             .section {
                 &.section01 {
                     padding: 8rem 0;
 
                     .gird__list {
+                        grid-template-columns: repeat(2, 1fr);
+
                         .list__card {
                             .card__overlay {
                                 padding: 1.5rem;
@@ -446,13 +449,14 @@
                         }
 
                         .box__form {
+                            width: 100%;
+
                             label {
                                 height: 5rem;
                             }
 
                             .btn-form {
                                 margin-left: 60rem;
-                                margin-top: -5rem;
                             }
                         }
                     }

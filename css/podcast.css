@@ -318,16 +318,16 @@
 						margin-top: 20rem;
 						margin-left: -17rem;
 
-						.information__subject {
+						/* .information__subject {
 							font-size: 6rem;
 							font-weight: bold;
 							margin-bottom: 6rem;
-						}
+						} */
 
 						.information__text {
 							font-size: 2.4rem;
 							font-weight: 300;
-							margin-bottom: 5rem;
+							margin-top: 5rem;
 							line-height: 3rem;
 						}
 					}
@@ -336,7 +336,7 @@
 					.about__btnBox {
 						width: 200rem;
 						align-items: flex-end;
-						margin-top: 32rem;
+						margin-top: 30rem;
 						margin-right: -10rem;
 
 						.textarea__listenOn {
@@ -355,6 +355,41 @@
 			}
 
 			&.section04 {
+				position: relative;
+				/* display: inline-block; */
+				height: 90rem;
+				border: 1px solid red;
+
+
+
+				.img__listen {
+					width: 60rem;
+					position: absolute;
+					left: 0;
+					border: 1px solid blue;
+				}
+
+				.imgbtn {
+					width: 50%;
+					height: 70rem;
+					border: 1px solid green;
+					/* align-items: flex-end; */
+					float: right;
+				}
+
+				.list__subject {
+					font-size: 4.5rem;
+					font-weight: bold;
+
+					.buttonn {
+						float: left;
+
+					}
+				}
+
+			}
+
+			&.section05 {
 				.inner {
 					.box__episodecontent {
 						width: 100%;
@@ -403,7 +438,7 @@
 				}
 			}
 
-			&.section05 {
+			&.section06 {
 				.informationBox__title {
 					&::after {
 						display: none;
@@ -411,7 +446,7 @@
 				}
 			}
 
-			&.section06 {
+			&.section07 {
 				display: flex;
 				align-items: center;
 				justify-content: center;
