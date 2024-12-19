@@ -62,9 +62,10 @@ img {
   gap: 5.03rem;
 
   li {
+
     /* active된 값에는 밑선을 준다. */
     &.--active {
-      > a {
+      >a {
         border-bottom: 1px solid var(--borderBlack);
       }
     }
@@ -138,6 +139,7 @@ img {
     line-height: 1.5;
   }
 }
+
 /* 섹션 타이틀 CSS 끝 */
 
 /* 에피소드 소개 영역 CSS 시작 */
@@ -314,6 +316,7 @@ img {
     }
   }
 }
+
 /* 에피소드 소개 영역 CSS 시작 */
 
 /* 버튼 CSS 영역 */
@@ -616,6 +619,7 @@ img {
     }
   }
 }
+
 /* 옵션 CSS 끝 */
 
 /* Swiper 슬라이드 옵션 CSS 시작 */
@@ -624,11 +628,12 @@ img {
   gap: 2.6rem;
   align-items: center;
 
-  > li {
+  >li {
+
     /* 버튼에 active가 들어간 버튼에 효과를 준다. */
     &.active,
     &:hover {
-      > a {
+      >a {
         &::after {
           content: "";
           display: block;
@@ -644,7 +649,7 @@ img {
       }
     }
 
-    > a {
+    >a {
       position: relative;
       width: 0.6rem;
       aspect-ratio: 1;
@@ -654,6 +659,7 @@ img {
     }
   }
 }
+
 /* Swiper 슬라이드 옵션 CSS 끝 */
 
 .episode__information {
@@ -718,7 +724,7 @@ img {
     transition: color 0.3s;
     display: block;
 
-    > i {
+    >i {
       color: var(--fontColor4);
       font-size: 2.1rem;
       font-weight: 400;
@@ -729,7 +735,7 @@ img {
     &:hover {
       color: var(--fontWhite);
 
-      > i {
+      >i {
         color: var(--fontWhite);
       }
     }
@@ -743,7 +749,7 @@ img {
   /* 한 줄에 일정한 크기로 3개 구성 */
   grid-template-columns: repeat(3, 1fr);
 
-  > li {
+  >li {
     background-color: var(--bgWhite);
     border-radius: 1rem;
     overflow: hidden;
@@ -818,7 +824,7 @@ img {
     gap: 1.54rem;
     align-items: center;
 
-    > li {
+    >li {
       width: 2.2rem;
       aspect-ratio: 1;
       background-color: var(--bg3);
@@ -829,7 +835,7 @@ img {
         background-color: var(--bgBlack);
       }
 
-      > a {
+      >a {
         width: 100%;
         aspect-ratio: 1;
         display: flex;
@@ -900,6 +906,7 @@ img {
     line-height: 1.4;
   }
 }
+
 /* 그리드(Grid) 영역 끝 */
 
 /* FORM CSS 영역 시작 */
@@ -933,6 +940,7 @@ img {
     color: var(--fontWhite);
   }
 }
+
 /* FORM CSS 영역 끝 */
 
 /* 애니메이션 영역 시작 */
@@ -977,6 +985,7 @@ img {
     transform-origin: 0 0;
   }
 }
+
 /* 애니메이션 영역 끝 */
 
 /* SUBHEAD 영역 시작 */
@@ -1026,6 +1035,7 @@ img {
     }
   }
 }
+
 /* SUBHEAD 영역 끝 */
 
 
@@ -1051,4 +1061,5 @@ img {
     }
   }
 }
+
 /* 페이지 목록 작업 끝*/
