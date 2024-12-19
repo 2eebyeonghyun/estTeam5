@@ -85,7 +85,7 @@ img {
   max-width: 130rem;
   margin: 0 auto;
 
-  @media (width < 1024px) {
+  @media (width < 1300px) {
     max-width: 95%;
   }
 }
@@ -113,7 +113,7 @@ img {
   line-height: 5.5rem;
   margin-bottom: 2rem;
 
-  @media (width < 1024px) {
+  @media (width < 1300px) {
     font-size: 3.5rem;
     line-height: 4rem;
   }
@@ -209,7 +209,7 @@ img {
     }
   }
 
-  @media (width < 1024px) {
+  @media (width < 1300px) {
     .episodeBox__img {
       width: 20rem;
     }
@@ -500,7 +500,7 @@ img {
     line-height: 0rem;
   }
 
-  @media (width < 1024px) {
+  @media (width < 1300px) {
     &.options__play {
       width: 4.5rem;
     }
@@ -840,7 +840,7 @@ img {
     }
   }
 
-  @media (width < 1024px) {
+  @media (width < 1300px) {
     gap: 3rem;
     grid-template-columns: repeat(2, 1fr);
 
@@ -1011,7 +1011,7 @@ img {
     color: var(--fontWhite);
   }
 
-  @media (width < 1024px) {
+  @media (width < 1300px) {
     margin: 11.5rem auto 0;
     max-width: 95%;
     height: 30rem;
