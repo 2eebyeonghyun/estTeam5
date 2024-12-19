@@ -254,15 +254,12 @@
             }
 
             &.section02 {
-
                 padding-bottom: 7rem;
-
 
                 .subscriibe__box {
                     width: 100%;
-                    height: 40rem;
                     background: url(../img/host_mic.jpg) no-repeat;
-                    /* padding: 4rem; */
+                    padding: 4rem;
                     box-shadow: var(--boxShadow);
                     border-radius: 1rem;
                     display: flex;
@@ -271,9 +268,12 @@
                     align-items: flex-end;
                     /* 오른쪽에서 시작 */
 
+                    .box__contents {
+                        width: 70rem;
+                    }
 
                     .box__textBox {
-                        width: 70rem;
+                        text-align: right;
                         margin-bottom: 4rem;
 
                         .textBox__title {
@@ -291,8 +291,7 @@
 
                     /* email 입력란 사이즈 및 마진 */
                     .box__form {
-                        width: 69rem;
-                        margin-right: 1rem;
+                        width: 100%;
 
                         .form__row {
                             /* fix */
@@ -339,7 +338,9 @@
     @media (width < 1300px) {
 
         &.host--page {
+
             .section {
+
                 &.section01 {
                     padding: 10rem 0;
 
@@ -364,35 +365,30 @@
                 }
 
                 &.section02 {
+
                     .subscriibe__box {
-                        height: 35rem;
                         padding: 3rem;
 
-                        .box__textBox {
-                            margin-left: 0;
+                        .box__contents {
                             width: 100%;
+                        }
 
+                        .box__textBox {
+                            text-align: left;
+                            
                             .textBox__title {
                                 font-size: 3rem;
+                                margin-bottom: 2rem;
                             }
 
                             .textBox__text {
                                 font-size: 1.8rem;
+                                line-height: 1.5;
                             }
                         }
 
                         .box__form {
                             width: 100%;
-
-                            label {
-                                .__input {
-                                    margin-left: 0;
-                                }
-                            }
-
-                            .btn-form {
-                                margin-left: 85rem;
-                            }
                         }
                     }
                 }
@@ -406,13 +402,19 @@
         &.host--page {
 
             .section {
+
                 &.section01 {
-                    padding: 8rem 0;
+                    padding: 7rem 0;
 
                     .gird__list {
                         grid-template-columns: repeat(2, 1fr);
 
                         .list__card {
+                            
+                            .card__imgBox {
+                                height: 20rem;
+                            }
+
                             .card__overlay {
                                 padding: 1.5rem;
 
@@ -432,15 +434,15 @@
                 }
 
                 &.section02 {
+
                     .subscriibe__box {
-                        height: 30rem;
                         padding: 2rem;
 
                         .box__textBox {
                             margin-bottom: 3rem;
 
                             .textBox__title {
-                                font-size: 2.5rem;
+                                font-size: 2.3rem;
                             }
 
                             .textBox__text {
@@ -456,16 +458,27 @@
                             }
 
                             .btn-form {
-                                margin-left: 60rem;
+                                width: 5rem;
+                                position: relative;
+
+                                &::after {
+                                    content: 'sub';
+                                    font-size: 1.4rem;
+                                    font-weight: 400;
+                                    color: var(--fontWhite);
+
+                                }
+
+                                span {
+                                    display: none;
+                                }
                             }
                         }
                     }
                 }
             }
         }
-
     }
-
 }
 
 /* 본문 영역 끝 */
