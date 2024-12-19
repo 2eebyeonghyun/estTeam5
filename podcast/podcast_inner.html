@@ -21,8 +21,8 @@
 
 <body>
     <!-- HEADER 영역 시작 -->
-    <header class="header">
-        <h1 class="logo"><a href="../index.html" title="Rosonator"><img src="../img/logo.png" alt="Resonator"></a></h1>
+    <header class="header light">
+        <h1 class="logo"><a href="../index.html" title="Rosonator"><img src="../img/logo_white.png" alt="Resonator"></a></h1>
 
         <!-- 
             웹 접근성을 고려하여 accessibility 클래스를 통한 문구구성 및 네비게이션 버튼 구성
@@ -131,16 +131,190 @@
     </aside>
     <!-- 사이드메뉴 영역 끝 -->
 
-    <!-- SUBHEAD 영역 시작-->
-    <div class="subhead podcast__subhead">
-        <div class="inner">
-            <span class="subtitle">Title Name</span>
-        </div>
-    </div>
-    <!-- SUBHEAD 영역 끝-->
-
     <!-- MAIN SECTION 영역 시작 -->
     <main class="main podcast--inner">
+
+        <h2 class="a11y-hidden">에피소드 서브 배너 영역</h2>
+        <section class="section section01">
+            <div class="inner">
+                <div class="section01__textBanner">
+                    <p class="textBanner__information">How to avoid making bad choices</p>
+                    <span class="a11y-hidden">다른 팟캐스트 사이트 버튼</span>
+                    <div class="information__btnWrap">
+                        <a href="#" class="btn"><img src="../img/btn_img1.png" alt="Apple Podcast" /></a>
+                        <a href="#" class="btn"><img src="../img/btn_img2.png" alt="SoundCloud" /></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <h2 class="a11y-hidden">에피소드 미리보기 영역</h2>
+        <section class="section section02">
+            <div class="inner">
+                <div class="episodeBox">
+                    <div class="episodeBox__img">
+                        <img src="../img/Essential_img1.png" alt="Timmy Mike" />
+                    </div>
+        
+                    <div class="episodeBox__information">
+                        <div class="information__textBox">
+                            <span class="a11y-hidden">팟캐스트로 이동 태그 및 타이틀</span>
+                            <a href="#none" class="textBox__title">Timmy Mike: the nature of design</a>
+                        </div>
+        
+                        <div class="information__subBox">
+                            <span class="a11y-hidden">에피소드 카테고리</span>
+                            <span class="subBox__episode episode__categoryBox">
+                                <p class="categoryBox__text">Episode 1 •</p>
+                                <p class="categoryBox__text">Microphone •</p>
+                                <p class="categoryBox__text">0:13</p>
+                            </span>
+        
+                            <!-- 에피소드 미리보기 옵션 영역 -->
+                            <span class="a11y-hidden">미리보기 옵션 박스</span>
+                            <div class="subBox__options">
+                                <div class="options__button options__play">
+                                    <button class="btn-play"><span class="a11y-hidden">play</span><i
+                                            class="fa-solid fa-play"></i></button>
+                                </div>
+                                <div class="options__button options__button1">
+                                    <button class="btn-skip10"><span class="a11y-hidden">backwark</span><i
+                                            class="fa-solid fa-backward"></i></button>
+                                    <div class="button__text">10s</div>
+                                </div>
+                                <div class="options__button options__button2">
+                                    <button class="btn-jump10"><span class="a11y-hidden">forward</span><i
+                                            class="fa-solid fa-forward"></i></button>
+                                    <div class="button__text">10s</div>
+                                </div>
+                                <div class="options__timeline">
+                                    <span class="timeline__ball"></span>
+                                    <span class="timeline__line"></span>
+                                </div>
+                                <div class="options__time">
+                                    <p class="time__text">00:00</p>
+                                    <p class="time__text">00:00</p>
+                                </div>
+                                <div class="options__sound">
+                                    <a href="#none" class="btn-mute"><span class="a11y-hidden">mute</span></a>
+                                    <div class="sound__options">
+                                        <input type="range" value="50" min="0" max="100" step="1" class="options_range" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION03 영역 시작 -->
+        <section class="section section03">
+            <div class="inner">
+                <div class="podcast__about">
+                    <div class="podcast__information">
+                        <h2 class="section__title">About this Podcast:</h2>
+                        <div class="text_info">
+                            <p class="information__text">Designers cas, it can sometimes be a challenge wont up with an
+                                initial
+                                idea
+                                for a
+                                concept. We might intend to ourselv in the same spot hours later still thum through of
+                                unfinished
+                                work.
+                                During our discussion, we explain the importance loong for inspiration beyond your
+                                field, as
+                                well as
+                                how
+                                tidentify it beyond an aesthetic level. We even share some of our latest on from
+                                photography
+                                to
+                                architecture.</p>
+                            <p class="information__text">As designers, it can sometimes be a challenge to come up with
+                                an
+                                initial
+                                idea
+                                for
+                                a concept. We might intend to spend 15 minutes looking for inspiration only to find
+                                ourselves in
+                                the
+                                same spot 3 hours later, still thumbing through endles feeds of discussion, we explain
+                                the
+                                importance
+                                unfinished work.</p>
+                        </div>
+                    </div>
+
+                    <!-- 버튼 박스 -->
+                    <div class="about__btnBox">
+                        <p class="textarea__listenOn">Listen on:</p>
+                        <a href="#none" class="btn-episode">Apple Podcast <img src="../img/ico_next.svg" alt="link button"></a>
+                        <a href="#none" class="btn-episode">Spotify<img src="../img/ico_next.svg" alt="link button"></a>
+                        <a href="#none" class="btn-episode">SoundCloud<img src="../img/ico_next.svg" alt="link button"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SECTION03 영역 끝 -->
+
+        <!-- SECTION04 영역 시작 -->
+        <section class="section section04">
+            <div class="contents">
+                <div class="contents__imgBox">
+                    <img src="../img/podcast_inner_img1.jpg" alt="Isobel Marks의 사진입니다.">
+                </div>
+
+                <div class="contents__textBox">
+                    <h3 class="textBox__title">Listen to the specific part</h3>
+
+                    <div class="textBox__list">
+                        <div class="list__item">
+                            <div class="options__button options__play">
+                                <button class="btn-play"><span class="a11y-hidden">play</span><i class="fa-solid fa-play"></i></button>
+                            </div>
+
+                            <span class="a11y-hidden">특정 부분만 재생</span>
+                            <div class="episode__information">
+                                <div class="episode__categoryBox">
+                                    <p class="categoryBox__text timer">00:02</p>
+                                </div>
+                                <span class="information__title infobox">Start With Why</span>
+                            </div>
+                        </div>
+
+                        <div class="list__item">
+                            <div class="options__button options__play">
+                                <button class="btn-play"><span class="a11y-hidden">play</span><i class="fa-solid fa-play"></i></button>
+                            </div>
+
+                            <span class="a11y-hidden">특정 부분만 재생</span>
+                            <div class="episode__information">
+                                <div class="episode__categoryBox">
+                                    <p class="categoryBox__text timer">00:02</p>
+                                </div>
+                                <span class="information__title infobox">Start With Why</span>
+                            </div>
+                        </div>
+
+                        <div class="list__item">
+                            <div class="options__button options__play">
+                                <button class="btn-play"><span class="a11y-hidden">play</span><i class="fa-solid fa-play"></i></button>
+                            </div>
+
+                            <span class="a11y-hidden">특정 부분만 재생</span>
+                            <div class="episode__information">
+                                <div class="episode__categoryBox">
+                                    <p class="categoryBox__text timer">00:02</p>
+                                </div>
+                                <span class="information__title infobox">Start With Why</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SECTION04 영역 끝 -->
+
         <!-- SECTION05 영역 시작 -->
         <section class="section section05">
             <div class="inner">

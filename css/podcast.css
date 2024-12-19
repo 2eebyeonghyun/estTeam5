@@ -12,6 +12,44 @@
 	height: 11.5rem;
 	margin-inline: 4.6rem;
 
+	&.light {
+
+		.gnb {
+
+			> li {
+
+				&.--active {
+					
+					> a {
+						border-color: var(--bgWhite);
+					}
+				}
+
+				> a {
+					color: var(--fontWhite);
+				}
+			}
+		}
+
+		.utillity {
+
+			.btn-search {
+
+				span {
+					color: var(--fontWhite);
+				}
+			}
+
+			.btn-menu {
+				& .btn-menu__line {
+					.btn-menu__dot {
+						background-color: var(--bgWhite);
+					}
+				}
+			}
+		}
+	}
+
 	.logo {
 
 		>a {
@@ -303,366 +341,134 @@
 		.section {
 
 			&.section01 {
-				padding: 14rem 0;
-
-				.gird__list {
-					/* 사용자 편의를 위해 card를 두개씩 배치 */
-					grid-template-columns: repeat(2, 1fr);
-					justify-content: center;
-					align-items: center;
-
-					.card__informationBox {
-						display: flex;
-						flex-direction: column;
-						box-shadow: var(--boxShadow);
-						border-radius: 1.5rem;
-						overflow: hidden;
-						/* card에 이미지 꽉 채워서 보여주기 위해 padding을 0으로 줌 */
-						padding: 0;
-
-						.card__content {
-							display: flex;
-							flex-direction: column;
-							padding: 3rem 2.5rem;
-
-							.informationBox__titleBox {
-								.informationBox__title {
-									font-size: 4rem;
-								}
-							}
-
-							.content__episode {
-								display: flex;
-								flex-direction: column;
-								gap: 2.5rem;
-
-								.content__info {
-									display: flex;
-									flex-direction: column;
-									gap: 1.5rem;
-
-									.content__num {
-										color: var(--fontColor2);
-										font-size: 1.5rem;
-									}
-
-									.info__playnsubtitle {
-										display: flex;
-										align-items: center;
-										justify-content: center;
-										gap: 2rem;
-
-										.options__play {
-											width: 10rem;
-											transition: all 0.7s;
-
-											&:hover {
-												background-color: var(--bg3);
-											}
-										}
-
-										.content__detail {
-											display: inline-block;
-											text-decoration: none;
-											color: var(--fontBlack);
-											font-size: 2rem;
-											font-weight: bold;
-											overflow: hidden;
-											display: -webkit-box;
-											-webkit-line-clamp: 2;
-											-webkit-box-orient: vertical;
-											line-height: 1.5;
-											position: relative;
-										}
-									}
-								}
-							}
-
-							.card__footer {
-								display: flex;
-								justify-content: flex-end;
-							}
-						}
-
-						&:hover .card__imgBox img {
-							transform: scale(1.1);
-							opacity: 0.7;
-							transition: transform 0.7s, opacity 0.7s;
-						}
-					}
+				position: relative;
+				height: 90rem;
+				background: url(../img/podcast_inner_bg.jpg) no-repeat center;
+				background-size: cover;
+		
+				.inner {
+				  height: 100%;
+				  display: flex;
+				  justify-content: center;
+				  align-items: center;
+				  text-align: center;
 				}
-			}
+		
+				.section01__textBanner {
 
-			&.section02 {
-
-				.episodeBox {
-					/* 영역을 아래 마진탑 값 만큼 이동시킨다. */
-					margin-top: -15.36rem;
-					position: relative;
-					z-index: 100;
-					width: 100%;
-					background-color: #fff;
-					border-radius: 1rem;
-					box-shadow: var(--boxShadow);
-					display: inline-flex;
-					align-items: center;
-					overflow: hidden;
-
-					.episodeBox__img {
-						width: 29.1rem;
-						aspect-ratio: 1;
+					.textBanner__information {
+					  	font-size: 6rem;
+					  	color: var(--fontWhite);
+					  	font-weight: 700;
 					}
-
-					.episodeBox__information {
-						padding: 3.4rem 3.8rem 3.3rem 6.3rem;
-						width: calc(100% - 29.1rem);
-
-						.information__textBox {
-							width: 100%;
-							display: flex;
-							justify-content: space-between;
-							padding-left: 1rem;
-							margin-bottom: 1.02rem;
-
-							.textBox__title {
-								width: 40.4794rem;
-								color: var(--fontBlack);
-								font-size: 3.8rem;
-								font-weight: 700;
-								line-height: 4.408rem;
-								text-decoration: none;
-							}
-						}
-
-						.information__subBox {
-							width: 100%;
-
-							.subBox__episode {
-								width: 100%;
-								margin-bottom: 2.7rem;
-								padding-left: 1rem;
-								display: flex;
-								align-items: center;
-							}
-
-							.subBox__options {
-								display: flex;
-								gap: 1rem;
-								flex-direction: row;
-								justify-content: space-between;
-								align-items: center;
-
-								.btn-mute {
-									position: absolute;
-									top: 50%;
-									left: 50%;
-									translate: -50% -50%;
-									z-index: 2;
-								}
-							}
-						}
-					}
-
-					@media (width < 1024px) {
-						.episodeBox__img {
-							width: 20rem;
-						}
-
-						.episodeBox__information {
-							padding: 1.5rem;
-							width: calc(100% - 20rem);
-
-							.information__textBox {
-								.textBox__title {
-									width: 30rem;
-									font-size: 2rem;
-									line-height: 1.3;
-								}
-							}
-
-							.information__subBox {
-								.subBox__episode {
-									margin-bottom: 2rem;
-								}
-
-								.subBox__options {
-									flex-wrap: wrap;
-									justify-content: normal;
-									gap: 0 3rem;
-
-									.options__sound {
-										order: 5;
-									}
-								}
-							}
-						}
-
-						.options__button {
-							&.options__play {
-								order: 1;
-							}
-
-							&.options__button1 {
-								order: 2;
-							}
-
-							&.options__button2 {
-								order: 3;
-							}
-						}
-
-						.options__timeline {
-							width: 100%;
-							order: 6;
-							margin-top: 1.5rem;
-
-							.timeline__line {
-								width: 100%;
-							}
-						}
-
-						.options__time {
-							order: 4;
-						}
-					}
-
-					@media (width < 768px) {
-						margin-top: -10rem;
-
-						.episodeBox__img {
-							display: none;
-						}
-
-						.episodeBox__information {
-							width: 100%;
-
-							.information__textBox {
-								padding-left: 0;
-
-								.textBox__title {
-									width: 100%;
-									font-size: 2.5rem;
-								}
-
-								.textBox__link {
-									display: none;
-								}
-							}
-
-							.information__subBox {
-								.subBox__episode {
-									padding-left: 0;
-								}
-
-								.subBox__options {
-									.options__play {
-										width: 6rem;
-									}
-
-									.options__time,
-									.options__sound {
-										display: none;
-									}
-								}
-							}
-						}
+		
+					.information__btnWrap {
+					  	display: flex;
+					  	justify-content: center;
+					  	gap: 3.5rem;
+					  	margin-top: 5rem;
 					}
 				}
 			}
 
 			&.section03 {
-				height: 80rem;
+                padding: 14rem 0;
 
-				/* 가로 배치 */
-				.podcastabout {
-					display: flex;
+                /* 가로 배치 */
+                .podcast__about {
+                    gap: 15rem;
+                    display: flex;
+                    align-items: center;
+                }
 
-					.podcastinformation {
-						width: 600rem;
-						height: 50rem;
-						margin-top: 20rem;
-						margin-left: -17rem;
+				.podcast__information {
+					width: calc(100% - 30rem);
 
-						/* .informationsubject {
-                            font-size: 6rem;
-                            font-weight: bold;
-                            margin-bottom: 6rem;
-                        } */
-
-						.informationtext {
-							font-size: 2.4rem;
-							font-weight: 300;
-							margin-top: 5rem;
-							line-height: 3rem;
-						}
+					.text_info {
+						display: flex;
+						flex-direction: column;
+						gap: 2rem;
 					}
 
-					/* 버튼 박스 오른쪽에서 시작 */
-					.aboutbtnBox {
-						width: 200rem;
-						align-items: flex-end;
-						margin-top: 30rem;
-						margin-right: -10rem;
-
-						.textarealistenOn {
-							font-size: 2.5rem;
-							margin-left: 10rem;
-							margin-bottom: 3rem;
-						}
-
-						.btn-episode {
-							margin-left: 10rem;
-							font-size: 2rem;
-							line-height: 4rem;
-						}
+					.information__text {
+						font-size: 2.4rem;
+						font-weight: 500;
+						line-height: 3rem;
 					}
 				}
-			}
+
+				/* 버튼 박스 오른쪽에서 시작 */
+				.about__btnBox {
+					width: 30rem;
+					align-items: flex-end;
+
+					.textarea__listenOn {
+						font-size: 2.5rem;
+						margin-bottom: 3rem;
+					}
+
+					.btn-episode {
+						font-size: 2rem;
+						line-height: 4rem;
+					}
+				}
+            }
 
 			&.section04 {
-				position: relative;
-				/* display: inline-block; */
-				height: 90rem;
-				border: 1px solid red;
+                overflow: hidden;
 
-
-
-				.img__listen {
-					width: 60rem;
-					position: absolute;
-					left: 0;
-					border: 1px solid blue;
+				.contents {
+					display: flex;
+					flex-direction: row;
+					flex-wrap: wrap;
 				}
 
-				.imgbtn {
+				.contents__imgBox {
+					width: calc(100% - 50% - 25rem);
+					margin-right: 25rem;
+					overflow: hidden;
+					border-radius: 1rem;
+				}
+
+				.contents__textBox {
 					width: 50%;
-					height: 70rem;
-					border: 1px solid green;
-					/* align-items: flex-end; */
-					float: right;
-				}
 
-				.list__subject {
-					font-size: 4.5rem;
-					font-weight: bold;
+					.textBox__title {
+						color: var(--fontBlack);
+						font-size: 3.5rem;
+						font-weight: 700;
+						line-height: 4rem;
+						margin-bottom: 5rem;
+					}
 
-					.buttonn {
-						float: left;
+					.textBox__list {
 
+						.list__item {
+							display: flex;
+                            flex-direction: row;
+                            flex-wrap: wrap;
+                            align-items: center;
+                            gap: 3rem;
+							margin-bottom: 3rem;
+
+							&:last-of-type {
+								margin-bottom: 0;
+							}
+						}
 					}
 				}
-
-			}
+            }
 
 			&.section05 {
 				padding: 14rem 0 0;
 
 				.inner {
+
 					.box__episodecontent {
 						width: 100%;
 						display: flex;
 						flex-direction: row;
-						justify-content: space-around;
+						justify-content: space-between;
 						align-items: center;
 
 						.episodecontent__content {
@@ -673,7 +479,6 @@
 							}
 
 							.content__information {
-								flex: 0 0 40%;
 								height: 30rem;
 								overflow-y: scroll;
 								padding: 0.5rem;
@@ -682,21 +487,25 @@
 								box-shadow: var(--boxShadow);
 
 								.information__row {
-									margin-bottom: 1.5rem;
-
-									.row__name {
-										font-size: 2.5rem;
-										font-weight: bold;
-									}
-
-									.row__description {
-										font-size: 1.7rem;
-										line-height: 3rem;
-									}
+									margin-bottom: 2.5rem;
 
 									&:last-child {
 										margin-bottom: 0;
 									}
+
+									.row__name {
+										font-size: 2.5rem;
+										font-weight: 700;
+										margin-bottom: 1.5rem;
+										display: block;
+									}
+
+									.row__description {
+										font-size: 1.7rem;
+										line-height: 1.5;
+									}
+
+									
 								}
 							}
 						}
@@ -866,6 +675,31 @@
 
 			.section {
 
+				&.section03 {
+
+					.podcast__about {
+						flex-direction: column;
+						gap: 8rem;
+					}
+				
+					.podcast__information {
+						width: 100%;
+					}
+				
+					.about__btnBox {
+						width: 100%;
+						align-items: center;
+					}
+				}
+
+				&.section04 {
+
+					.contents__imgBox {
+						width: calc(100% - 50% - 10rem);
+						margin-right: 10rem;
+					}
+				}
+
 				&.section05 {
 					.inner {
 						.box__episodecontent {
@@ -976,6 +810,82 @@
 		/* 팟캐스트inner 페이지 */
 		&.podcast--inner {
 			.section {
+
+				&.section01 {
+					height: 70rem;
+			
+					.section01__textBanner {
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+
+						.textBanner__information {
+							font-size: 3rem;
+					  	}
+		  
+			
+						.information__btnWrap {
+							gap: 0.5rem;
+							flex-direction: column;
+						}
+					}
+				}
+
+				&.section03 {
+					padding: 7rem 0;
+
+					.podcast__about {
+						gap: 5rem;
+					}
+
+					.podcast__information {
+	
+						.information__text {
+							font-size: 1.6rem;
+							line-height: 1.5;
+						}
+					}
+				}
+
+				&.section04 {
+
+					.contents {
+						max-width: 95%;
+						margin: 0 auto;
+						gap: 2rem;
+					}
+
+					.contents__imgBox {
+						width: 100%;
+						margin: 0;
+					}
+	
+					.contents__textBox {
+						width: 100%;
+	
+						.textBox__title {
+                            font-size: 2.3rem;
+                            line-height: 1.5;
+                            margin-bottom: 2.5rem;
+						}
+	
+						.textBox__list {
+	
+							.list__item {
+								display: flex;
+								flex-direction: row;
+								flex-wrap: wrap;
+								align-items: center;
+								gap: 3rem;
+								margin-bottom: 3rem;
+	
+								&:last-of-type {
+									margin-bottom: 0;
+								}
+							}
+						}
+					}
+				}
 
 				&.section05 {
 					padding: 4rem 0;
