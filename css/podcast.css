@@ -303,7 +303,6 @@
 	&.podcast--inner {
 
 		.section {
-			padding: 7rem 0 0;
 
 			&.section03 {
 				height: 80rem;
@@ -354,13 +353,14 @@
 				}
 			}
 
-			&.section04 {
+			&.section05 {
+				padding: 14rem 0 0;
+
 				.inner {
 					.box__episodecontent {
 						width: 100%;
 						display: flex;
 						flex-direction: row;
-						/* gap: 25.5rem; */
 						justify-content: space-between;
 						align-items: center;
 
@@ -403,139 +403,103 @@
 				}
 			}
 
-			&.section05 {
-				.informationBox__title {
-					&::after {
-						display: none;
+			&.section06 {
+				padding: 10rem 0;
+
+				.inner {
+					.contents {
+						.section__headingBox {
+							text-align: left;
+						}
+
+						.gird__list {
+							.list__card {
+								.card__informationBox {
+									.informationBox__title {
+										&::after {
+											display: none;
+										}
+									}
+
+									.informationBox__job {
+										margin-bottom: 1rem;
+									}
+								}
+							}
+						}
 					}
 				}
 			}
 
-			&.section06 {
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				width: 100%;
-				height: 50rem;
+			&.section07 {
 				background-color: var(--bg2);
 				position: relative;
-
+				padding: 7rem 0;
 
 				.inner {
-					display: flex;
-					position: absolute;
-					gap: 20rem;
-					overflow: hidden;
+					.contents {
+						.section__headingBox {
+							text-align: left;
+						}
 
-					.inner__card {
-						display: flex;
-					}
-
-					.card__imgBox {
-						.essential__episodeList {
+						.gird__list {
 							display: flex;
+							flex-direction: row;
+							justify-content: center;
 							align-items: center;
 
-							.list__card {
-								position: relative;
-
-								.btn-sound {
-									position: absolute;
-									top: 1rem;
-									right: 1rem;
-									z-index: 100;
-								}
+							.card__imgBox {
+								width: 50%;
+								border-radius: 5rem;
 							}
 
-							.card__info {
-								display: flex;
-								flex-direction: column;
+							.card__informationBox {
+								width: 70%;
 
-								.info__title {
-									color: var(--fontColor2);
-									font-size: 2.5rem;
-									font-weight: bold;
+								.informationBox__title {
+									font-size: 3rem;
 								}
 
-								.info__content {
-									color: var(--fontBlack);
+								.informationBox__job {
 									font-size: 2rem;
-									font-weight: bold;
-									display: inline-block;
-									padding: 3rem 0;
+									line-height: 3rem;
+									margin-top: 2rem;
 								}
 
-								.info__footer {
-									color: var(--fontColor2);
-									font-size: 1.5rem;
+								.episode__categoryBox {
+									margin-top: 1rem;
 								}
 							}
+
 						}
+
 					}
 
-					.section__arrow {
-						display: flex;
-						align-items: center;
-						justify-content: center;
+					.btn-left {
+						background: url(../img/ico_left.svg) no-repeat;
+						width: 1.5rem;
+						height: 3rem;
 						position: absolute;
-						top: 50%;
-						right: 0.5rem;
+						top: 60%;
+						left: 5%;
+						translate: 0 -50%;
+					}
 
-						.arrow__prev {
-							display: flex;
-							flex-direction: row-reverse;
-							justify-content: center;
-							align-items: center;
-							opacity: 0.5;
-							transition: all 0.7s;
-
-							.prev__title {
-								text-decoration: none;
-								display: inline-block;
-								font-size: 1.7rem;
-								font-weight: bold;
-								padding: 0 1rem;
-							}
-
-							&:hover {
-								opacity: 1;
-								transform: skew(10deg);
-							}
-						}
-
-						.arrow__divide {
-							font-size: 2.5rem;
-							font-weight: lighter;
-						}
-
-						.arrow__next {
-							display: flex;
-							justify-content: center;
-							align-items: center;
-							opacity: 0.5;
-							transition: all 0.7s;
-
-
-							.next__title {
-								text-decoration: none;
-								display: inline-block;
-								font-size: 1.7rem;
-								font-weight: bold;
-								padding: 0 1rem;
-							}
-
-							&:hover {
-								opacity: 1;
-								transform: skew(10deg);
-							}
-						}
+					.btn-right {
+						background: url(../img/ico_right.svg) no-repeat;
+						width: 1.5rem;
+						height: 3rem;
+						position: absolute;
+						top: 60%;
+						right: 5%;
+						translate: 0 -50%;
 					}
 				}
 			}
 		}
 	}
 
-	@media (width < 1024px) {
+	@media (width < 1300px) {
 
 		/* 팟캐스트 페이지 */
 		&.podcast--page {
@@ -577,6 +541,43 @@
 											}
 										}
 									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		/* 팟캐스트inner 페이지 */
+		&.podcast--inner {
+			.section {
+				&.section05 {
+					.inner {
+						.box__episodecontent {
+							gap: 5rem;
+						}
+					}
+				}
+
+				&.section07 {
+					.inner {
+						.contents {
+							.gird__list {
+								display: flex;
+								flex-direction: column;
+
+								.card__imgBox {
+									width: 70%;
+									border-radius: 5rem;
+								}
+
+								.card__informationBox {
+									display: flex;
+									flex-direction: column;
+									text-align: center;
+									justify-content: center;
+									align-items: center;
 								}
 							}
 						}
@@ -629,6 +630,87 @@
 									}
 								}
 							}
+						}
+					}
+				}
+			}
+		}
+
+		/* 팟캐스트inner 페이지 */
+		&.podcast--inner {
+			.section {
+
+				&.section05 {
+					padding: 4rem 0;
+
+					.inner {
+						.box__episodecontent {
+							flex-direction: column;
+
+							.episodecontent__content {
+								width: 80%;
+
+								.content__information {
+									.information__row {
+										.row__name {
+											font-size: 2rem;
+										}
+
+										.row__description {
+											font-size: 1.5rem;
+											line-height: 2.5rem;
+										}
+									}
+								}
+							}
+
+							.contents__pictureBox {
+								height: 30rem;
+							}
+						}
+					}
+				}
+
+				&.section06 {
+					padding: 4rem 0;
+				}
+
+				&.section07 {
+					padding: 4rem 0;
+
+					.inner {
+						.contents {
+							.gird__list {
+								display: flex;
+								flex-direction: column;
+
+
+
+								.card__informationBox {
+									display: flex;
+									flex-direction: column;
+									text-align: center;
+									justify-content: center;
+									align-items: center;
+
+									.informationBox__title {
+										font-size: 2rem;
+									}
+
+									.informationBox__job {
+										font-size: 1.5rem;
+										line-height: 2.5rem;
+									}
+								}
+							}
+						}
+
+						.btn-left {
+							left: 2rem;
+						}
+
+						.btn-right {
+							right: 2rem;
 						}
 					}
 				}
