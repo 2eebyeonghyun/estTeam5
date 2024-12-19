@@ -3,808 +3,765 @@
 
 /* HEADER 영역 시작 */
 .header {
-	position: absolute;
-	inset: 0 0 auto 0;
-	z-index: 1000;
-	display: grid;
-	grid-template-columns: min-content 1fr min-content;
-	align-items: center;
-	height: 11.5rem;
-	margin-inline: 4.6rem;
+  position: absolute;
+  inset: 0 0 auto 0;
+  z-index: 1000;
+  display: grid;
+  grid-template-columns: min-content 1fr min-content;
+  align-items: center;
+  height: 11.5rem;
+  margin-inline: 4.6rem;
 
-	.logo {
+  .logo {
+    > a {
+      width: 13rem;
+      display: block;
+    }
+  }
 
-		>a {
-			width: 13rem;
-			display: block;
-		}
-	}
+  .gnb {
+    text-align: center;
+    justify-content: center;
 
-	.gnb {
-		text-align: center;
-		justify-content: center;
+    > li {
+      transition: all 0.3s ease-in-out;
 
-		> li {
-			transition: all .3s ease-in-out;
+      &:hover {
+        transform: translateY(-0.3rem);
+      }
+    }
+  }
 
-			&:hover {
-				transform: translateY(-0.3rem);
-			}
-		}
-	}
+  .utillity {
+    display: flex;
+    gap: 3.77rem;
+    align-items: center;
+  }
 
-	.utillity {
-		display: flex;
-		gap: 3.77rem;
-		align-items: center;
-	}
+  @media (width < 1024px) {
+    margin-inline: auto;
+    max-width: 95%;
 
-	@media (width < 1024px) {
-		margin-inline: auto;
-		max-width: 95%;
+    .gnb {
+      display: none;
+    }
+  }
 
-		.gnb {
-			display: none;
-		}
-	}
+  @media (width < 768px) {
+    height: 8rem;
 
-	@media (width < 768px) {
-		height: 8rem;
+    .logo {
+      > a {
+        width: 10rem;
+      }
+    }
 
-		.logo {
+    .utillity {
+      gap: 2rem;
 
-			>a {
-				width: 10rem;
-			}
-		}
-
-		.utillity {
-			gap: 2rem;
-
-			.btn-search {
-
-				span {
-					display: none;
-				}
-			}
-		}
-	}
+      .btn-search {
+        span {
+          display: none;
+        }
+      }
+    }
+  }
 }
 /* HEADER 영역 끝 */
 
-
 /* 사이드메뉴 영역 시작 */
 .sideMenu {
-	position: fixed;
-	top: 0;
-	right: 0;
-	z-index: 1001;
-	width: 0;
-	height: 100vh;
-	background-color: var(--bgWhite);
-	box-shadow: var(--boxShadow);
-	padding: 0 4.5rem;
-	display: none;
-    
-	&.--active {
-		width: 45rem;
-		display: grid;
-		gap: 5rem;
-    	grid-template-rows: 11.5rem min-content min-content;
-	}
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1001;
+  width: 0;
+  height: 100vh;
+  background-color: var(--bgWhite);
+  box-shadow: var(--boxShadow);
+  padding: 0 4.5rem;
+  display: none;
 
-	.btn-wrap {
-		display: flex;
-		justify-content: flex-end;
-		align-items: center;
+  &.--active {
+    width: 45rem;
+    display: grid;
+    gap: 5rem;
+    grid-template-rows: 11.5rem min-content min-content;
+  }
 
-		.btn-menu {
+  .btn-wrap {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 
-			.btn-menu__line {
+    .btn-menu {
+      .btn-menu__line {
+        &.__line2 {
+          justify-content: center;
+        }
+      }
+    }
+  }
 
-				&.__line2{
-					justify-content: center;
-				}
-			}
-		}
-	}
+  .gnb {
+    flex-direction: column;
+    align-items: center;
+    gap: 6rem;
+    margin-bottom: 5rem;
 
-	.gnb {
-		flex-direction: column;
-		align-items: center;
-		gap: 6rem;
-		margin-bottom: 5rem;
+    > li {
+      &:hover {
+        > a {
+          color: var(--fontBlack);
+        }
+      }
 
-		> li {
+      &.--active {
+        > a {
+          border-bottom: 0;
+        }
+      }
 
-			&:hover {
+      > a {
+        font-size: 3rem;
+        font-weight: 800;
+        color: var(--fontColor2);
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
 
-				> a {
-					color: var(--fontBlack);
-				}
-			}
+  .company__information {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
 
-			&.--active {
+    .row__title {
+      font-size: 2.3rem;
+      line-height: 1.5;
+      font-weight: 700;
+      color: var(--fontBlack);
+      margin-bottom: 1rem;
+      display: block;
+    }
 
-				> a {
-					border-bottom: 0;
-				}
-			}
+    .linkBox__link {
+      line-height: 1.5;
+      font-weight: 400;
 
-			> a {
-				font-size: 3rem;
-				font-weight: 800;
-				color: var(--fontColor2);
-				transition: all .3s ease-in-out;
-			}
-		}
-	}
+      :is(&:hover, &:hover > i) {
+        color: var(--fontBlack);
+      }
+    }
+  }
 
-	.company__information {
-		display: flex;
-        flex-direction: column;
-        gap: 5rem;
+  @media (width < 768px) {
+    padding: 0 2rem;
 
-		.row__title {
-			font-size: 2.3rem;
-			line-height: 1.5;
-			font-weight: 700;
-			color: var(--fontBlack);
-			margin-bottom: 1rem;
-			display: block;
-		}
+    &.--active {
+      width: 100%;
+      grid-template-rows: 8rem min-content min-content;
+    }
 
-		.linkBox__link {
-			line-height: 1.5;
-            font-weight: 400;
+    .gnb {
+      gap: 3.5rem;
 
-			:is(&:hover, &:hover > i) {
-				color: var(--fontBlack);
-			}
-		}
-	}
+      > li {
+        > a {
+          font-size: 2.3rem;
+        }
+      }
+    }
 
-	@media (width < 768px) {
-		padding: 0 2rem;
+    .company__information {
+      gap: 5rem;
 
-		&.--active {
-			width: 100%;
-			grid-template-rows: 8rem min-content min-content;
-		}
-
-		.gnb {
-			gap: 3.5rem;
-	
-			> li {
-	
-				> a {
-					font-size: 2.3rem;
-				}
-			}
-		}
-
-		.company__information {
-			gap: 5rem;
-	
-			.row__title {
-				font-size: 1.8rem;
-			}
-		}
-	}
+      .row__title {
+        font-size: 1.8rem;
+      }
+    }
+  }
 }
 /* 사이드메뉴 영역 끝 */
 
-
 /* 본문 영역 시작 */
 .main {
+  .section {
+    width: 100%;
+  }
 
-	.section {
-		width: 100%;
-	}
+  /* 메인페이지 */
+  &.main--page {
+    .section {
+      /* 메인비주얼 영역 CSS */
+      &.section01 {
+        position: relative;
+        height: 90rem;
+        background: url(../img/@thumbnail_img.png) no-repeat;
+        background-size: cover;
 
-	/* 메인페이지 */
-	&.main--page {
+        .inner {
+          height: 100%;
+          display: flex;
+          align-items: center;
+        }
 
-		.section {
+        .section01__textBox {
+          .textBox__title {
+            color: var(--fontBlack);
+            font-size: 9.5rem;
+            font-weight: 700;
+            line-height: 10.3rem;
+            margin-bottom: 1.4rem;
+          }
 
-			/* 메인비주얼 영역 CSS */
-			&.section01 {
-				position: relative;
-				height: 90rem;
-				background: url(../img/@thumbnail_img.png) no-repeat center;
-				background-size: cover;
+          .textBox__information {
+            color: var(--fontBlack);
+            font-family: var(--subFont);
+            font-size: 1.9rem;
+            font-weight: 400;
+            line-height: 2.7rem;
+            margin-bottom: 5rem;
+          }
 
-				.inner {
-					height: 100%;
-					display: flex;
-					align-items: center;
-				}
+          .textBox__btnWrap {
+            display: flex;
+            gap: 2.3rem;
+            align-items: center;
+          }
+        }
+      }
 
-				.section01__textBox {
+      /* 에피소드 소개 영역 CSS */
+      &.section03 {
+        background-color: var(--bgWhite);
+        padding: 14rem 0 15.17rem;
 
-					.textBox__title {
-						color: var(--fontBlack);
-						font-size: 9.5rem;
-						font-weight: 700;
-						line-height: 10.3rem;
-						margin-bottom: 1.4rem;
-					}
+        .contents {
+          width: 100%;
+          display: flex;
+          gap: 25.5rem;
+          justify-content: space-between;
+          align-items: center;
 
-					.textBox__information {
-						color: var(--fontBlack);
-						font-family: var(--subFont);
-						font-size: 1.9rem;
-						font-weight: 400;
-						line-height: 2.7rem;
-						margin-bottom: 5rem;
-					}
-
-					.textBox__btnWrap {
-						display: flex;
-						gap: 2.3rem;
-						align-items: center;
-					}
-				}
-			}
-
-			/* 에피소드 소개 영역 CSS */
-			&.section03 {
-				background-color: var(--bgWhite);
-				padding: 14rem 0 15.17rem;
-
-				.contents {
-					width: 100%;
-					display: flex;
-					gap: 25.5rem;
-					justify-content: space-between;
-					align-items: center;
-
-					/* 
+          /* 
 						소개영역과 이미지 영역을 flex를 통해 넓이값을 고정시킨다.
 					*/
-					.contents__textBox {
-						flex: 0 0 40%;
-
-						.section__title {
-							margin-bottom: 2.8rem;
-						}
-
-						.textBox__information {
-
-							.information__episode {
-								display: flex;
-								gap: 2.1rem;
-								align-items: center;
-								margin-bottom: 3rem;
-							}
-
-							.information__textarea {
-								margin-bottom: 3.13rem;
-							}
-
-							.textarea__text {
-								color: var(--fontBlack);
-								font-family: var(--subFont);
-								font-size: 1.7rem;
-								font-weight: 400;
-								line-height: 2.703rem;
-								margin-bottom: 2rem;
-
-								&:last-of-type {
-									margin-bottom: 0;
-								}
-							}
-						}
-					}
-
-					.contents__pictureBox {
-						position: relative;
-						flex: 0 0 40%;
-
-						/* 이미지 왼쪽 텍스트를 90도 회전시켜 absolute로 배치하는 작업을 했고 zindex를 이미지보다 아래로 주어 밑에 보이도록 작업했습니다. */
-						.pictureBox__text {
-							position: absolute;
-							top: 50%;
-							left: -50%;
-							translate: -25px -50%;
-							transform: rotate(-90deg);
-							color: var(--fontColor3);
-							font-size: 9.2rem;
-							font-weight: 600;
-							line-height: 2.703rem;
-							z-index: 1;
-						}
-
-						img {
-							position: relative;
-							z-index: 2;
-							border-radius: 1rem;
-							box-shadow: var(--boxShadow);
-						}
-					}
-				}
-			}
-
-			/* 인기 팟캐스트 영역 CSS */
-			&.section04 {
-				background-color: var(--bg2);
-				padding: 9.2rem 0 10.7rem;
-				text-align: center;
-				overflow: hidden;
-
-				.swiper__list {
-					/* 이미지를 영역 밖으로 보내기 위해 position을 사용했고 부모에 높이값을 주어 커스텀했습니다. */
-					position: relative;
-					height: 46rem;
-
-					.swiper-wrapper {
-						position: absolute;
-						top: 0;
-						left: 50%;
-						translate: -50% 0;
-
-						display: flex;
-						gap: 8rem;
-						flex-direction: row;
-						/* justify-content: center; */
-						/* margin-bottom: 6rem; */
-					}
-
-					.swiper-slide {
-						display: flex;
-						width: 78.5rem;
-						height: 39.25rem;
-						justify-content: center;
-						align-items: center;
-						border-radius: 1rem;
-						background-color: var(--bgWhite);
-						box-shadow: var(--boxShadow);
-						overflow: hidden;
-
-						.slide__img {
-							width: 50%;
-							height: 100%;
-
-							>a {
-								width: 100%;
-								height: 100%;
-								display: block;
-							}
-						}
-
-						.slide__information {
-							width: 50%;
-							padding: 0 4.5rem;
-							text-align: left;
-						}
-					}
-				}
-
-				/* dot 버튼도 슬라이드 이미지와 같이 absolute을 사용하여 커스텀했습니다. */
-				.swiper__options {
-					position: absolute;
-					bottom: 0;
-					left: 50%;
-					translate: -50% 0;
-
-					width: 100%;
-					display: inline-flex;
-					justify-content: center;
-				}
-			}
-
-			/* 필수 에피소드 영역 CSS */
-			&.section05 {
-				padding: 12.4rem 0 21rem;
-
-				.contents {
-
-					.section__headingBox {
-						display: flex;
-						justify-content: space-between;
-						align-items: center;
-
-						.section__title {
-							margin-bottom: 0;
-						}
-					}
-				}
-			}
-
-			/* 비디오 영역 CSS */
-			&.section06 {
-				height: 71.0609rem;
-				background: url(../img/video__img.png) no-repeat;
-				background-size: cover;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-
-				.video__btnBox {
-					width: 9rem;
-					aspect-ratio: 1;
-					background-color: var(--bgWhite);
-					border-radius: 50%;
-					display: flex;
-					justify-content: center;
-					align-items: center;
-				}
-			}
-
-			/* 호스트소개 영역 CSS */
-			&.section07 {
-				padding: 12.7rem 0 13.8rem;
-
-				.section__headingBox {
-					display: flex;
-					justify-content: space-between;
-					align-items: center;
-
-					.section__title {
-						margin-bottom: 0;
-					}
-				}
-
-				.gird__list {
-
-					.card__imgBox {
-						height: 44.7219rem;
-					}
-
-					.card__informationBox {
-
-						.informationBox__title {
-							margin-bottom: 0.8rem;
-
-							&::after {
-								display: none;
-							}
-						}
-
-						.informationBox__job {
-							margin-bottom: 2.53rem;
-						}
-					}
-				}
-			}
-		}
-	}
-
-	@media (width < 1024px) {
-
-		&.main--page {
-
-			.section {
-
-				&.section01 {
-
-					.section01__textBox {
-
-						.textBox__title {
-							font-size: 5.5rem;
-							line-height: 6.5rem;
-						}
-	
-						.textBox__information {
-							font-size: 1.6rem;
-						}
-
-						.textBox__btnWrap {
-							gap: 2rem;
-
-							.btn {
-								width: 15rem;
-							}
-						}
-					}
-				}
-
-				&.section03 {
-
-					.contents {
-						gap: 3rem;
-						align-items: flex-start;
-
-						.contents__textBox {
-							flex: 0 0 calc(100% - 35% - 3rem);
-						}
-
-						.contents__pictureBox {
-							flex: 0 0 35%;
-
-							.pictureBox__text {
-								translate: 0 0;
-								font-size: 3.8rem;
-								top: auto;
-								bottom: -2rem;
-								left: 0;
-								transform: rotate(0);
-							}
-						}
-					}
-				}
-
-				&.section04 {
-
-					.swiper__list {
-						height: 40rem;
-
-						.swiper-wrapper {
-							gap: 3rem;
-						}
-
-						.swiper-slide {
-							width: 65rem;
-							height: 35rem;
-						}
-					}
-				}
-
-				&.section07 {
-
-					.gird__list {
-
-						.card__imgBox {
-							height: 35rem;
-						}
-					}
-				}
-			}
-		}
-	}
-
-	@media (width < 768px) {
-		
-		&.main--page {
-
-			.section {
-
-				&.section01 {
-					height: 70rem;
-					background-position: left;
-
-					.section01__textBox {
-
-						.textBox__title {
-							font-size: 4.3rem;
-							line-height: 5.3rem;
-						}
-	
-						.textBox__information {
-							font-size: 1.8rem;
-							line-height: 2.8rem;
-							margin-bottom: 3rem;
-						}
-	
-						.textBox__btnWrap {
-							flex-direction: column;
-							gap: 1.5rem;
-							align-items: flex-start;
-
-							.btn {
-								width: 20rem;
-							}
-						}
-					}
-				}
-
-				&.section03 {
-					padding: 7rem 0;
-
-					.contents {
-						flex-direction: column;
-
-						.contents__textBox {
-							order: 2;
-							width: 100%;
-						}
-
-						.contents__pictureBox {
-							order: 1;
-							width: 100%;
-						}
-					}
-				}
-
-				&.section04 {
-					padding: 7rem 0;
-
-					.contents {
-
-						.section__headingBox {
-							text-align: center;
-						}
-					}
-
-					.swiper__list {
-
-						.swiper-slide {
-							width: 25rem;
-							height: auto;
-							flex-direction: column;
-
-							.slide__img {
-								width: 100%;
-								height: 20rem;
-							}
-
-							.slide__information {
-								width: 100%;
-								padding: 1.5rem;
-
-								.information__title {
-									font-size: 1.8rem;
-								}
-							}
-						}
-					}
-				}
-
-				&.section05 {
-					padding: 7rem 0;
-				}
-
-				&.section07 {
-					padding: 7rem 0;
-				}
-			}
-		}
-	}
+          .contents__textBox {
+            flex: 0 0 40%;
+
+            .section__title {
+              margin-bottom: 2.8rem;
+            }
+
+            .textBox__information {
+              .information__episode {
+                display: flex;
+                gap: 2.1rem;
+                align-items: center;
+                margin-bottom: 3rem;
+              }
+
+              .information__textarea {
+                margin-bottom: 3.13rem;
+              }
+
+              .textarea__text {
+                color: var(--fontBlack);
+                font-family: var(--subFont);
+                font-size: 1.7rem;
+                font-weight: 400;
+                line-height: 2.703rem;
+                margin-bottom: 2rem;
+
+                &:last-of-type {
+                  margin-bottom: 0;
+                }
+              }
+            }
+          }
+
+          .contents__pictureBox {
+            position: relative;
+            flex: 0 0 40%;
+
+            /* 이미지 왼쪽 텍스트를 90도 회전시켜 absolute로 배치하는 작업을 했고 zindex를 이미지보다 아래로 주어 밑에 보이도록 작업했습니다. */
+            .pictureBox__text {
+              position: absolute;
+              top: 50%;
+              left: -50%;
+              translate: -25px -50%;
+              transform: rotate(-90deg);
+              color: var(--fontColor3);
+              font-size: 9.2rem;
+              font-weight: 600;
+              line-height: 2.703rem;
+              z-index: 1;
+            }
+
+            img {
+              position: relative;
+              z-index: 2;
+              border-radius: 1rem;
+              box-shadow: var(--boxShadow);
+            }
+          }
+        }
+      }
+
+      /* 인기 팟캐스트 영역 CSS */
+      &.section04 {
+        background-color: var(--bg2);
+        padding: 9.2rem 0 10.7rem;
+        text-align: center;
+        overflow: hidden;
+
+        .swiper__list {
+          /* 이미지를 영역 밖으로 보내기 위해 position을 사용했고 부모에 높이값을 주어 커스텀했습니다. */
+          position: relative;
+          height: 46rem;
+
+          .swiper-wrapper {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            translate: -50% 0;
+
+            display: flex;
+            gap: 8rem;
+            flex-direction: row;
+            /* justify-content: center; */
+            /* margin-bottom: 6rem; */
+          }
+
+          .swiper-slide {
+            display: flex;
+            width: 78.5rem;
+            height: 39.25rem;
+            justify-content: center;
+            align-items: center;
+            border-radius: 1rem;
+            background-color: var(--bgWhite);
+            box-shadow: var(--boxShadow);
+            overflow: hidden;
+
+            .slide__img {
+              width: 50%;
+              height: 100%;
+
+              > a {
+                width: 100%;
+                height: 100%;
+                display: block;
+              }
+            }
+
+            .slide__information {
+              width: 50%;
+              padding: 0 4.5rem;
+              text-align: left;
+            }
+          }
+        }
+
+        /* dot 버튼도 슬라이드 이미지와 같이 absolute을 사용하여 커스텀했습니다. */
+        .swiper__options {
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          translate: -50% 0;
+
+          width: 100%;
+          display: inline-flex;
+          justify-content: center;
+        }
+      }
+
+      /* 필수 에피소드 영역 CSS */
+      &.section05 {
+        padding: 12.4rem 0 21rem;
+
+        .contents {
+          .section__headingBox {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .section__title {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+
+      /* 비디오 영역 CSS */
+      &.section06 {
+        height: 71.0609rem;
+        background: url(../img/video__img.png) no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .video__btnBox {
+          width: 9rem;
+          aspect-ratio: 1;
+          background-color: var(--bgWhite);
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+
+      /* 호스트소개 영역 CSS */
+      &.section07 {
+        padding: 12.7rem 0 13.8rem;
+
+        .section__headingBox {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .section__title {
+            margin-bottom: 0;
+          }
+        }
+
+        .gird__list {
+          .card__imgBox {
+            height: 44.7219rem;
+          }
+
+          .card__informationBox {
+            .informationBox__title {
+              margin-bottom: 0.8rem;
+
+              &::after {
+                display: none;
+              }
+            }
+
+            .informationBox__job {
+              margin-bottom: 2.53rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (width < 1024px) {
+    &.main--page {
+      .section {
+        &.section01 {
+          .section01__textBox {
+            .textBox__title {
+              font-size: 5.5rem;
+              line-height: 6.5rem;
+            }
+
+            .textBox__information {
+              font-size: 1.6rem;
+            }
+
+            .textBox__btnWrap {
+              gap: 2rem;
+
+              .btn {
+                width: 15rem;
+              }
+            }
+          }
+        }
+
+        &.section03 {
+          .contents {
+            gap: 3rem;
+            align-items: flex-start;
+
+            .contents__textBox {
+              flex: 0 0 calc(100% - 35% - 3rem);
+            }
+
+            .contents__pictureBox {
+              flex: 0 0 35%;
+
+              .pictureBox__text {
+                translate: 0 0;
+                font-size: 3.8rem;
+                top: auto;
+                bottom: -2rem;
+                left: 0;
+                transform: rotate(0);
+              }
+            }
+          }
+        }
+
+        &.section04 {
+          .swiper__list {
+            height: 40rem;
+
+            .swiper-wrapper {
+              gap: 3rem;
+            }
+
+            .swiper-slide {
+              width: 65rem;
+              height: 35rem;
+            }
+          }
+        }
+
+        &.section07 {
+          .gird__list {
+            .card__imgBox {
+              height: 35rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (width < 768px) {
+    &.main--page {
+      .section {
+        &.section01 {
+          height: 70rem;
+          background-position: left;
+
+          .section01__textBox {
+            .textBox__title {
+              font-size: 4.3rem;
+              line-height: 5.3rem;
+            }
+
+            .textBox__information {
+              font-size: 1.8rem;
+              line-height: 2.8rem;
+              margin-bottom: 3rem;
+            }
+
+            .textBox__btnWrap {
+              flex-direction: column;
+              gap: 1.5rem;
+              align-items: flex-start;
+
+              .btn {
+                width: 20rem;
+              }
+            }
+          }
+        }
+
+        &.section03 {
+          padding: 7rem 0;
+
+          .contents {
+            flex-direction: column;
+
+            .contents__textBox {
+              order: 2;
+              width: 100%;
+            }
+
+            .contents__pictureBox {
+              order: 1;
+              width: 100%;
+            }
+          }
+        }
+
+        &.section04 {
+          padding: 7rem 0;
+
+          .contents {
+            .section__headingBox {
+              text-align: center;
+            }
+          }
+
+          .swiper__list {
+            .swiper-slide {
+              width: 25rem;
+              height: auto;
+              flex-direction: column;
+
+              .slide__img {
+                width: 100%;
+                height: 20rem;
+              }
+
+              .slide__information {
+                width: 100%;
+                padding: 1.5rem;
+
+                .information__title {
+                  font-size: 1.8rem;
+                }
+              }
+            }
+          }
+        }
+
+        &.section05 {
+          padding: 7rem 0;
+        }
+
+        &.section07 {
+          padding: 7rem 0;
+        }
+      }
+    }
+  }
 }
 /* 본문 영역 끝 */
 
-
 /* 푸터 영역 시작 */
 .footer {
-	width: 100%;
-	background-color: var(--bgBlack);
-	padding: 13.4rem 0 13rem;
+  width: 100%;
+  background-color: var(--bgBlack);
+  padding: 13.4rem 0 13rem;
 
-	.footer__content {
-		width: 100%;
-		display: flex;
-		flex-direction: row;
-		padding: 1rem 1.5rem;
-	}
+  .footer__content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 1rem 1.5rem;
+  }
 
-	.content__logo {
-		width: 14.7rem;
-		margin-right: 18.55rem;
+  .content__logo {
+    width: 14.7rem;
+    margin-right: 18.55rem;
 
-		.logo__img {
-			display: block;
-			margin-bottom: 1.1rem;
-		}
+    .logo__img {
+      display: block;
+      margin-bottom: 1.1rem;
+    }
 
-		.logo__text {
-			color: var(--fontColor4);
-			font-family: var(--subFont);
-			font-size: 1.3rem;
-			font-weight: 400;
-			line-height: 2.067rem;
-		}
-	}
+    .logo__text {
+      color: var(--fontColor4);
+      font-family: var(--subFont);
+      font-size: 1.3rem;
+      font-weight: 400;
+      line-height: 2.067rem;
+    }
+  }
 
-	.content__information {
-		width: calc(100% - 33.25rem);
+  .content__information {
+    width: calc(100% - 33.25rem);
 
-		.information__slogan {
-			width: 60.2106rem;
-			color: var(--fontWhite);
-			font-size: 2.7rem;
-			font-weight: 700;
-			line-height: 3.402rem;
-			margin-bottom: 11.33rem;
-		}
+    .information__slogan {
+      width: 60.2106rem;
+      color: var(--fontWhite);
+      font-size: 2.7rem;
+      font-weight: 700;
+      line-height: 3.402rem;
+      margin-bottom: 11.33rem;
+    }
 
-		.information__list {
-			display: flex;
-			flex-direction: row;
-			flex-wrap: wrap;
-			justify-content: space-between;
+    .information__list {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
 
-			>li {
-				height: 21.4703rem;
-				display: grid;
-				grid-template-rows: min-content 1fr min-content;
-				;
+      > li {
+        height: 21.4703rem;
+        display: grid;
+        grid-template-rows: min-content 1fr min-content;
+        .list__title {
+          color: var(--fontColor4);
+          font-size: 1.8rem;
+          font-weight: 700;
+          line-height: 2.304rem;
+          margin-bottom: 2.3rem;
+          display: block;
+        }
 
-				.list__title {
-					color: var(--fontColor4);
-					font-size: 1.8rem;
-					font-weight: 700;
-					line-height: 2.304rem;
-					margin-bottom: 2.3rem;
-					display: block;
-				}
-        
-				.list__link__last {
-					color: var(--fontColor4);
-					font-family: var(--subFont);
-					font-size: 1.3rem;
-					font-weight: 400;
-					line-height: 2.067rem;
-					text-decoration: none;
+        .list__link__last {
+          color: var(--fontColor4);
+          font-family: var(--subFont);
+          font-size: 1.3rem;
+          font-weight: 400;
+          line-height: 2.067rem;
+          text-decoration: none;
 
-					>a {
-						color: #ccc;
-						text-decoration: none;
-					}
-				}
-			}
-		}
-	}
+          > a {
+            color: #ccc;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
 
-	@media (width < 1024px) {
+  @media (width < 1024px) {
+    .footer__content {
+      padding: 0;
+      flex-direction: column;
+    }
 
-		.footer__content {
-			padding: 0;
-			flex-direction: column;
-		}
+    .content__logo {
+      margin-bottom: 3rem;
+      margin-right: 0;
+    }
 
-		.content__logo {
-			margin-bottom: 3rem;
-			margin-right: 0;
-		}
+    .content__information {
+      width: 100%;
 
-		.content__information {
-			width: 100%;
+      .information__slogan {
+        width: 100%;
+        margin-bottom: 5rem;
+      }
 
-			.information__slogan {
-				width: 100%;
-				margin-bottom: 5rem;
-			}
+      .information__list {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+    }
+  }
 
-			.information__list {
-				flex-direction: column;
-				gap: 1.5rem;
-			}
-		}
-	}
+  @media (width < 768px) {
+    padding: 6.5rem 0;
 
-	@media (width < 768px) {
-		padding: 6.5rem 0;
+    .content__information {
+      .information__slogan {
+        font-size: 2rem;
+        line-height: 2.8rem;
+      }
 
-		.content__information {
+      .information__list {
+        > li {
+          height: 15rem;
 
-			.information__slogan {
-				font-size: 2rem;
-				line-height: 2.8rem;
-			}
+          .list__title {
+            font-size: 1.5rem;
+            line-height: 1.8rem;
+            margin-bottom: 1.5rem;
+          }
 
-			.information__list {
+          .list__content {
+            &.sns {
+              .list__link {
+                > i {
+                  font-size: 1.8rem;
+                  line-height: 1.8rem;
+                }
+              }
+            }
 
-				>li {
-					height: 15rem;
-
-					.list__title {
-						font-size: 1.5rem;
-						line-height: 1.8rem;
-						margin-bottom: 1.5rem;
-					}
-
-					.list__content {
-
-						&.sns {
-
-							.list__link {
-
-								>i {
-									font-size: 1.8rem;
-									line-height: 1.8rem;
-								}
-							}
-						}
-
-						.list__link {
-							font-size: 1.4rem;
-							line-height: 2.4rem;
-						}
-					}
-				}
-			}
-		}
-	}
+            .list__link {
+              font-size: 1.4rem;
+              line-height: 2.4rem;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 /* 푸터 영역 끝 */
