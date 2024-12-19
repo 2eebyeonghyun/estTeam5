@@ -492,7 +492,7 @@
 						align-items: center;
 
 						.form__row {
-							width: calc(100% - 13rem);
+							width: calc(100% - 15rem);
 						}
 					}
 				}
@@ -744,6 +744,7 @@
 
 						.inner__form{
 							gap: 1rem;
+							justify-content: flex-end;
 	
 							.form__row {
 								width: 100%;
