@@ -125,30 +125,78 @@
     </aside>
     <!-- 사이드메뉴 영역 끝 -->
 
-    <!-- SUBHEAD 영역 시작-->
-    <div class="subhead podcast__subhead">
-      <div class="inner">
-        <span class="subtitle">Title Name</span>
-      </div>
-    </div>
-    <!-- SUBHEAD 영역 끝-->
-
     <!-- MAIN SECTION 영역 시작 -->
     <main class="main podcast--inner">
       <section class="section section01">
+        <!-- 팟캐스트 미리보기 영역 -->
+
         <h2 class="a11y-hidden">에피소드 서브 배너 영역</h2>
-        <section class="section section01">
-          <div class="inner">
-            <div class="section01__textBanner">
-              <p class="textBanner__information">How to avoid making bad choices</p>
-              <span class="a11y-hidden">다른 팟캐스트 사이트 버튼</span>
-              <div class="information__btnWrap">
-                <a href="#" class="btn"><img src="../img/btn_img1.png" alt="Apple Podcast" /></a>
-                <a href="#" class="btn"><img src="../img/btn_img2.png" alt="SoundCloud" /></a>
+
+        <div class="inner">
+          <div class="section01__textBanner">
+            <p class="textBanner__information">How to avoid making bad choices</p>
+            <span class="a11y-hidden">다른 팟캐스트 사이트 버튼</span>
+            <div class="information__btnWrap">
+              <a href="#" class="btn"><img src="../img/btn_img1.png" alt="Apple Podcast" /></a>
+              <a href="#" class="btn"><img src="../img/btn_img2.png" alt="SoundCloud" /></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section02">
+        <div class="inner">
+          <div class="episodeBox">
+            <div class="episodeBox__img">
+              <img src="../img/Essential_img4.png" alt="Timmy Mike" />
+            </div>
+
+            <div class="episodeBox__information">
+              <div class="information__textBox">
+                <span class="a11y-hidden">팟캐스트로 이동 태그 및 타이틀</span>
+                <a href="#none" class="textBox__title">How to avoid making bad choices</a>
+              </div>
+
+              <div class="information__subBox">
+                <span class="a11y-hidden">에피소드 카테고리</span>
+                <span class="subBox__episode episode__categoryBox">
+                  <p class="categoryBox__text">Episode 1 •</p>
+                  <p class="categoryBox__text">Microphone •</p>
+                  <p class="categoryBox__text">0:13</p>
+                </span>
+
+                <!-- 에피소드 미리보기 옵션 영역 -->
+                <span class="a11y-hidden">미리보기 옵션 박스</span>
+                <div class="subBox__options">
+                  <div class="options__button options__play">
+                    <button class="btn-play"><span class="a11y-hidden">play</span></button>
+                  </div>
+                  <div class="options__button options__button1">
+                    <button class="btn-skip10"><span class="a11y-hidden">backwark</span><i class="fa-solid fa-backward"></i></button>
+                    <div class="button__text">10s</div>
+                  </div>
+                  <div class="options__button options__button2">
+                    <button class="btn-jump10"><span class="a11y-hidden">forward</span><i class="fa-solid fa-forward"></i></button>
+                    <div class="button__text">10s</div>
+                  </div>
+                  <div class="options__timeline">
+                    <span class="timeline__ball"></span>
+                    <span class="timeline__line"></span>
+                  </div>
+                  <div class="options__time">
+                    <p class="time__text">00:00</p>
+                    <p class="time__text">00:00</p>
+                  </div>
+                  <div class="options__sound">
+                    <a href="#none" class="btn-mute"><span class="a11y-hidden">mute</span></a>
+                    <div class="sound__options">
+                      <input type="range" value="50" min="0" max="100" step="1" class="options_range" />
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </section>
+        </div>
       </section>
     </main>
     <!-- MAIN SECTION 영역 끝 -->
