@@ -39,7 +39,7 @@
 <!-- - Library:  `Swiper` -->
 <br/><br/>
 
-### 파일 구조
+<!-- ### 파일 구조
 📦estTeam5
  ┣ 📂css
  ┃ ┣ 📜common.css
@@ -63,7 +63,7 @@
  ┣ 📜.DS_Store
  ┣ 📜index.html
  ┗ 📜README.md
-<br><br>
+<br><br> -->
 
 ### 📅회의록/중간보고
 - 회의록 : https://www.notion.so/5-15e021880f7a808aa59dd5dcb44b7caa
