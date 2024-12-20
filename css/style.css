@@ -107,7 +107,7 @@
 						position: relative;
 						flex: 0 0 40%;
 
-						/* 이미지 왼쪽 텍스트를 90도 회전시켜 absolute로 배치하는 작업을 했고 zindex를 이미지보다 아래로 주어 밑에 보이도록 작업했습니다. */
+						/* 이미지 왼쪽 텍스트를 90도 회전시켜 absolute로 배치하는 작업을 했고 z-index를 이미지보다 아래로 주어 밑에 보이도록 작업했습니다. */
 						.pictureBox__text {
 							position: absolute;
 							top: 50%;
@@ -148,12 +148,9 @@
 						top: 0;
 						left: 50%;
 						translate: -50% 0;
-
 						display: flex;
 						gap: 8rem;
 						flex-direction: row;
-						/* justify-content: center; */
-						/* margin-bottom: 6rem; */
 					}
 
 					.swiper-slide {
@@ -308,6 +305,7 @@
 						gap: 2rem;
 						align-items: center;
 
+						/* 입력창 영역을 전체 비율에서 - 15rem뺀 값을 준다. */
 						.form__row {
 							width: calc(100% - 15rem);
 						}

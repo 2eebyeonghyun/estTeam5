@@ -183,19 +183,24 @@
 			&.section04 {
                 overflow: hidden;
 
+				/* 부모요소에 플렉스 준 다음 수평정렬을 맞춘다. */
 				.contents {
 					display: flex;
 					flex-direction: row;
+					/* wrap을 사용한 이유 : 자식요소가 전체넓이 100%을 초과하게 되면 자식 영역이 분리가 된다 */
 					flex-wrap: wrap;
 				}
 
+				/* 이미지 박스 */
 				.contents__imgBox {
+					/* calc을 사용한 이유 전체넓이 100%에서 텍스트박스의 넓이 50%을 뺀다음 이미지박스에 준 마진 값을 뺀다. */
 					width: calc(100% - 50% - 25rem);
 					margin-right: 25rem;
 					overflow: hidden;
 					border-radius: 1rem;
 				}
 
+				/* 텍스트박스 */
 				.contents__textBox {
 					width: 50%;
 

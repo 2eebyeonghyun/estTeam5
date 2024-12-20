@@ -85,6 +85,7 @@ video {
 /* 내부 영역 사이즈 CSS */
 .inner {
   width: 100%;
+  /* 내부사이즈를 130rem으로 고정한다. */
   max-width: 130rem;
   margin: 0 auto;
 
@@ -92,6 +93,7 @@ video {
     max-width: 95%;
   }
 }
+
 
 /* 섹션 타이틀 CSS 시작 */
 .section__headingBox {
@@ -141,8 +143,8 @@ video {
     line-height: 1.5;
   }
 }
-
 /* 섹션 타이틀 CSS 끝 */
+
 
 /* 에피소드 소개 영역 CSS 시작 */
 .episodeBox {
@@ -318,8 +320,8 @@ video {
     }
   }
 }
-
 /* 에피소드 소개 영역 CSS 시작 */
+
 
 /* 버튼 CSS 영역 */
 .btn-search {
@@ -421,6 +423,7 @@ video {
 
   /* 에피소드 버튼에 마우스를 올리면 Xmove 애니메이션이 발동 */
   &:hover {
+
     img {
       animation: Xmove 0.7s ease-in-out forwards;
     }
@@ -471,11 +474,11 @@ video {
     background-size: cover;
   }
 }
-
 /* 버튼 CSS 끝 */
 
 /* 옵션 CSS 시작 */
 .options__button {
+
   &.options__play {
     width: 7rem;
     aspect-ratio: 1;
@@ -545,6 +548,7 @@ video {
     &::after {
       content: "";
       display: block;
+      /* 타입라인_라인 애니메이션을주 60초동안 재생하고 무한 반복한다. */
       animation: timeline_line 60s infinite forwards;
       height: 0.2rem;
       background-color: var(--bg3);
@@ -621,7 +625,6 @@ video {
     }
   }
 }
-
 /* 옵션 CSS 끝 */
 
 /* Swiper 슬라이드 옵션 CSS 시작 */
@@ -944,8 +947,8 @@ video {
     color: var(--fontWhite);
   }
 }
-
 /* FORM CSS 영역 끝 */
+
 
 /* 애니메이션 영역 시작 */
 @keyframes timeline_ball {
@@ -997,11 +1000,12 @@ video {
     /* 좌측기준점 */
   }
 }
-
 /* 애니메이션 영역 끝 */
+
 
 /* HEADER 영역 시작 */
 .header {
+  /* grid-template-columns을 통해 컨텐츠간 간격을 조정한다. */
   position: absolute;
   inset: 0 0 auto 0;
   z-index: 1000;
@@ -1009,8 +1013,10 @@ video {
   grid-template-columns: min-content 1fr min-content;
   align-items: center;
   height: 11.5rem;
+  /* 마진인라인을 사용한 이유는 중복된 값을 사용하지 않고 좌우에 마진 값을 주기 위해 사용했습니다.*/
   margin-inline: 4.6rem;
 
+  /* 라이트클래스가 들어 헤더는 폰트색상과 아이콘 색상을 흰색으로 변경한다. */
   &.light {
 
     .gnb {
@@ -1111,7 +1117,6 @@ video {
     }
   }
 }
-
 /* HEADER 영역 끝 */
 
 
@@ -1120,15 +1125,18 @@ video {
   position: fixed;
   top: 0;
   right: 0;
+  /* z-index값을 header보다 위로 주어 사이드메뉴가 위에 있게 배치한다. */
   z-index: 1001;
-  width: 0;
   height: 100vh;
   background-color: var(--bgWhite);
   box-shadow: var(--boxShadow);
   padding: 0 4.5rem;
+  /* active가 되기전에는 넓이값이 0이고 숨김처리를 한다. */
+  width: 0;
   display: none;
 
   &.--active {
+    /* actvie가 되면 넓이는 45rem으로 변경되고 display grid가 된다. */
     width: 45rem;
     display: grid;
     gap: 5rem;
