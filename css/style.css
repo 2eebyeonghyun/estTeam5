@@ -228,6 +228,11 @@
 					height: 100%;
 				}
 
+				.videoBox__video {
+					appearance: none;
+					-webkit-appearance: none;
+				}
+
 				.videoBox__btn {
 					position: absolute;
 					top: 50%;

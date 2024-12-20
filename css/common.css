@@ -800,6 +800,8 @@ video {
   }
 
   .informationBox__share_list {
+    display: inline-block
+    ;
     .share__title {
       color: var(--fontColor2);
       font-size: 1.4rem;
