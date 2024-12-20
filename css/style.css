@@ -343,6 +343,7 @@
 				}
 
 				.informationBox__inputBox {
+					display: inline-block;
 
 					label {
 						display: flex;

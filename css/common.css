@@ -1034,6 +1034,10 @@ video {
 
       .btn-search {
 
+        &::before {
+          filter: invert(1);
+        }
+
         span {
           color: var(--fontWhite);
         }
@@ -1207,6 +1211,7 @@ video {
 
     &.--active {
       width: 100%;
+      gap: 3.5rem;
       grid-template-rows: 8rem min-content min-content;
     }
 
@@ -1222,10 +1227,14 @@ video {
     }
 
     .company__information {
-      gap: 5rem;
+      gap: 1.7rem;
 
       .row__title {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
+      }
+
+      .linkBox__link {
+        font-size: 1.4rem;
       }
     }
   }
