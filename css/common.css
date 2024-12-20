@@ -1074,7 +1074,7 @@ video {
     align-items: center;
   }
 
-  @media (width < 1024px) {
+  @media (width < 1300px) {
     margin-inline: auto;
     max-width: 95%;
 
