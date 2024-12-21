@@ -14,9 +14,9 @@
     </thead>
     <tbody>
         <tr>
-            <td>이병현</td>
-            <td>팀장</td>
-            <td>기본 세팅, 메인페이지 작업, Shop 페이지 작업<br>Git 형상관리,<br>서브페이지 서포팅<br>결과보고서 작성, 프로젝트 발표</td>
+            <th style="width: 20%;">이병현</th>
+            <th style="width: 10%;">팀장</th>
+            <th style="width: 70%;">기본 세팅, 메인페이지 작업, Shop 페이지 작업<br>Git 형상관리,<br>서브페이지 서포팅<br>결과보고서 작성, 프로젝트 발표</th>
         </tr>
         <tr>
             <td>김석용</td>
