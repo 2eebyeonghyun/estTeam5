@@ -4,7 +4,7 @@
 <br><br>
 
 ### :family_man_man_boy_boy: 프로젝트 5팀 구성
-<table>
+<table style="width: 100%;">
     <thead>
         <tr style="background-color: #ededed;">
             <th>이름</th>
@@ -49,9 +49,10 @@
 - Tablet : 769px ~ 1299px 
 - Mobile : 768px ~
 
-#### 프로젝트 애니메이션
+#### 프로젝트 효과
 - 마우스 호버 시 애니메이션 활용
-- 디자인을 목적으로 한 애니메이션 활용
+- 마우스 호버 시 transform을 활용한 디자인 효과
+- 시각 애니메이션 활용
 
 #### 크로스브라우징 확인
 - 구글, 사파리, 엣지, 웨일 pc, mobile 확인 작업
