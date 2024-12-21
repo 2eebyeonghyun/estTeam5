@@ -1,7 +1,7 @@
 # 이스트소프트 프로젝트 5팀
 ### QR
 <img src="./img/qr.png">
-<br><br>
+<br>
 
 ### :family_man_man_boy_boy: 프로젝트 5팀 구성
 <table>
@@ -31,6 +31,7 @@
         <td>팟캐스트방송목록 페이지 작업, 팟캐스트 뷰페이지 작업</td>
     </tr>
 <table>
+<br><br>
 
 ### :receipt: 프로젝트 개요
 주제 : Resonator 팟캐스트
