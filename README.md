@@ -1,11 +1,12 @@
 # 이스트소프트 프로젝트 5팀
 ### QR
 <img src="./img/qr.png">
+<br><br>
 
 ### :family_man_man_boy_boy: 프로젝트 5팀 구성
 <table>
     <thead>
-        <tr>
+        <tr style="background-color: #ededed;">
             <th>이름</th>
             <th>역할</th>
             <th>담당 업무</th>
@@ -34,6 +35,7 @@
         </tr>
     </tbody>
 </table>
+<br><br>
 
 ### :receipt: 프로젝트 개요
 주제 : Resonator 팟캐스트
@@ -58,18 +60,22 @@
 - 충돌방지를 위해 동일 페이지 작업 시 개별 html, ccs를 만들어 작업 후 중간브리핑 이후 병합 작업
 - 같은 시간에 싱크 작업
 - 추가 작업자는 풀리퀘스트 후 내용 전달
+<br><br>
 
 ### :martial_arts_uniform: 작업시 요청사항
 - 같이 시간에 싱크맞추기
 - 추가 작업이 있으신분은 풀리퀘스트 후 채팅 남기기
 - HTML, CSS는 분리하여 작업
+<br><br>
 
 ### :gear:️ 사용한 기술 스택
 - Basic: `HTML`, `CSS`, `JavaScript`
+<br><br>
 
 ### :calendar: 회의록/중간보고
 - 회의록 : https://www.notion.so/5-15e021880f7a808aa59dd5dcb44b7caa
 - 중간보고 : https://www.notion.so/5-15f021880f7a80eab2c9fa370184ecd6
+<br><br>
 
 ### :open_file_folder: 폴더 구조
 ```
