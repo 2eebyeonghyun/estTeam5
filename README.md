@@ -7,16 +7,16 @@
 <table style="width: 100%;">
     <thead>
         <tr style="background-color: #ededed;">
-            <th>이름</th>
-            <th>역할</th>
-            <th>담당 업무</th>
+            <th style="width: 15%;">이름</th>
+            <th style="width: 10%;">역할</th>
+            <th style="width: 75%;">담당 업무</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <th style="width: 20%;">이병현</th>
-            <th style="width: 10%;">팀장</th>
-            <th style="width: 70%;">기본 세팅, 메인페이지 작업, Shop 페이지 작업<br>Git 형상관리,<br>서브페이지 서포팅<br>결과보고서 작성, 프로젝트 발표</th>
+            <td>이병현</td>
+            <td>팀장</td>
+            <td>기본 세팅, 메인페이지 작업, Shop 페이지 작업<br>Git 형상관리,<br>서브페이지 서포팅<br>결과보고서 작성, 프로젝트 발표</td>
         </tr>
         <tr>
             <td>김석용</td>
@@ -35,7 +35,6 @@
         </tr>
     </tbody>
 </table>
-<br><br>
 
 ### :receipt: 프로젝트 개요
 주제 : Resonator 팟캐스트
