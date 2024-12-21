@@ -1,6 +1,7 @@
 # 이스트소프트 프로젝트 5팀
 
 ### :family_man_man_boy_boy: 프로젝트 5팀 구성
+
 <table>
     <thead>
         <tr>
@@ -9,26 +10,22 @@
             <th>담당 업무</th>
         </tr>
     </thead>
-
     <tbody>
         <tr>
             <td>이병현</td>
             <td>팀장</td>
             <td>기본 세팅, 메인페이지 작업, Shop 페이지 작업<br>Git 형상관리,<br>서브페이지 서포팅<br>결과보고서 작성, 프로젝트 발표</td>
         </tr>
-
         <tr>
             <td>김석용</td>
             <td>팀원</td>
             <td>에피소드 페이지 작업, 팟캐스트 뷰페이지 작업</td>
         </tr>
-
         <tr>
             <td>전윤교</td>
             <td>팀원</td>
             <td>호스트안내 페이지 작업, 팟캐스트 뷰페이지 작업</td>
         </tr>
-
         <tr>
             <td>송승엽</td>
             <td>팀원</td>
@@ -36,6 +33,7 @@
         </tr>
     </tbody>
 </table>
+
 
 <br><br>
 
