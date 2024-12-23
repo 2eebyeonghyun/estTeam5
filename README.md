@@ -1,9 +1,10 @@
 # 이스트소프트 프로젝트 5팀
 ### QR
 <img src="./img/qr.png">
-<br>
 
-### URL
+### 프로젝트 URL
+<img src="./img/qr_site.png">
+
 https://2eebyeonghyun.github.io/estTeam5/
 
 ### :family_man_man_boy_boy: 프로젝트 5팀 구성
