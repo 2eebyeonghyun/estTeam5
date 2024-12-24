@@ -543,9 +543,11 @@
         <h2 class="a11y-hidden">영상 영역</h2>
         <section class="section section06">
             <div class="section06__videoBox">
-                <video class="videoBox__video" poster="img/video__img.png"><source src="img/video/main_video1.mp4" type="video/mp4"/></video>
-                <div class="videoBox__btn">
-                    <button class="btn-play"><span class="a11y-hidden">play</span><i class="fa-solid fa-play"></i></button>
+                <video class="videoBox__video" poster="img/video__img.png" muted>
+                    <source src="img/video/main_video1.mp4" type="video/mp4"/>
+                </video>
+                <div class="videoBox__btn play">
+                    <button class="btn-play"><span class="a11y-hidden">play</span></button>
                 </div>
             </div>
         </section>

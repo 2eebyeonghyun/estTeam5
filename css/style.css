@@ -223,6 +223,16 @@
 					position: relative;
 					width: 100%;
 					height: 100%;
+
+					&:hover {
+
+						.videoBox__btn {
+
+							&.pause {
+								display: block;
+							}
+						}
+					}
 				}
 
 				.videoBox__video {
@@ -242,6 +252,11 @@
 					display: flex;
 					justify-content: center;
 					align-items: center;
+
+					&.pause {
+						display: none;
+						transition: all .3s ease-in-out;
+					}
 				}
 			}
 
