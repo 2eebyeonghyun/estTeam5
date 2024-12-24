@@ -58,6 +58,20 @@ video {
   -o-object-fit: cover;
 }
 
+video {
+
+  &::-webkit-media-controls-fullscreen-button,
+  &::-webkit-media-controls-play-button,
+  &::-webkit-media-controls-timeline,
+  &::-webkit-media-controls-current-time-display,
+  &::-webkit-media-controls-time-remaining-display,
+  &::-webkit-media-controls-mute-button,
+  &::-webkit-media-controls-volume-slider,
+  &::-webkit-media-controls-fullscreen-button {
+    display: none !important;
+  }
+}
+
 /* 네비게이션 CSS */
 .gnb {
   display: flex;
